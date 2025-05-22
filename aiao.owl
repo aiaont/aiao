@@ -142,14 +142,11 @@ prescribe such distinctions.
   </owl:ObjectProperty>
   
 	<owl:ObjectProperty rdf:ID="hasSubject">
-		<rdfs:domain rdf:resource="#ImpactClaim"/>
-		<rdfs:range rdf:resource="impactont:Impact"/>
-	</owl:ObjectProperty>
-
-	<owl:ObjectProperty rdf:ID="hasSubject">
-		<rdfs:domain rdf:resource="#StateClaim"/>
-		<rdfs:range rdf:resource="impactont:Thing"/>
-	</owl:ObjectProperty>
+    <rdfs:domain rdf:resource="#ImpactClaim"/>
+    <rdfs:domain rdf:resource="#StateClaim"/>
+    <rdfs:range rdf:resource="impactont:Impact"/>
+    <rdfs:range rdf:resource="impactont:Thing"/>
+</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:ID="hasAgentActivityRelation">
 		<rdfs:domain rdf:resource="#Activity"/>
