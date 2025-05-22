@@ -12,7 +12,8 @@
 		 xmlns:impactont="http://purl.org/impactont#"
 		 xmlns:ruleml="http://www.ruleml.org/spec/"
 		 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-		 xmlns:terms="http://purl.org/dc/terms/">
+		 xmlns:terms="http://purl.org/dc/terms/"
+		 xmlns:time="http://www.w3.org/2006/time#">
 		 
   <owl:Ontology rdf:about="http://purl.org/aiaontology">
 	<terms:title xml:lang="en">Anthropogenic Impact Accounting Ontology</terms:title>
@@ -23,15 +24,19 @@
   <owl:Class rdf:about="http://purl.org/aiaontology#Agent">
 	<rdfs:subClassOf rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"/>
 	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-	<rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
-	<rdfs:comment>
-	  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
+<rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
+<rdfs:comment>
+  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
 personas (e.g., User1234 on TalkSomeMore social media platform).
 
-	  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
 prescribe such distinctions.
-	</rdfs:comment>
-	<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>	
+</rdfs:comment>
+<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
+<skos:example xml:lang="en">natural person</skos:example>
+<skos:example xml:lang="en">legal person</skos:example>
+<skos:example xml:lang="en">company</skos:example>
+<skos:example xml:lang="en">cyber persona</skos:example>
   </owl:Class>
   
   <!-- aiao:ImpactClaim class -->
@@ -51,9 +56,14 @@ prescribe such distinctions.
 	<rdfs:subClassOf rdf:resource="http://purl.org/impactont#Event"/>
 	<rdfs:comment>An event that is orchestrated by an agent.</rdfs:comment>
 	<rdfs:comment>A thing that an agent does, which impacts an environment.</rdfs:comment>
-	<rdfs:comment>
-	  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.
-	</rdfs:comment>
+<rdfs:comment>
+  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.
+</rdfs:comment>
+<skos:example xml:lang="en">generating electricity</skos:example>
+<skos:example xml:lang="en">extracting minerals</skos:example>
+<skos:example xml:lang="en">protecting a forest</skos:example>
+<skos:example xml:lang="en">restoring a wetland</skos:example>
+<skos:example xml:lang="en">transporting goods</skos:example>
   </owl:Class>
   
   <owl:Class rdf:about="http://purl.org/aiaontology#AgentActivityRelation">
@@ -63,9 +73,12 @@ prescribe such distinctions.
    
   <!-- aiao:Instrument class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#Instrument">
-	<rdfs:comment>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</rdfs:comment>
-	<rdfs:comment>A boiler, a truck and a turbine are all examples of instruments.</rdfs:comment>
-	<rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
+<rdfs:comment>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</rdfs:comment>
+<rdfs:comment>A boiler, a truck and a turbine are all examples of instruments.</rdfs:comment>
+<rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
+<skos:example xml:lang="en">boiler</skos:example>
+<skos:example xml:lang="en">truck</skos:example>
+<skos:example xml:lang="en">turbine</skos:example>
   </owl:Class>
   
   <!-- aiao:NaturalProcess class -->
@@ -85,20 +98,29 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://purl.org/aiaontology#Environment">
 	<rdfs:subClassOf rdf:resource="http://purl.org/impactont#Thing"/>
 	<rdfs:comment>The surroundings and conditions in which a thing occurs.</rdfs:comment>
-	<rdfs:comment>
-	  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
-	</rdfs:comment>	
-	<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
+<rdfs:comment>
+  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
+</rdfs:comment>
+<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
+<skos:example xml:lang="en">social environment</skos:example>
+<skos:example xml:lang="en">political environment</skos:example>
+<skos:example xml:lang="en">economic environment</skos:example>
+<skos:example xml:lang="en">legal environment</skos:example>
+<skos:example xml:lang="en">physical environment</skos:example>
+<skos:example xml:lang="en">natural environment</skos:example>
   </owl:Class>
   
   <!-- aiao:Control class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#Control">
 	<owl:equivalentClass rdf:resource="http://www.ruleml.org/spec/Rule"/>
-	<rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
-	<rdfs:comment>
-	  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
-	</rdfs:comment>
-	<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
+<rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
+<rdfs:comment>
+  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
+</rdfs:comment>
+<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
+<skos:example xml:lang="en">implementation plan</skos:example>
+<skos:example xml:lang="en">monitoring plan</skos:example>
+<skos:example xml:lang="en">methodology</skos:example>
   </owl:Class>
   
   <!-- aiao:Objective class -->
@@ -115,25 +137,30 @@ prescribe such distinctions.
 	<rdfs:comment>
 	  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
 	</rdfs:comment>
-	<rdfs:comment>
-	  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
-	</rdfs:comment>
+<rdfs:comment>
+  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
+</rdfs:comment>
+<skos:example xml:lang="en">project developer</skos:example>
+<skos:example xml:lang="en">project owner</skos:example>
+<skos:example xml:lang="en">calibrator</skos:example>
+<skos:example xml:lang="en">operator</skos:example>
+<skos:example xml:lang="en">representer</skos:example>
   </owl:Class>
   
   <!-- Disjoint Classes -->
   <owl:AllDisjointClasses>
-	  <owl:members rdf:parseType="Collection">
-		  <owl:Class rdf:about="#ImpactClaim"/>
-		  <owl:Class rdf:about="#StateClaim"/>
-	  </owl:members>
-  </owl:AllDisjointClasses>	  
+  <owl:members rdf:parseType="Collection">
+  <owl:Class rdf:about="#ImpactClaim"/>
+  <owl:Class rdf:about="#StateClaim"/>
+  </owl:members>
+  </owl:AllDisjointClasses>  
   
   <owl:AllDisjointClasses>
-	  <owl:members rdf:parseType="Collection">
-		  <owl:Class rdf:about="#NaturalProcess"/>
-		  <owl:Class rdf:about="#Project"/>
-	  </owl:members>
-  </owl:AllDisjointClasses>	    
+  <owl:members rdf:parseType="Collection">
+  <owl:Class rdf:about="#NaturalProcess"/>
+  <owl:Class rdf:about="#Project"/>
+  </owl:members>
+  </owl:AllDisjointClasses>    
   
   <owl:ObjectProperty rdf:about="#hasObjective">
 	  <rdfs:domain rdf:resource="#Activity"/>
@@ -182,142 +209,7 @@ prescribe such distinctions.
   
 	<owl:ObjectProperty rdf:ID="hasDuration">
 		<rdfs:domain rdf:resource="#Project"/>
-		<rdfs:range rdf:resource="(TODO: A fixed temporal duration.)"/>
+		<rdfs:range rdf:resource="time:Duration"/>
 	</owl:ObjectProperty>     
 	
-	
-	<!-- https://registry.goldstandard.org/projects/details/605 -->
-	
-	<owl:NamedIndividual rdf:ID="iofs(GS3492)drfysdf">
-		<rdf:type rdf:resource="#Project"/>
-		<comprisesActivity rdf:resource="GS3492Activity1"/>
-		<comprisesActivity rdf:resource="GS3492Activity2"/>
-		<comprisesActivity rdf:resource="GS3492Activity3"/>
-		<hasObjective "Reduce the fuel consumption of ships through the application of advanced hull coatings."/>
-		<hasDuration rdf:resource="(2013 - 2021)">
-		<hasAgentActivityRelation rdf:resource="dfadbe8798df987adffa"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:ID="GS3492Activity1">
-		<rdf:type rdf:resource="#Activity"/>
-		<hasObjective "Apply Intersleek 700 (only) to selected vessels."/>		
-	</owl:NamedIndividual>
-
-	<owl:NamedIndividual rdf:ID="GS3492Activity2">
-		<rdf:type rdf:resource="#Activity"/>
-		<hasObjective "Apply Intersleek 700 and Intersleek 1100SR to selected vessels."/>		
-	</owl:NamedIndividual>
-
-	<owl:NamedIndividual rdf:ID="GS3492Activity3">
-		<rdf:type rdf:resource="#Activity"/>
-		<hasObjective "Apply Intersleek 900 (only) to selected vessels."/>		
-	</owl:NamedIndividual>	
-	
-	<owl:NamedIndividual rdf:ID="dsaf(InternationalPaintLtd)78df">
-		<rdf:type rdf:resource="#Agent"/>
-	</owl:NamedIndividual>		
-
-	<owl:NamedIndividual rdf:ID="123a(ProjectOwnerOfAGoldStandardProject)f678">
-		<rdf:type rdf:resource="#Role"/>
-	</owl:NamedIndividual>	
-	
-	<owl:NamedIndividual rdf:ID="dfadbe8798df987adffa">
-		<rdf:type rdf:resource="#AgentActivityRelation"/>
-		<hasAgent rdf:resource="dsaf(InternationalPaintLtd)78df"/>
-		<hasActivity rdf:resource="iofs(GS3492)drfysdf"/>
-		<isGovernedBy rdf:resource="123a(ProjectOwnerOfAGoldStandardProject)f678"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:ID="erte(CO2emissionsFromShipIndicator)ttre">
-		<rdf:type rdf:resource="impactont:Indicator"/>
-		<hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of carbon dioxide (CO2) emissions released per year by a maritime vessel due to the fuel consumption of its engines.</hasDefinition>
-		<hasUnitOfMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tCO2/yr</hasUnitOfMeasure>
-	</owl:NamedIndividual>	
-	
-	
-	
-
-	<!--For each of the 17 ships involved in the project, the following individuals must be created:-->
-	
-	<owl:NamedIndividual rdf:ID="sadf(Ship9xxxx14/86366)aufy">
-		<rdf:type rdf:resource="impactont:Thing"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:ID="rfvf(VoyageLogForShip9xxxx14/86366)rfvf">
-		<rdf:type rdf:resource="claimont:Substantiation"/>
-	</owl:NamedIndividual>
-	<!--A named individual like this must be created for each of the voyage logs of the ship.-->
-	
-	
-	
-	<owl:NamedIndividual rdf:ID="duifu(MonPer1BaselineStateForShip9xxxx14/86366)dfdf">
-		<rdf:type rdf:resource="impactont:State"/>
-		<impactont:hasTemporalLocation rdf:resource="(10 September 2014 - 9 September 2015)"/>
-		<impactont:hasModality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counterfactual</hasModality>
-		<impactont:isDefinedByIndicator rdf:resource="#erte(CO2emissionsFromShipIndicator)ttre">"/>
-		<impactont:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">119000</hasValue>		
-	</owl:NamedIndividual>	
-	<!--A named individual like this must be created for each monitoring period.-->	
-	
-	<owl:NamedIndividual rdf:ID="dudf(ClaimAboutMonPer1BaselineStateForShip9xxxx14/86366)qwqw">
-		<rdf:type rdf:resource="#StateClaim"/>
-		<claimont:hasClaimant rdf:resource="dsaf(InternationalPaintLtd)78df"/>
-		<claimont:hasSubject rdf:resource="sadf(Ship9xxxx14/86366)aufy"/>
-		<claimont:hasPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Had baseline state during monitoring period 1 of GS3492Activity1</>
-		<claimont:hasObject rdf:resource="duifu(MonPer1BaselineStateForShip9xxxx14/86366)dfdf"/>
-		<claimont:isSupportedBy rdf:resource="rfvf(VoyageLogForShip9xxxx14/86366)rfvf"/>
-	</owl:NamedIndividual>	
-	<!--A named individual like this must be created for each monitoring period.-->
-	
-	
-	
-	<owl:NamedIndividual rdf:ID="yyifu(MonPer1ProjectStateForShip9xxxx14/86366)dfyy">
-		<rdf:type rdf:resource="impactont:State"/>
-		<impactont:hasTemporalLocation rdf:resource="(10 September 2014 - 9 September 2015)"/>
-		<impactont:hasModality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real</hasModality>
-		<impactont:isDefinedByIndicator rdf:resource="#erte(CO2emissionsFromShipIndicator)ttre">"/>
-		<impactont:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">101002</hasValue>		
-	</owl:NamedIndividual>	  
-	<!--A named individual like this must be created for each monitoring period.-->  
-  
-	<owl:NamedIndividual rdf:ID="dudf(ClaimAboutMonPer1ProjectStateForShip9xxxx14/86366)qwqw">
-		<rdf:type rdf:resource="#StateClaim"/>
-		<claimont:hasClaimant rdf:resource="dsaf(InternationalPaintLtd)78df"/>
-		<claimont:hasSubject rdf:resource="sadf(Ship9xxxx14/86366)aufy"/>
-		<claimont:hasPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Had project state during monitoring period 1 of GS3492Activity1</>
-		<claimont:hasObject rdf:resource="yyifu(MonPer1ProjectStateForShip9xxxx14/86366)dfyy"/>
-		<claimont:isSupportedBy rdf:resource="rfvf(VoyageLogForShip9xxxx14/86366)rfvf"/>
-	</owl:NamedIndividual>	  
-	<!--A named individual like this must be created for each monitoring period.-->
-  
-
-  
-	<owl:NamedIndividual rdf:ID="tyuc(StateDifferenceForShip9xxxx14/86366DuringMonPer1)tyuy">
-        <rdf:type rdf:resource="impactont:Event"/>
-		<impactont:hasStateA rdf:resource="duifu(MonPer1BaselineStateForShip9xxxx14/86366)dfdf"/>
-		<impactont:hasStateB rdf:resource="yyifu(MonPer1ProjectStateForShip9xxxx14/86366)dfyy"/>
-    </owl:NamedIndividual>	  
-	<!--A named individual like this must be created for each monitoring period.-->
-  
-  	<owl:NamedIndividual rdf:ID="uuug(ClaimAboutImpactOfGS3492Activity1OnShip9xxxx14/86366DuringMonPer1)guuf">
-		<rdf:type rdf:resource="#ImpactClaim"/>
-		<claimont:hasClaimant rdf:resource="dsaf(InternationalPaintLtd)78df"/>
-		<claimont:hasSubject rdf:resource="GS3492Activity1"/>
-		<claimont:hasPredicate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caused</>
-		<claimont:hasObject rdf:resource="tyuc(StateDifferenceForShip9xxxx14/86366DuringMonPer1)tyuy"/>
-		<claimont:isSupportedBy rdf:resource="...(#TODO: project documentation)..."/>
-	</owl:NamedIndividual>	
-	<!--A named individual like this must be created for each monitoring period.-->
-
-
-
-	<owl:NamedIndividual rdf:ID="tyuc(ImpactOfGS3492Activity1OnShip9xxxx14/86366)tyuy">
-        <rdf:type rdf:resource="impactont:Impact"/>
-		<impactont:hasStateA rdf:resource="duifu(MonPer1BaselineStateForShip9xxxx14/86366)dfdf"/>
-		<impactont:hasStateB rdf:resource="yyifu(MonPer1ProjectStateForShip9xxxx14/86366)dfyy"/>
-		<impactont:hasProvenance rdf:resource="GS3492Activity1"/>
-    </owl:NamedIndividual>	
-	<!--A named individual like this must be created for each monitoring period for each ship.-->
- 
-  
 </rdf:RDF>
