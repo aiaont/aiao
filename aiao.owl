@@ -24,20 +24,16 @@
   <owl:Class rdf:about="http://purl.org/aiaontology#Agent">
 	<rdfs:subClassOf rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"/>
 	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-<rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
-<rdfs:comment>
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
-personas (e.g., User1234 on TalkSomeMore social media platform).
-
-  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
-prescribe such distinctions.
-</rdfs:comment>
-<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
-<skos:example xml:lang="en">natural person</skos:example>
-<skos:example xml:lang="en">legal person</skos:example>
-<skos:example xml:lang="en">company</skos:example>
-<skos:example xml:lang="en">cyber persona</skos:example>
-  </owl:Class>
+	<rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
+	<rdfs:comment> This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
+personas (e.g., User1234 on TalkSomeMore social media platform). AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+prescribe such distinctions.</rdfs:comment>
+	<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
+	<skos:example xml:lang="en">natural person</skos:example>
+	<skos:example xml:lang="en">legal person</skos:example>
+	<skos:example xml:lang="en">company</skos:example>
+	<skos:example xml:lang="en">cyber persona</skos:example>
+	</owl:Class>
   
   <!-- aiao:ImpactClaim class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#ImpactClaim">
@@ -64,7 +60,7 @@ prescribe such distinctions.
 <skos:example xml:lang="en">protecting a forest</skos:example>
 <skos:example xml:lang="en">restoring a wetland</skos:example>
 <skos:example xml:lang="en">transporting goods</skos:example>
-  </owl:Class>
+ </owl:Class>
   
   <owl:Class rdf:about="http://purl.org/aiaontology#AgentActivityRelation">
 	<rdfs:comment>The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
@@ -98,29 +94,26 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://purl.org/aiaontology#Environment">
 	<rdfs:subClassOf rdf:resource="http://purl.org/impactont#Thing"/>
 	<rdfs:comment>The surroundings and conditions in which a thing occurs.</rdfs:comment>
-<rdfs:comment>
-  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
-</rdfs:comment>
-<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
-<skos:example xml:lang="en">social environment</skos:example>
-<skos:example xml:lang="en">political environment</skos:example>
-<skos:example xml:lang="en">economic environment</skos:example>
-<skos:example xml:lang="en">legal environment</skos:example>
-<skos:example xml:lang="en">physical environment</skos:example>
-<skos:example xml:lang="en">natural environment</skos:example>
+	<rdfs:comment> This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
+	</rdfs:comment>
+	<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
+	<skos:example xml:lang="en">social environment</skos:example>
+	<skos:example xml:lang="en">political environment</skos:example>
+	<skos:example xml:lang="en">economic environment</skos:example>
+	<skos:example xml:lang="en">legal environment</skos:example>
+	<skos:example xml:lang="en">physical environment</skos:example>
+	<skos:example xml:lang="en">natural environment</skos:example>
   </owl:Class>
   
   <!-- aiao:Control class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#Control">
 	<owl:equivalentClass rdf:resource="http://www.ruleml.org/spec/Rule"/>
-<rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
-<rdfs:comment>
-  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
-</rdfs:comment>
-<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
-<skos:example xml:lang="en">implementation plan</skos:example>
-<skos:example xml:lang="en">monitoring plan</skos:example>
-<skos:example xml:lang="en">methodology</skos:example>
+	<rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
+	<rdfs:comment>A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).</rdfs:comment>
+	<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
+	<skos:example xml:lang="en">implementation plan</skos:example>
+	<skos:example xml:lang="en">monitoring plan</skos:example>
+	<skos:example xml:lang="en">methodology</skos:example>
   </owl:Class>
   
   <!-- aiao:Objective class -->
@@ -137,14 +130,12 @@ prescribe such distinctions.
 	<rdfs:comment>
 	  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
 	</rdfs:comment>
-<rdfs:comment>
-  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
-</rdfs:comment>
-<skos:example xml:lang="en">project developer</skos:example>
-<skos:example xml:lang="en">project owner</skos:example>
-<skos:example xml:lang="en">calibrator</skos:example>
-<skos:example xml:lang="en">operator</skos:example>
-<skos:example xml:lang="en">representer</skos:example>
+	<rdfs:comment>Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.</rdfs:comment>
+	<skos:example xml:lang="en">project developer</skos:example>
+	<skos:example xml:lang="en">project owner</skos:example>
+	<skos:example xml:lang="en">calibrator</skos:example>
+	<skos:example xml:lang="en">operator</skos:example>
+	<skos:example xml:lang="en">representer</skos:example>
   </owl:Class>
   
   <!-- Disjoint Classes -->
