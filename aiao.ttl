@@ -1,0 +1,167 @@
+@prefix : <http://purl.org/aiaontology#> .
+@prefix claimont: <http://purl.org/claimont#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix impactont: <http://purl.org/impactont#> .
+@prefix lrml: <http://docs.oasis-open.org/legalruleml/ns/v1.0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ruleml: <http://www.ruleml.org/spec/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://purl.org/aiaontology> a owl:Ontology ;
+    dcterms:description "An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies."@en ;
+    dcterms:title "Anthropogenic Impact Accounting Ontology"@en .
+
+:Environment a owl:Class ;
+    rdfs:comment """
+  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
+""",
+        "An Environment may comprise other Environments.",
+        "The surroundings and conditions in which a thing occurs." ;
+    rdfs:subClassOf impactont:Thing ;
+    skos:example "economic environment"@en,
+        "legal environment"@en,
+        "natural environment"@en,
+        "physical environment"@en,
+        "political environment"@en,
+        "social environment"@en .
+
+:comprisesActivity a owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range :Activity .
+
+:governs a owl:ObjectProperty ;
+    rdfs:domain :Role ;
+    rdfs:range :AgentActivityRelation ;
+    owl:inverseOf :isGovernedBy .
+
+:hasActivity a owl:ObjectProperty ;
+    rdfs:domain :AgentActivityRelation ;
+    rdfs:range :Activity .
+
+:hasAgent a owl:ObjectProperty ;
+    rdfs:domain :AgentActivityRelation ;
+    rdfs:range :Agent .
+
+:hasAgentActivityRelation a owl:ObjectProperty ;
+    rdfs:domain :Activity,
+        :Project ;
+    rdfs:range :AgentActivityRelation .
+
+:hasDuration a owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range <time:Duration> .
+
+:hasObjective a owl:ObjectProperty ;
+    rdfs:domain :Activity,
+        :Project ;
+    rdfs:range :Objective .
+
+:hasSubject a owl:ObjectProperty ;
+    rdfs:domain :ImpactClaim,
+        :StateClaim ;
+    rdfs:range <impactont:Impact>,
+        <impactont:Thing> .
+
+:isPerformedWith a owl:ObjectProperty ;
+    rdfs:domain :Activity ;
+    rdfs:range :Instrument .
+
+:Agent a owl:Class ;
+    rdfs:comment """
+  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
+personas (e.g., User1234 on TalkSomeMore social media platform).
+
+  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+prescribe such distinctions.
+""",
+        "A thing that bears some form of accountability for the occurrence of another thing.",
+        "An Agent may comprise other Agents." ;
+    rdfs:subClassOf lrml:Agent ;
+    owl:equivalentClass prov:Agent ;
+    skos:example "company"@en,
+        "cyber persona"@en,
+        "legal person"@en,
+        "natural person"@en .
+
+:Control a owl:Class ;
+    rdfs:comment """
+  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
+""",
+        "A thing that limits or directs another thing.",
+        "The implementation plan and monitoring plan for an activity are controls." ;
+    owl:equivalentClass ruleml:Rule ;
+    skos:example "implementation plan"@en,
+        "methodology"@en,
+        "monitoring plan"@en .
+
+:Instrument a owl:Class ;
+    rdfs:comment "A boiler, a truck and a turbine are all examples of instruments.",
+        "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.",
+        "An Instrument may comprise other Instruments." ;
+    skos:example "boiler"@en,
+        "truck"@en,
+        "turbine"@en .
+
+:NaturalProcess a owl:Class ;
+    rdfs:comment "A series of interrelated or interacting natural events without a primary human cause." ;
+    rdfs:subClassOf impactont:Process .
+
+:Objective a owl:Class ;
+    rdfs:comment "A desired state to be effected by an activity." ;
+    rdfs:subClassOf :Control ;
+    skos:altLabel "Goal" .
+
+:Role a owl:Class ;
+    rdfs:comment """
+	  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
+	""",
+        """
+  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
+""",
+        "A control that specifies the scope of and/or requirements for an agent's relation to an activity." ;
+    owl:equivalentClass lrml:Role ;
+    skos:example "calibrator"@en,
+        "operator"@en,
+        "project developer"@en,
+        "project owner"@en,
+        "representer"@en .
+
+:ImpactClaim a owl:Class ;
+    rdfs:comment "A claim about the causal relation between an event and a state difference." ;
+    rdfs:subClassOf claimont:Claim .
+
+:StateClaim a owl:Class ;
+    rdfs:comment "A claim about the state of a thing." ;
+    rdfs:subClassOf claimont:Claim .
+
+:AgentActivityRelation a owl:Class ;
+    rdfs:comment """The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
+""" .
+
+:Activity a owl:Class ;
+    rdfs:comment """
+  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.
+""",
+        "A thing that an agent does, which impacts an environment.",
+        "An event that is orchestrated by an agent." ;
+    rdfs:subClassOf impactont:Event ;
+    skos:example "extracting minerals"@en,
+        "generating electricity"@en,
+        "protecting a forest"@en,
+        "restoring a wetland"@en,
+        "transporting goods"@en .
+
+:Project a owl:Class ;
+    rdfs:comment "A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.",
+        "TODO: Create object predicates for the required controls." ;
+    rdfs:subClassOf impactont:Process .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ImpactClaim :StateClaim ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :NaturalProcess :Project ) .
+
