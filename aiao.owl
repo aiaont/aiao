@@ -73,6 +73,7 @@ prescribe such distinctions.
    
   <!-- aiao:Instrument class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#Instrument">
+
 <rdfs:comment>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</rdfs:comment>
 <rdfs:comment>A boiler, a truck and a turbine are all examples of instruments.</rdfs:comment>
 <rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
@@ -98,6 +99,7 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://purl.org/aiaontology#Environment">
 	<rdfs:subClassOf rdf:resource="http://purl.org/impactont#Thing"/>
 	<rdfs:comment>The surroundings and conditions in which a thing occurs.</rdfs:comment>
+
 <rdfs:comment>
   This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
 </rdfs:comment>
@@ -113,6 +115,7 @@ prescribe such distinctions.
   <!-- aiao:Control class -->
   <owl:Class rdf:about="http://purl.org/aiaontology#Control">
 	<owl:equivalentClass rdf:resource="http://www.ruleml.org/spec/Rule"/>
+
 <rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
 <rdfs:comment>
   A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
@@ -121,6 +124,7 @@ prescribe such distinctions.
 <skos:example xml:lang="en">implementation plan</skos:example>
 <skos:example xml:lang="en">monitoring plan</skos:example>
 <skos:example xml:lang="en">methodology</skos:example>
+
   </owl:Class>
   
   <!-- aiao:Objective class -->
@@ -137,6 +141,7 @@ prescribe such distinctions.
 	<rdfs:comment>
 	  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
 	</rdfs:comment>
+
 <rdfs:comment>
   Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
 </rdfs:comment>
@@ -145,10 +150,12 @@ prescribe such distinctions.
 <skos:example xml:lang="en">calibrator</skos:example>
 <skos:example xml:lang="en">operator</skos:example>
 <skos:example xml:lang="en">representer</skos:example>
+
   </owl:Class>
   
   <!-- Disjoint Classes -->
   <owl:AllDisjointClasses>
+<
   <owl:members rdf:parseType="Collection">
   <owl:Class rdf:about="#ImpactClaim"/>
   <owl:Class rdf:about="#StateClaim"/>
@@ -211,5 +218,5 @@ prescribe such distinctions.
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="time:Duration"/>
 	</owl:ObjectProperty>     
-	
+
 </rdf:RDF>
