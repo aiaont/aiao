@@ -10,7 +10,7 @@ AIAO is closely integrated with three complementary ontologies:
 
 - **[Impact Ontology](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
 
-- **[Claimont](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
+- **[Claim Ontology](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
   
 - **[Information Communication Ontology](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
 
