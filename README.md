@@ -12,7 +12,7 @@ AIAO is closely integrated with three complementary ontologies:
 
 - **[Claimont](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
   
-- **[InfoComm](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
+- **[Information Communication Ontology](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
 
 Together, these four ontologies comprise a suite of ontologies for environmental and social impact accounting.
 
