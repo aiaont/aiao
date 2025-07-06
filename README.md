@@ -8,7 +8,7 @@ The Anthropogenic Impact Accounting Ontology (AIAO) provides a semantic framewor
 
 AIAO is closely integrated with three complementary ontologies:
 
-- **[ImpactOnt](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
+- **[Impact Ontology](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
 
 - **[Claimont](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
   
