@@ -17,7 +17,8 @@
 		 
   <owl:Ontology rdf:about="http://w3id.org/aiao">
 	<terms:title xml:lang="en">Anthropogenic Impact Accounting Ontology</terms:title>
-	<terms:description xml:lang="en">An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies.</terms:description>
+	<terms:description xml:lang="en">An ontology for accounting for how human activities impact their environments. The premise of the ontology is: An agent engages in an activity that impacts an environment.</terms:description>
+	<terms:description xml:lang="en">This ontology relies on the 'claimont' (http://w3id.org/claimont), 'impactont' (http://w3id.org/impactont) and 'legalruleml' (http://docs.oasis-open.org/legalruleml/ns/v1.0/) ontologies.</terms:description>
   </owl:Ontology>
   
   <!-- aiao:Agent class -->
@@ -26,17 +27,16 @@
 	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
 <rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
 <rdfs:comment>
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
-personas (e.g., User1234 on TalkSomeMore social media platform).
+  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber 
+personas.
 
   AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
 prescribe such distinctions.
 </rdfs:comment>
 <rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
-<skos:example xml:lang="en">natural person</skos:example>
-<skos:example xml:lang="en">legal person</skos:example>
-<skos:example xml:lang="en">company</skos:example>
-<skos:example xml:lang="en">cyber persona</skos:example>
+<skos:example xml:lang="en">Jane Doe (as a natural person)</skos:example>
+<skos:example xml:lang="en">Intermart Inc. (as a legal person)</skos:example>
+<skos:example xml:lang="en">User1234 on TalkSomeMore social media platform (as a cyber persona)</skos:example>
   </owl:Class>
   
   <!-- aiao:ImpactClaim class -->
