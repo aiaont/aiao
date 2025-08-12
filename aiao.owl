@@ -124,6 +124,7 @@ prescribe such distinctions.
 <skos:example xml:lang="en">implementation plan</skos:example>
 <skos:example xml:lang="en">monitoring plan</skos:example>
 <skos:example xml:lang="en">methodology</skos:example>
+<skos:example xml:lang="en">employment contract</skos:example>
 
   </owl:Class>
   
@@ -131,6 +132,8 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://w3id.org/aiao#Objective">
 	<rdfs:subClassOf rdf:resource="http://w3id.org/aiao#Control"/>
 	<rdfs:comment>A desired state to be effected by an activity.</rdfs:comment>
+	<skos:example xml:lang="en">"The objective of the activity is to apply Intersleek 700 to the hull of vessel 5514393."</skos:example>
+	<skos:example xml:lang="en">"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings."</skos:example>
 	<skos:altLabel>Goal</skos:altLabel>
   </owl:Class>
   
@@ -138,13 +141,8 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://w3id.org/aiao#Role">
 	<owl:equivalentClass rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"/>
 	<rdfs:comment>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</rdfs:comment>
-	<rdfs:comment>
-	  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
-	</rdfs:comment>
+	<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
 
-<rdfs:comment>
-  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.
-</rdfs:comment>
 <skos:example xml:lang="en">project developer</skos:example>
 <skos:example xml:lang="en">project owner</skos:example>
 <skos:example xml:lang="en">calibrator</skos:example>
