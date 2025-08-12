@@ -1,7 +1,7 @@
-@prefix : <http://purl.org/aiaontology#> .
-@prefix claimont: <http://purl.org/claimont#> .
+@prefix : <http://w3id.org/aiao#> .
+@prefix claimont: <http://w3id.org/claimont#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix impactont: <http://purl.org/impactont#> .
+@prefix impactont: <http://w3id.org/impactont#> .
 @prefix lrml: <http://docs.oasis-open.org/legalruleml/ns/v1.0/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -10,7 +10,7 @@
 @prefix ruleml: <http://www.ruleml.org/spec/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://purl.org/aiaontology> a owl:Ontology ;
+<http://w3id.org/aiao> a owl:Ontology ;
     dcterms:description "An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies."@en ;
     dcterms:title "Anthropogenic Impact Accounting Ontology"@en .
 

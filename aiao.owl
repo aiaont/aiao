@@ -155,7 +155,6 @@ prescribe such distinctions.
   
   <!-- Disjoint Classes -->
   <owl:AllDisjointClasses>
-<
   <owl:members rdf:parseType="Collection">
   <owl:Class rdf:about="#ImpactClaim"/>
   <owl:Class rdf:about="#StateClaim"/>

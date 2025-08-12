@@ -1,71 +1,77 @@
 [
   {
-    "@id": "http://purl.org/aiaontology#governs",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#Role"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/aiaontology#AgentActivityRelation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/aiaontology#isGovernedBy"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#Activity",
+    "@id": "http://w3id.org/aiao#Instrument",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "An event that is orchestrated by an agent."
+        "@value": "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity."
       },
       {
-        "@value": "A thing that an agent does, which impacts an environment."
+        "@value": "A boiler, a truck and a turbine are all examples of instruments."
       },
       {
-        "@value": "\n  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.\n"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.org/impactont#Event"
+        "@value": "An Instrument may comprise other Instruments."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#example": [
       {
         "@language": "en",
-        "@value": "generating electricity"
+        "@value": "boiler"
       },
       {
         "@language": "en",
-        "@value": "extracting minerals"
+        "@value": "truck"
       },
       {
         "@language": "en",
-        "@value": "protecting a forest"
-      },
-      {
-        "@language": "en",
-        "@value": "restoring a wetland"
-      },
-      {
-        "@language": "en",
-        "@value": "transporting goods"
+        "@value": "turbine"
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#Project",
+    "@id": "http://w3id.org/aiao#Objective",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A desired state to be effected by an activity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/aiao#Control"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "Goal"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasAgentActivityRelation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      },
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Project",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -79,12 +85,190 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/impactont#Process"
+        "@id": "http://w3id.org/impactont#Process"
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#Control",
+    "@id": "http://w3id.org/aiao#NaturalProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A series of interrelated or interacting natural events without a primary human cause."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/impactont#Process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#AgentActivityRelation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).\n"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#StateClaim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A claim about the state of a thing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/claimont#Claim"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasDuration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "time:Duration"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasActivity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasSubject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#ImpactClaim"
+      },
+      {
+        "@id": "http://w3id.org/aiao#StateClaim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "impactont:Impact"
+      },
+      {
+        "@id": "impactont:Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#isPerformedWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Instrument"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Role",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A control that specifies the scope of and/or requirements for an agent's relation to an activity."
+      },
+      {
+        "@value": "\n\t  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.\n\t"
+      },
+      {
+        "@value": "\n  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.\n"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "project developer"
+      },
+      {
+        "@language": "en",
+        "@value": "project owner"
+      },
+      {
+        "@language": "en",
+        "@value": "calibrator"
+      },
+      {
+        "@language": "en",
+        "@value": "operator"
+      },
+      {
+        "@language": "en",
+        "@value": "representer"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#governs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Role"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://w3id.org/aiao#isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Control",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -120,89 +304,58 @@
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#isPerformedWith",
+    "@id": "http://w3id.org/aiao#hasObjective",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://purl.org/aiaontology#Activity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/aiaontology#Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#hasAgentActivityRelation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#Activity"
+        "@id": "http://w3id.org/aiao#Activity"
       },
       {
-        "@id": "http://purl.org/aiaontology#Project"
+        "@id": "http://w3id.org/aiao#Project"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://purl.org/aiaontology#AgentActivityRelation"
+        "@id": "http://w3id.org/aiao#Objective"
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#Instrument",
+    "@id": "http://w3id.org/aiao#comprisesActivity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#ImpactClaim",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity."
-      },
-      {
-        "@value": "A boiler, a truck and a turbine are all examples of instruments."
-      },
-      {
-        "@value": "An Instrument may comprise other Instruments."
+        "@value": "A claim about the causal relation between an event and a state difference."
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#example": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@language": "en",
-        "@value": "boiler"
-      },
-      {
-        "@language": "en",
-        "@value": "truck"
-      },
-      {
-        "@language": "en",
-        "@value": "turbine"
+        "@id": "http://w3id.org/claimont#Claim"
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#comprisesActivity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/aiaontology#Activity"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology",
+    "@id": "http://w3id.org/aiao",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology"
     ],
@@ -220,39 +373,107 @@
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#hasActivity",
+    "@id": "http://w3id.org/aiao#Environment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The surroundings and conditions in which a thing occurs."
+      },
+      {
+        "@value": "\n  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.\n"
+      },
+      {
+        "@value": "An Environment may comprise other Environments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/impactont#Thing"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "social environment"
+      },
+      {
+        "@language": "en",
+        "@value": "political environment"
+      },
+      {
+        "@language": "en",
+        "@value": "economic environment"
+      },
+      {
+        "@language": "en",
+        "@value": "legal environment"
+      },
+      {
+        "@language": "en",
+        "@value": "physical environment"
+      },
+      {
+        "@language": "en",
+        "@value": "natural environment"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na95f2d9f12f8409990764b520a271fc8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/aiao#ImpactClaim"
+          },
+          {
+            "@id": "http://w3id.org/aiao#StateClaim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasAgent",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "http://purl.org/aiaontology#AgentActivityRelation"
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://purl.org/aiaontology#Activity"
+        "@id": "http://w3id.org/aiao#Agent"
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#hasDuration",
+    "@id": "_:Nf640d038ef6f454c88ac82d94ce3c6ca",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2002/07/owl#members": [
       {
-        "@id": "http://purl.org/aiaontology#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "time:Duration"
+        "@list": [
+          {
+            "@id": "http://w3id.org/aiao#NaturalProcess"
+          },
+          {
+            "@id": "http://w3id.org/aiao#Project"
+          }
+        ]
       }
     ]
   },
   {
-    "@id": "http://purl.org/aiaontology#Agent",
+    "@id": "http://w3id.org/aiao#Agent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -297,267 +518,46 @@
     ]
   },
   {
-    "@id": "_:Nc3af4b81ac5142cda16b9daa7b212d9e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/aiaontology#NaturalProcess"
-          },
-          {
-            "@id": "http://purl.org/aiaontology#Project"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#ImpactClaim",
+    "@id": "http://w3id.org/aiao#Activity",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A claim about the causal relation between an event and a state difference."
+        "@value": "An event that is orchestrated by an agent."
+      },
+      {
+        "@value": "A thing that an agent does, which impacts an environment."
+      },
+      {
+        "@value": "\n  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.\n"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/claimont#Claim"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#Role",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A control that specifies the scope of and/or requirements for an agent's relation to an activity."
-      },
-      {
-        "@value": "\n\t  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.\n\t"
-      },
-      {
-        "@value": "\n  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.\n"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"
+        "@id": "http://w3id.org/impactont#Event"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#example": [
       {
         "@language": "en",
-        "@value": "project developer"
+        "@value": "generating electricity"
       },
       {
         "@language": "en",
-        "@value": "project owner"
+        "@value": "extracting minerals"
       },
       {
         "@language": "en",
-        "@value": "calibrator"
+        "@value": "protecting a forest"
       },
       {
         "@language": "en",
-        "@value": "operator"
+        "@value": "restoring a wetland"
       },
       {
         "@language": "en",
-        "@value": "representer"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#Objective",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A desired state to be effected by an activity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.org/aiaontology#Control"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@value": "Goal"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#hasSubject",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#ImpactClaim"
-      },
-      {
-        "@id": "http://purl.org/aiaontology#StateClaim"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "impactont:Impact"
-      },
-      {
-        "@id": "impactont:Thing"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#AgentActivityRelation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).\n"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#Environment",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The surroundings and conditions in which a thing occurs."
-      },
-      {
-        "@value": "\n  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.\n"
-      },
-      {
-        "@value": "An Environment may comprise other Environments."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.org/impactont#Thing"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "social environment"
-      },
-      {
-        "@language": "en",
-        "@value": "political environment"
-      },
-      {
-        "@language": "en",
-        "@value": "economic environment"
-      },
-      {
-        "@language": "en",
-        "@value": "legal environment"
-      },
-      {
-        "@language": "en",
-        "@value": "physical environment"
-      },
-      {
-        "@language": "en",
-        "@value": "natural environment"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#hasAgent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#AgentActivityRelation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/aiaontology#Agent"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#hasObjective",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://purl.org/aiaontology#Activity"
-      },
-      {
-        "@id": "http://purl.org/aiaontology#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://purl.org/aiaontology#Objective"
-      }
-    ]
-  },
-  {
-    "@id": "_:N318ff06c4b474b5c8d80c3d774752b71",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/aiaontology#ImpactClaim"
-          },
-          {
-            "@id": "http://purl.org/aiaontology#StateClaim"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#NaturalProcess",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A series of interrelated or interacting natural events without a primary human cause."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.org/impactont#Process"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/aiaontology#StateClaim",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A claim about the state of a thing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.org/claimont#Claim"
+        "@value": "transporting goods"
       }
     ]
   }
