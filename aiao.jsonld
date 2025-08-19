@@ -6,6 +6,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
+
         "@value": "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity."
       },
       {
@@ -18,6 +19,7 @@
     "http://www.w3.org/2004/02/skos/core#example": [
       {
         "@language": "en",
+
         "@value": "boiler"
       },
       {

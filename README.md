@@ -2,17 +2,17 @@
 
 ## Overview
 
-The Anthropogenic Impact Accounting Ontology (AIAO) provides a semantic framework for accounting for human impact on environments. This ontology is the product of collaboration by members of the Standards Working Group of the LFDT CA2SIG. It is one of four.
+The Anthropogenic Impact Accounting Ontology (AIAO) provides a semantic framework for accounting for human impact on environments. This ontology is the product of collaboration by members of the Standards Working Group of the LFDT CA2SIG. It is one of four ontologies.
 
 ## Linked Ontologies
 
 AIAO is closely integrated with three complementary ontologies:
 
-- **[ImpactOnt](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
+- **[Impact Ontology](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
 
-- **[Claimont](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
+- **[Claim Ontology](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
   
-- **[InfoComm](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
+- **[Information Communication Ontology](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
 
 Together, these four ontologies comprise a suite of ontologies for environmental and social impact accounting.
 

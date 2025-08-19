@@ -1,3 +1,4 @@
+
 @prefix : <http://w3id.org/aiao#> .
 @prefix claimont: <http://w3id.org/claimont#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -11,6 +12,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://w3id.org/aiao> a owl:Ontology ;
+
     dcterms:description "An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies."@en ;
     dcterms:title "Anthropogenic Impact Accounting Ontology"@en .
 
