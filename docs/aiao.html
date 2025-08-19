@@ -5,14 +5,14 @@
     <style>
         #pylode {
             position: fixed;
-            top: 205px;
-            left: -150px;
+            top: 130px;
+            left: -80px;
             font-size: small;
             transform: rotate(-90deg);
             color: grey;
         }
         #pylode a {
-            font-size: 1.5em;
+            font-size: 2em;
             font-weight: bold;
             text-decoration: none;
             color: #005A9C;
@@ -28,12 +28,6 @@
         }
         #pylode #version {
             font-size: 1.0em;
-        }
-
-        #profile {
-            font-style: italic;
-            font-size: 1.25em;
-            color: darkred!important;
         }
 
         .cardinality {
@@ -142,7 +136,7 @@
             background-position: top left;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            text-align: left;
+            text-align: justify;
         }
 
         section {
@@ -262,20 +256,6 @@
 .setclass {
     list-style-type: none;
 }
-
-code{
-    word-wrap: break-word;
-  }
-table {
-    table-layout: fixed;
-    width: 100%;
-}
-td {
-    word-wrap: break-word;
-}
-#legend table.entity {
-    width: 25%;
-}
 	</style>
     <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
     <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
@@ -290,7 +270,11 @@ td {
     "https://schema.org/description": [
       {
         "@language": "en",
-        "@value": "An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies."
+        "@value": "An ontology for accounting for how human activities impact their environments. The premise of the ontology is: An agent engages in an activity that impacts an environment."
+      },
+      {
+        "@language": "en",
+        "@value": "This ontology relies on the 'claimont' (http://w3id.org/claimont), 'impactont' (http://w3id.org/impactont) and 'legalruleml' (http://docs.oasis-open.org/legalruleml/ns/v1.0/) ontologies."
       }
     ],
     "https://schema.org/name": [
@@ -319,15 +303,20 @@ td {
           </div>
           <div>
             <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="None. Defined in None">Title</a>
             </dt>
             <dd><p>Anthropogenic Impact Accounting Ontology</p></dd>
           </div>
           <div>
             <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
             </dt>
-            <dd><p>An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies.</p></dd>
+            <dd>
+              <ul>
+                <li><p>An ontology for accounting for how human activities impact their environments. The premise of the ontology is: An agent engages in an activity that impacts an environment.</p></li>
+                <li><p>This ontology relies on the 'claimont' (http://w3id.org/claimont), 'impactont' (http://w3id.org/impactont) and 'legalruleml' (http://docs.oasis-open.org/legalruleml/ns/v1.0/) ontologies.</p></li>
+              </ul>
+            </dd>
           </div>
         </dl>
       </div>
@@ -346,13 +335,12 @@ td {
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
                   <li><p>A thing that bears some form of accountability for the occurrence of another thing.</p></li>
-                  <li><p>This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber 
-personas (e.g., User1234 on TalkSomeMore social media platform).</p>
+                  <li><p>This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.</p>
 <p>AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
 prescribe such distinctions.</p></li>
                   <li><p>An Agent may comprise other Agents.</p></li>
@@ -361,28 +349,19 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>natural person</pre>
-                  </li>
-                  <li>
-                    <pre>legal person</pre>
-                  </li>
-                  <li>
-                    <pre>company</pre>
-                  </li>
-                  <li>
-                    <pre>cyber persona</pre>
-                  </li>
+                  <li><p>Jane Doe (as a natural person)</p></li>
+                  <li><p>Intermart Inc. (as a legal person)</p></li>
+                  <li><p>User1234 on TalkSomeMore social media platform (as a cyber persona)</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent">lrml:Agent</a>
@@ -390,18 +369,15 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
+                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="None. Defined in None">Equivalent Class</a>
               </th>
               <td>
-                <span>
-                  <a href="http://www.w3.org/ns/prov#Agent">Agent</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <a href="http://www.w3.org/ns/prov#Agent">prov:Agent</a>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
               </th>
               <td>
                 <span>
@@ -425,13 +401,18 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A claim about the causal relation between an event and a state difference.</p></td>
+              <td>
+                <ul>
+                  <li><p>A claim about the causal relation between an event and a state difference.</p></li>
+                  <li><p>An Impact Claim may comprise other Impact Claims.</p></li>
+                </ul>
+              </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/claimont#Claim">claimont:Claim</a>
@@ -439,7 +420,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <span>
@@ -463,13 +444,18 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A claim about the state of a thing.</p></td>
+              <td>
+                <ul>
+                  <li><p>A claim about the state of a thing.</p></li>
+                  <li><p>A State Claim may comprise other State Claims.</p></li>
+                </ul>
+              </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/claimont#Claim">claimont:Claim</a>
@@ -477,7 +463,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <span>
@@ -501,43 +487,33 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
                   <li><p>An event that is orchestrated by an agent.</p></li>
                   <li><p>A thing that an agent does, which impacts an environment.</p></li>
-                  <li><p>Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.</p></li>
+                  <li><p>An Activity may comprise other Activities.</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>generating electricity</pre>
-                  </li>
-                  <li>
-                    <pre>extracting minerals</pre>
-                  </li>
-                  <li>
-                    <pre>protecting a forest</pre>
-                  </li>
-                  <li>
-                    <pre>restoring a wetland</pre>
-                  </li>
-                  <li>
-                    <pre>transporting goods</pre>
-                  </li>
+                  <li><p>generating electricity</p></li>
+                  <li><p>extracting minerals</p></li>
+                  <li><p>protecting a forest</p></li>
+                  <li><p>restoring a wetland</p></li>
+                  <li><p>transporting goods</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/impactont#Event">impactont:Event</a>
@@ -545,7 +521,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <ul>
@@ -572,7 +548,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
               </th>
               <td>
                 <ul>
@@ -606,13 +582,13 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td><p>The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <ul>
@@ -633,7 +609,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
               </th>
               <td>
                 <ul>
@@ -667,37 +643,30 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
                   <li><p>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</p></li>
-                  <li><p>A boiler, a truck and a turbine are all examples of instruments.</p></li>
                   <li><p>An Instrument may comprise other Instruments.</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>boiler</pre>
-                  </li>
-                  <li>
-                    <pre>truck</pre>
-                  </li>
-                  <li>
-                    <pre>turbine</pre>
-                  </li>
+                  <li><p>boiler</p></li>
+                  <li><p>truck</p></li>
+                  <li><p>turbine</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
               </th>
               <td>
                 <span>
@@ -721,13 +690,13 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td><p>A series of interrelated or interacting natural events without a primary human cause.</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/impactont#Process">impactont:Process</a>
@@ -748,18 +717,13 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td>
-                <ul>
-                  <li><p>A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.</p></li>
-                  <li><p>TODO: Create object predicates for the required controls.</p></li>
-                </ul>
-              </td>
+              <td><p>A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/impactont#Process">impactont:Process</a>
@@ -767,7 +731,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <ul>
@@ -813,7 +777,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
@@ -825,34 +789,22 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>social environment</pre>
-                  </li>
-                  <li>
-                    <pre>political environment</pre>
-                  </li>
-                  <li>
-                    <pre>economic environment</pre>
-                  </li>
-                  <li>
-                    <pre>legal environment</pre>
-                  </li>
-                  <li>
-                    <pre>physical environment</pre>
-                  </li>
-                  <li>
-                    <pre>natural environment</pre>
-                  </li>
+                  <li><p>The Manhattan Workaholics Support Group (a social environment)</p></li>
+                  <li><p>The Republic of Indonesia (a political environment)</p></li>
+                  <li><p>The economy of Australia (an economic environment)</p></li>
+                  <li><p>A legal environment created by some set of consumer protection laws</p></li>
+                  <li><p>Tribeca Mall (a physical environment)</p></li>
+                  <li><p>Lake Victoria (a natural environment)</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <a href="http://w3id.org/impactont#Thing">impactont:Thing</a>
@@ -873,7 +825,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
@@ -885,25 +837,20 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>implementation plan</pre>
-                  </li>
-                  <li>
-                    <pre>monitoring plan</pre>
-                  </li>
-                  <li>
-                    <pre>methodology</pre>
-                  </li>
+                  <li><p>implementation plan</p></li>
+                  <li><p>monitoring plan</p></li>
+                  <li><p>methodology</p></li>
+                  <li><p>employment contract</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
+                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="None. Defined in None">Equivalent Class</a>
               </th>
               <td>
                 <a href="http://www.ruleml.org/spec/Rule">ruleml:Rule</a>
@@ -911,7 +858,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
               </th>
               <td>
                 <span>
@@ -935,13 +882,24 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td><p>A desired state to be effected by an activity.</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>"The objective of the activity is to apply Intersleek 700 to the hull of vessel 5514393."</p></li>
+                  <li><p>"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings."</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
               </th>
               <td>
                 <span>
@@ -952,7 +910,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
               </th>
               <td>
                 <span>
@@ -976,44 +934,32 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
               <td>
                 <ul>
                   <li><p>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</p></li>
-                  <li><pre><code>  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.
-</code></pre></li>
-                  <li><p>Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.</p></li>
+                  <li><p>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="An example of the use of a concept. Defined in SKOS Vocabulary">Example</a>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
               </th>
               <td>
                 <ul>
-                  <li>
-                    <pre>project developer</pre>
-                  </li>
-                  <li>
-                    <pre>project owner</pre>
-                  </li>
-                  <li>
-                    <pre>calibrator</pre>
-                  </li>
-                  <li>
-                    <pre>operator</pre>
-                  </li>
-                  <li>
-                    <pre>representer</pre>
-                  </li>
+                  <li><p>project developer</p></li>
+                  <li><p>project owner</p></li>
+                  <li><p>calibrator</p></li>
+                  <li><p>operator</p></li>
+                  <li><p>representer</p></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
+                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="None. Defined in None">Equivalent Class</a>
               </th>
               <td>
                 <a href="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role">lrml:Role</a>
@@ -1021,7 +967,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
               </th>
               <td>
                 <span>
@@ -1048,7 +994,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <ul>
@@ -1069,7 +1015,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1093,7 +1039,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <ul>
@@ -1114,15 +1060,15 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <ul>
                   <li>
-                    <a href="impactont:Impact">impactont:Impact</a>
+                    <a href="impactont:Impact">ns2:Impact</a>
                   </li>
                   <li>
-                    <a href="impactont:Thing">impactont:Thing</a>
+                    <a href="impactont:State">ns2:State</a>
                   </li>
                 </ul>
               </td>
@@ -1142,7 +1088,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <ul>
@@ -1163,7 +1109,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1187,7 +1133,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1198,7 +1144,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1222,7 +1168,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1233,7 +1179,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1257,7 +1203,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1268,7 +1214,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1292,7 +1238,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1303,7 +1249,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1327,7 +1273,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1338,7 +1284,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
                 <span>
@@ -1362,7 +1308,7 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
@@ -1373,10 +1319,10 @@ prescribe such distinctions.</p></li>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td>
-                <a href="time:Duration">time:Duration</a>
+                <a href="time:Duration">ns3:Duration</a>
               </td>
             </tr>
           </table>
@@ -1393,6 +1339,10 @@ prescribe such distinctions.</p></li>
           <dd>
             <code>http://w3id.org/claimont#</code>
           </dd>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
           <dt id="impactont">impactont</dt>
           <dd>
             <code>http://w3id.org/impactont#</code>
@@ -1404,6 +1354,14 @@ prescribe such distinctions.</p></li>
           <dt id="ns1">ns1</dt>
           <dd>
             <code>http://w3id.org/</code>
+          </dd>
+          <dt id="ns2">ns2</dt>
+          <dd>
+            <code>impactont:</code>
+          </dd>
+          <dt id="ns3">ns3</dt>
+          <dd>
+            <code>time:</code>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
@@ -1428,10 +1386,6 @@ prescribe such distinctions.</p></li>
           <dt id="skos">skos</dt>
           <dd>
             <code>http://www.w3.org/2004/02/skos/core#</code>
-          </dd>
-          <dt id="terms">terms</dt>
-          <dd>
-            <code>http://purl.org/dc/terms/</code>
           </dd>
         </dl>
       </div>
@@ -1460,10 +1414,7 @@ prescribe such distinctions.</p></li>
           <span id="y">y</span>
           <span>LODE</span>
         </a>
-        <a href="https://github.com/rdflib/pyLODE/release/3.2.1" id="version">3.2.1</a>
-        <span> with the </span>
-        <a href="https://w3id.org/profile/ontpub" id="profile">OntPub</a>
-        <span>profile</span>
+        <a href="https://github.com/rdflib/pyLODE/release/3.0.1" id="version">3.0.1</a>
       </p>
     </div>
     <div id="toc">
@@ -1563,6 +1514,9 @@ prescribe such distinctions.</p></li>
               <a href="#claimont">claimont</a>
             </li>
             <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
               <a href="#impactont">impactont</a>
             </li>
             <li>
@@ -1570,6 +1524,12 @@ prescribe such distinctions.</p></li>
             </li>
             <li>
               <a href="#ns1">ns1</a>
+            </li>
+            <li>
+              <a href="#ns2">ns2</a>
+            </li>
+            <li>
+              <a href="#ns3">ns3</a>
             </li>
             <li>
               <a href="#owl">owl</a>
@@ -1588,9 +1548,6 @@ prescribe such distinctions.</p></li>
             </li>
             <li>
               <a href="#skos">skos</a>
-            </li>
-            <li>
-              <a href="#terms">terms</a>
             </li>
           </ul>
         </li>
