@@ -1,60 +1,6 @@
 [
   {
-    "@id": "http://w3id.org/aiao#Instrument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-
-        "@value": "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity."
-      },
-      {
-        "@value": "A boiler, a truck and a turbine are all examples of instruments."
-      },
-      {
-        "@value": "An Instrument may comprise other Instruments."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-
-        "@value": "boiler"
-      },
-      {
-        "@language": "en",
-        "@value": "truck"
-      },
-      {
-        "@language": "en",
-        "@value": "turbine"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#Objective",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A desired state to be effected by an activity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/aiao#Control"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@value": "Goal"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#hasAgentActivityRelation",
+    "@id": "http://w3id.org/aiao#hasObjective",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -68,42 +14,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://w3id.org/aiao#AgentActivityRelation"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#Project",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration."
-      },
-      {
-        "@value": "TODO: Create object predicates for the required controls."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/impactont#Process"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#NaturalProcess",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A series of interrelated or interacting natural events without a primary human cause."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/impactont#Process"
+        "@id": "http://w3id.org/aiao#Objective"
       }
     ]
   },
@@ -115,157 +26,6 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@value": "The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).\n"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#StateClaim",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A claim about the state of a thing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/claimont#Claim"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#hasDuration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "time:Duration"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#hasActivity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#AgentActivityRelation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/aiao#Activity"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#hasSubject",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#ImpactClaim"
-      },
-      {
-        "@id": "http://w3id.org/aiao#StateClaim"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "impactont:Impact"
-      },
-      {
-        "@id": "impactont:Thing"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#isPerformedWith",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#Activity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/aiao#Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#Role",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A control that specifies the scope of and/or requirements for an agent's relation to an activity."
-      },
-      {
-        "@value": "\n\t  The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.\n\t"
-      },
-      {
-        "@value": "\n  Examples of roles include (but are not limited to) project developer, project owner, calibrator, operator, representer.\n"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "project developer"
-      },
-      {
-        "@language": "en",
-        "@value": "project owner"
-      },
-      {
-        "@language": "en",
-        "@value": "calibrator"
-      },
-      {
-        "@language": "en",
-        "@value": "operator"
-      },
-      {
-        "@language": "en",
-        "@value": "representer"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#governs",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#Role"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/aiao#AgentActivityRelation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://w3id.org/aiao#isGovernedBy"
       }
     ]
   },
@@ -302,141 +62,41 @@
       {
         "@language": "en",
         "@value": "methodology"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#hasObjective",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#Activity"
       },
       {
-        "@id": "http://w3id.org/aiao#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/aiao#Objective"
+        "@language": "en",
+        "@value": "employment contract"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/aiao#comprisesActivity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://w3id.org/aiao#Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://w3id.org/aiao#Activity"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#ImpactClaim",
+    "@id": "http://w3id.org/aiao#Objective",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A claim about the causal relation between an event and a state difference."
+        "@value": "A desired state to be effected by an activity."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/claimont#Claim"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "An ontology for accounting for human impact on their environments. This ontology relies heavily on the 'claimont', 'impactont' and 'legalruleml' ontologies."
+        "@id": "http://w3id.org/aiao#Control"
       }
     ],
-    "http://purl.org/dc/terms/title": [
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
       {
-        "@language": "en",
-        "@value": "Anthropogenic Impact Accounting Ontology"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#Environment",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The surroundings and conditions in which a thing occurs."
-      },
-      {
-        "@value": "\n  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.\n"
-      },
-      {
-        "@value": "An Environment may comprise other Environments."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/impactont#Thing"
+        "@value": "Goal"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#example": [
       {
         "@language": "en",
-        "@value": "social environment"
+        "@value": "\"The objective of the activity is to apply Intersleek 700 to the hull of vessel 5514393.\""
       },
       {
         "@language": "en",
-        "@value": "political environment"
-      },
-      {
-        "@language": "en",
-        "@value": "economic environment"
-      },
-      {
-        "@language": "en",
-        "@value": "legal environment"
-      },
-      {
-        "@language": "en",
-        "@value": "physical environment"
-      },
-      {
-        "@language": "en",
-        "@value": "natural environment"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na95f2d9f12f8409990764b520a271fc8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/aiao#ImpactClaim"
-          },
-          {
-            "@id": "http://w3id.org/aiao#StateClaim"
-          }
-        ]
+        "@value": "\"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings.\""
       }
     ]
   },
@@ -457,65 +117,138 @@
     ]
   },
   {
-    "@id": "_:Nf640d038ef6f454c88ac82d94ce3c6ca",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://w3id.org/aiao#NaturalProcess"
-          },
-          {
-            "@id": "http://w3id.org/aiao#Project"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/aiao#Agent",
+    "@id": "http://w3id.org/aiao#Role",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "A thing that bears some form of accountability for the occurrence of another thing."
+        "@value": "A control that specifies the scope of and/or requirements for an agent's relation to an activity."
       },
       {
-        "@value": "\n  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons (e.g., companies) and cyber \npersonas (e.g., User1234 on TalkSomeMore social media platform).\n\n  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor \nprescribe such distinctions.\n"
-      },
-      {
-        "@value": "An Agent may comprise other Agents."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"
+        "@value": "The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity."
       }
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "http://www.w3.org/ns/prov#Agent"
+        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#example": [
       {
         "@language": "en",
-        "@value": "natural person"
+        "@value": "project developer"
       },
       {
         "@language": "en",
-        "@value": "legal person"
+        "@value": "project owner"
       },
       {
         "@language": "en",
-        "@value": "company"
+        "@value": "calibrator"
       },
       {
         "@language": "en",
-        "@value": "cyber persona"
+        "@value": "operator"
+      },
+      {
+        "@language": "en",
+        "@value": "representer"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasSubject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#ImpactClaim"
+      },
+      {
+        "@id": "http://w3id.org/aiao#StateClaim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "impactont:Impact"
+      },
+      {
+        "@id": "impactont:State"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#ImpactClaim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A claim about the causal relation between an event and a state difference."
+      },
+      {
+        "@value": "An Impact Claim may comprise other Impact Claims."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/claimont#Claim"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#NaturalProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A series of interrelated or interacting natural events without a primary human cause."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/impactont#Process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "An ontology for accounting for how human activities impact their environments. The premise of the ontology is: An agent engages in an activity that impacts an environment."
+      },
+      {
+        "@language": "en",
+        "@value": "This ontology relies on the 'claimont' (http://w3id.org/claimont), 'impactont' (http://w3id.org/impactont) and 'legalruleml' (http://docs.oasis-open.org/legalruleml/ns/v1.0/) ontologies."
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Anthropogenic Impact Accounting Ontology"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#comprisesActivity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
       }
     ]
   },
@@ -532,7 +265,7 @@
         "@value": "A thing that an agent does, which impacts an environment."
       },
       {
-        "@value": "\n  Generating electricity, extracting minerals, protecting a forest, restoring a wetland, and transporting goods are all examples of activities.\n"
+        "@value": "An Activity may comprise other Activities."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -560,6 +293,282 @@
       {
         "@language": "en",
         "@value": "transporting goods"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A thing that bears some form of accountability for the occurrence of another thing."
+      },
+      {
+        "@value": "\n  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.\n\n  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor \nprescribe such distinctions.\n"
+      },
+      {
+        "@value": "An Agent may comprise other Agents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "Jane Doe (as a natural person)"
+      },
+      {
+        "@language": "en",
+        "@value": "Intermart Inc. (as a legal person)"
+      },
+      {
+        "@language": "en",
+        "@value": "User1234 on TalkSomeMore social media platform (as a cyber persona)"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Environment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The surroundings and conditions in which a thing occurs."
+      },
+      {
+        "@value": "\n  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.\n"
+      },
+      {
+        "@value": "An Environment may comprise other Environments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/impactont#Thing"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "The Manhattan Workaholics Support Group (a social environment)"
+      },
+      {
+        "@language": "en",
+        "@value": "The Republic of Indonesia (a political environment)"
+      },
+      {
+        "@language": "en",
+        "@value": "The economy of Australia (an economic environment)"
+      },
+      {
+        "@language": "en",
+        "@value": "A legal environment created by some set of consumer protection laws"
+      },
+      {
+        "@language": "en",
+        "@value": "Tribeca Mall (a physical environment)"
+      },
+      {
+        "@language": "en",
+        "@value": "Lake Victoria (a natural environment)"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#StateClaim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A claim about the state of a thing."
+      },
+      {
+        "@value": "A State Claim may comprise other State Claims."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/claimont#Claim"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasAgentActivityRelation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      },
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#governs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Role"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://w3id.org/aiao#isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#isPerformedWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Instrument"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Project",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/impactont#Process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasActivity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#AgentActivityRelation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://w3id.org/aiao#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf95631e9dd5a488c9ff0718e63f1909a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/aiao#NaturalProcess"
+          },
+          {
+            "@id": "http://w3id.org/aiao#Project"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#Instrument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity."
+      },
+      {
+        "@value": "An Instrument may comprise other Instruments."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "boiler"
+      },
+      {
+        "@language": "en",
+        "@value": "truck"
+      },
+      {
+        "@language": "en",
+        "@value": "turbine"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/aiao#hasDuration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://w3id.org/aiao#Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "time:Duration"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9f69b817e820465eb2d84846283b6d7b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/aiao#ImpactClaim"
+          },
+          {
+            "@id": "http://w3id.org/aiao#StateClaim"
+          }
+        ]
       }
     ]
   }
