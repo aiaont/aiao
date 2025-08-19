@@ -155,8 +155,8 @@ prescribe such distinctions.
     rdfs:subClassOf impactont:Process .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :ImpactClaim :StateClaim ) .
+    owl:members ( :NaturalProcess :Project ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :NaturalProcess :Project ) .
+    owl:members ( :ImpactClaim :StateClaim ) .
 
