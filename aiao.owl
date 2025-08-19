@@ -27,8 +27,7 @@
 	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
 <rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
 <rdfs:comment>
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber 
-personas.
+  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.
 
   AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
 prescribe such distinctions.
@@ -37,6 +36,7 @@ prescribe such distinctions.
 <skos:example xml:lang="en">Jane Doe (as a natural person)</skos:example>
 <skos:example xml:lang="en">Intermart Inc. (as a legal person)</skos:example>
 <skos:example xml:lang="en">User1234 on TalkSomeMore social media platform (as a cyber persona)</skos:example>
+
   </owl:Class>
   
   <!-- aiao:ImpactClaim class -->
@@ -58,7 +58,9 @@ prescribe such distinctions.
 	<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Event"/>
 	<rdfs:comment>An event that is orchestrated by an agent.</rdfs:comment>
 	<rdfs:comment>A thing that an agent does, which impacts an environment.</rdfs:comment>
+
 <rdfs:comment>An Activity may comprise other Activities.</rdfs:comment>
+
 <skos:example xml:lang="en">generating electricity</skos:example>
 <skos:example xml:lang="en">extracting minerals</skos:example>
 <skos:example xml:lang="en">protecting a forest</skos:example>
@@ -75,6 +77,7 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://w3id.org/aiao#Instrument">
 
 <rdfs:comment>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</rdfs:comment>
+
 <rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
 <skos:example xml:lang="en">boiler</skos:example>
 <skos:example xml:lang="en">truck</skos:example>
@@ -102,12 +105,14 @@ prescribe such distinctions.
   This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
 </rdfs:comment>
 <rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
+
 <skos:example xml:lang="en">The Manhattan Workaholics Support Group (a social environment)</skos:example>
 <skos:example xml:lang="en">The Republic of Indonesia (a political environment)</skos:example>
 <skos:example xml:lang="en">The economy of Australia (an economic environment)</skos:example>
 <skos:example xml:lang="en">A legal environment created by some set of consumer protection laws</skos:example>
 <skos:example xml:lang="en">Tribeca Mall (a physical environment)</skos:example>
 <skos:example xml:lang="en">Lake Victoria (a natural environment)</skos:example>
+
   </owl:Class>
   
   <!-- aiao:Control class -->
@@ -124,6 +129,7 @@ prescribe such distinctions.
 <skos:example xml:lang="en">methodology</skos:example>
 <skos:example xml:lang="en">employment contract</skos:example>
 
+
   </owl:Class>
   
   <!-- aiao:Objective class -->
@@ -139,6 +145,7 @@ prescribe such distinctions.
   <owl:Class rdf:about="http://w3id.org/aiao#Role">
 	<owl:equivalentClass rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"/>
 	<rdfs:comment>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</rdfs:comment>
+
 	<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
 
 <skos:example xml:lang="en">project developer</skos:example>
@@ -151,7 +158,7 @@ prescribe such distinctions.
   
   <!-- Disjoint Classes -->
   <owl:AllDisjointClasses>
-<
+
   <owl:members rdf:parseType="Collection">
   <owl:Class rdf:about="#ImpactClaim"/>
   <owl:Class rdf:about="#StateClaim"/>
