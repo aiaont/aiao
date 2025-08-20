@@ -2,17 +2,17 @@
 
 ## Overview
 
-The Anthropogenic Impact Accounting Ontology (AIAO) provides a semantic framework for accounting for human impact on environments. This ontology is the product of collaboration by members of the Standards Working Group of the LFDT CA2SIG. It is one of four ontologies.
+The Anthropogenic Impact Accounting Ontology (AIAO) provides a semantic framework for accounting for human impact on environments. This ontology is the product of collaboration by members of the Standards Working Group of the LFDT CA2-SIG. It is one of four ontologies.
 
 ## Linked Ontologies
 
 AIAO is closely integrated with three complementary ontologies:
 
-- **[Impact Ontology](http://w3id.org/impactont)**: Provides foundational concepts for impact modeling, including Events, Processes, and Things
+- **[Impact Ontology](http://w3id.org/impactont)**: Provides a foundational semantic framework for impact modeling, such as the impact of some human activity on its environment.
 
-- **[Claim Ontology](http://w3id.org/claimont)**: Defines the structure for claims and assertions about impacts
+- **[Claim Ontology](http://w3id.org/claimont)**: Provides a foundational semantic framework for representing claims and assertions, such as those made about an agent's activities.
   
-- **[Information Communication Ontology](http://w3id.org/infocomm)**: Handles information and communication aspects related to impact reporting
+- **[Information Communication Ontology](http://w3id.org/infocomm)**: Provides a foundational semantic framework for representing information communication aspects, e.g., those related to impact reporting.
 
 Together, these four ontologies comprise a suite of ontologies for environmental and social impact accounting.
 
@@ -20,13 +20,13 @@ Together, these four ontologies comprise a suite of ontologies for environmental
 
 ### Agent (`aiao:Agent`)
 
-Represents any entity that bears accountability for the occurrence of activities. This includes:
+Represents any entity that can bear accountability for the occurrence of an activity. This includes:
 
 - Natural persons
 - Legal persons (companies, organizations)
 - Cyber personas (digital identities)
 
-Agents may comprise other agents, allowing for complex organizational structures.
+Agents may comprise other agents, allowing for complex organisational structures.
 
 ### Activity (`aiao:Activity`)
 
@@ -34,7 +34,7 @@ An event orchestrated by an agent that impacts an environment. Activities are th
 
 ### Environment (`aiao:Environment`)
 
-The surroundings and conditions in which a thing occur. This encompasses, inter alia:
+The surroundings and conditions in which a thing occurs. This encompasses, inter alia:
 
 - Physical environments
 - Natural environments
@@ -56,9 +56,9 @@ Rules, plans, or constraints that limit or direct activities or things. These ma
 
 Two types of claims capture different aspects of impact:
 
-- **ImpactClaim (`aiao:ImpactClaim`)**: Claims about causal relations between events and state differences
+- **ImpactClaim (`aiao:ImpactClaim`)**: A claim about the causal relation between an event and a state difference
 
-- **StateClaim (`aiao:StateClaim`)**: Claims about the state of things
+- **StateClaim (`aiao:StateClaim`)**: A claim about the state of some thing
 
 ## Key Relationships
 
@@ -66,10 +66,10 @@ Two types of claims capture different aspects of impact:
 
 The ontology models complex relationships between agents and activities through:
 
-- `hasAgentActivityRelation`: Links activities to their agent relationships
-- `hasAgent`: Identifies the agent in a relationship
-- `hasActivity`: Identifies the activity in a relationship
-- `governs`: Describes how roles control agent-activity relationships
+- `hasAgentActivityRelation`: Links activities to their agents
+- `hasAgent`: Identifies the agent in an agent-activity relation
+- `hasActivity`: Identifies the activity in an agent-activity relation
+- `governs`: Describes how roles control agent-activity relation
 
 ### Activity Controls
 
@@ -77,7 +77,7 @@ Activities are governed by various controls:
 
 - `hasObjective`: Links activities and projects to their goals
 - `isPerformedWith`: Connects activities to their instruments
-- `comprisesActivity`: Shows how projects contain multiple activities
+- `comprisesActivity`: Allows projects to encompass multiple activities
 
 ## Usage
 
