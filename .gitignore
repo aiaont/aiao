@@ -39,9 +39,6 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-# docs/ - commented out to allow GitHub Pages
-
 # translation temp files
 po/*~
 
