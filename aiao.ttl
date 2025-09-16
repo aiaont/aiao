@@ -9,18 +9,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ruleml: <http://www.ruleml.org/spec/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 
 <http://w3id.org/aiao> a owl:Ontology ;
     dcterms:description """An ontology for accounting for how human activities impact their environments. 
-	The premise of the ontology is: An agent engages in an activity that impacts an environment.
-	This ontology relies on the 'claimont', 'impactont' and 'legalruleml' ontologies."""@en ;
+		The premise of the ontology is: An agent engages in an activity that impacts an environment.
+		This ontology relies on the claimont, impactont and legalruleml ontologies."""@en ;
     dcterms:title "Anthropogenic Impact Accounting Ontology"@en .
 
 :Environment a owl:Class ;
-    rdfs:comment """
-  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
-""",
-        "An Environment may comprise other Environments." ;
+    rdfs:label "Environment"@en ;
+    rdfs:comment "An Environment may comprise other Environments.",
+        "This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included." ;
     rdfs:subClassOf impactont:Thing ;
     skos:definition "The surroundings and conditions in which a thing occurs." ;
     skos:example "A legal environment created by some set of consumer protection laws"@en,
@@ -31,54 +31,61 @@
         "Tribeca Mall (a physical environment)"@en .
 
 :comprisesActivity a owl:ObjectProperty ;
+    rdfs:label "comprisesActivity"@en ;
     rdfs:domain :Project ;
     rdfs:range :Activity .
 
 :governs a owl:ObjectProperty ;
+    rdfs:label "governs"@en ;
     rdfs:domain :Role ;
     rdfs:range :AgentActivityRelation ;
     owl:inverseOf :isGovernedBy .
 
 :hasActivity a owl:ObjectProperty ;
+    rdfs:label "hasActivity"@en ;
     rdfs:domain :AgentActivityRelation ;
     rdfs:range :Activity .
 
 :hasAgent a owl:ObjectProperty ;
+    rdfs:label "hasAgent"@en ;
     rdfs:domain :AgentActivityRelation ;
     rdfs:range :Agent .
 
 :hasAgentActivityRelation a owl:ObjectProperty ;
+    rdfs:label "hasAgentActivityRelation"@en ;
     rdfs:domain :Activity,
         :Project ;
     rdfs:range :AgentActivityRelation .
 
 :hasDuration a owl:ObjectProperty ;
+    rdfs:label "hasDuration"@en ;
     rdfs:domain :Project ;
-    rdfs:range <time:Duration> .
+    rdfs:range time:Duration .
 
 :hasObjective a owl:ObjectProperty ;
+    rdfs:label "hasObjective"@en ;
     rdfs:domain :Activity,
         :Project ;
     rdfs:range :Objective .
 
 :hasSubject a owl:ObjectProperty ;
+    rdfs:label "hasSubject"@en ;
     rdfs:domain :ImpactClaim,
         :StateClaim ;
-    rdfs:range <impactont:Impact>,
-        <impactont:State> .
+    rdfs:range impactont:Impact,
+        impactont:State .
 
 :isPerformedWith a owl:ObjectProperty ;
+    rdfs:label "isPerformedWith"@en ;
     rdfs:domain :Activity ;
     rdfs:range :Instrument .
 
 :Agent a owl:Class ;
-    rdfs:comment """
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.
-
-  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
-prescribe such distinctions.
-""",
-        "An Agent may comprise other Agents." ;
+    rdfs:label "Agent"@en ;
+    rdfs:comment """AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+		prescribe such distinctions.""",
+        "An Agent may comprise other Agents.",
+        "This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas." ;
     rdfs:subClassOf lrml:Agent ;
     owl:equivalentClass prov:Agent ;
     skos:definition "A thing that bears some form of accountability for the occurrence of another thing." ;
@@ -87,9 +94,8 @@ prescribe such distinctions.
         "User1234 on TalkSomeMore social media platform (as a cyber persona)"@en .
 
 :Control a owl:Class ;
-    rdfs:comment """
-  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
-""",
+    rdfs:label "Control"@en ;
+    rdfs:comment "A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).",
         "The implementation plan and monitoring plan for an activity are controls." ;
     owl:equivalentClass ruleml:Rule ;
     skos:definition "A thing that limits or directs another thing." ;
@@ -99,6 +105,7 @@ prescribe such distinctions.
         "monitoring plan"@en .
 
 :Instrument a owl:Class ;
+    rdfs:label "Instrument"@en ;
     rdfs:comment "An Instrument may comprise other Instruments." ;
     skos:definition "A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity." ;
     skos:example "boiler"@en,
@@ -106,10 +113,12 @@ prescribe such distinctions.
         "turbine"@en .
 
 :NaturalProcess a owl:Class ;
+    rdfs:label "NaturalProcess"@en ;
     rdfs:subClassOf impactont:Process ;
     skos:definition "A series of interrelated or interacting natural events without a primary human cause." .
 
 :Objective a owl:Class ;
+    rdfs:label "Objective"@en ;
     rdfs:subClassOf :Control ;
     skos:altLabel "Goal" ;
     skos:definition "A desired state to be effected by an activity." ;
@@ -117,6 +126,7 @@ prescribe such distinctions.
         "\"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings.\""@en .
 
 :Role a owl:Class ;
+    rdfs:label "Role"@en ;
     rdfs:comment "The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity." ;
     owl:equivalentClass lrml:Role ;
     skos:definition "A control that specifies the scope of and/or requirements for an agent's relation to an activity." ;
@@ -127,20 +137,24 @@ prescribe such distinctions.
         "representer"@en .
 
 :ImpactClaim a owl:Class ;
+    rdfs:label "ImpactClaim"@en ;
     rdfs:comment "An Impact Claim may comprise other Impact Claims." ;
     rdfs:subClassOf claimont:Claim ;
     skos:definition "A claim about the causal relation between an event and a state difference." .
 
 :StateClaim a owl:Class ;
+    rdfs:label "StateClaim"@en ;
     rdfs:comment "A State Claim may comprise other State Claims." ;
     rdfs:subClassOf claimont:Claim ;
     skos:definition "A claim about the state of a thing." .
 
 :AgentActivityRelation a owl:Class ;
+    rdfs:label "AgentActivityRelation"@en ;
     skos:definition """The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
-""" .
+		""" .
 
 :Activity a owl:Class ;
+    rdfs:label "Activity"@en ;
     rdfs:comment "A thing that an agent does, which impacts an environment.",
         "An Activity may comprise other Activities." ;
     rdfs:subClassOf impactont:Event ;
@@ -152,6 +166,7 @@ prescribe such distinctions.
         "transporting goods"@en .
 
 :Project a owl:Class ;
+    rdfs:label "Project"@en ;
     rdfs:subClassOf impactont:Process ;
     skos:definition "A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration." .
 

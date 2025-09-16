@@ -59,8 +59,8 @@
     <header>
       <h1>Anthropogenic Impact Accounting Ontology</h1>
 <div class="iri">IRI: <code>http://w3id.org/aiao</code></div>      <div class="desc defblock defblock--desc"><span class="badge badge--desc">Description</span> An ontology for accounting for how human activities impact their environments. 
-	The premise of the ontology is: An agent engages in an activity that impacts an environment.
-	This ontology relies on the 'claimont', 'impactont' and 'legalruleml' ontologies.</div>
+		The premise of the ontology is: An agent engages in an activity that impacts an environment.
+		This ontology relies on the claimont, impactont and legalruleml ontologies.</div>
       <div class="prefixes">
         Prefixes:
           <code>:: &lt;http://w3id.org/aiao#&gt;</code><br />
@@ -69,14 +69,13 @@
           <code>impactont: &lt;http://w3id.org/impactont#&gt;</code><br />
           <code>lrml: &lt;http://docs.oasis-open.org/legalruleml/ns/v1.0/&gt;</code><br />
           <code>ns1: &lt;http://w3id.org/&gt;</code><br />
-          <code>ns2: &lt;impactont:&gt;</code><br />
-          <code>ns3: &lt;time:&gt;</code><br />
           <code>owl: &lt;http://www.w3.org/2002/07/owl#&gt;</code><br />
           <code>prov: &lt;http://www.w3.org/ns/prov#&gt;</code><br />
           <code>rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</code><br />
           <code>rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</code><br />
           <code>ruleml: &lt;http://www.ruleml.org/spec/&gt;</code><br />
           <code>skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;</code><br />
+          <code>time: &lt;http://www.w3.org/2006/time#&gt;</code><br />
       </div>
     </header>
 
@@ -85,10 +84,10 @@
       <div class="kv">
           <div class="key">Classes</div>
           <div>
-              <a href="#cls--Activity">:Activity</a>,               <a href="#cls--Agent">:Agent</a>,               <a href="#cls--AgentActivityRelation">:AgentActivityRelation</a>,               <a href="#cls--Control">:Control</a>,               <a href="#cls--Environment">:Environment</a>,               <a href="#cls--ImpactClaim">:ImpactClaim</a>,               <a href="#cls--Instrument">:Instrument</a>,               <a href="#cls--NaturalProcess">:NaturalProcess</a>,               <a href="#cls--Objective">:Objective</a>,               <a href="#cls--Project">:Project</a>,               <a href="#cls--Role">:Role</a>,               <a href="#cls--StateClaim">:StateClaim</a>          </div>
+              <a href="#cls--Activity">Activity</a>,               <a href="#cls--Agent">Agent</a>,               <a href="#cls--AgentActivityRelation">AgentActivityRelation</a>,               <a href="#cls--Control">Control</a>,               <a href="#cls--Environment">Environment</a>,               <a href="#cls--ImpactClaim">ImpactClaim</a>,               <a href="#cls--Instrument">Instrument</a>,               <a href="#cls--NaturalProcess">NaturalProcess</a>,               <a href="#cls--Objective">Objective</a>,               <a href="#cls--Project">Project</a>,               <a href="#cls--Role">Role</a>,               <a href="#cls--StateClaim">StateClaim</a>          </div>
           <div class="key">Properties</div>
           <div>
-              <a href="#prop--comprisesActivity">:comprisesActivity</a>,               <a href="#prop--governs">:governs</a>,               <a href="#prop--hasActivity">:hasActivity</a>,               <a href="#prop--hasAgent">:hasAgent</a>,               <a href="#prop--hasAgentActivityRelation">:hasAgentActivityRelation</a>,               <a href="#prop--hasDuration">:hasDuration</a>,               <a href="#prop--hasObjective">:hasObjective</a>,               <a href="#prop--hasSubject">:hasSubject</a>,               <a href="#prop--isPerformedWith">:isPerformedWith</a>          </div>
+              <a href="#prop--comprisesActivity">comprisesActivity</a>,               <a href="#prop--governs">governs</a>,               <a href="#prop--hasActivity">hasActivity</a>,               <a href="#prop--hasAgent">hasAgent</a>,               <a href="#prop--hasAgentActivityRelation">hasAgentActivityRelation</a>,               <a href="#prop--hasDuration">hasDuration</a>,               <a href="#prop--hasObjective">hasObjective</a>,               <a href="#prop--hasSubject">hasSubject</a>,               <a href="#prop--isPerformedWith">isPerformedWith</a>          </div>
       </div>
     </section>
 
@@ -96,7 +95,7 @@
       <section>
         <h2>Classes</h2>
           <div class="item" id="cls--Activity">
-            <h3>:Activity</h3>
+            <h3>Activity</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Activity</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -126,19 +125,16 @@
             </div>
           </div>
           <div class="item" id="cls--Agent">
-            <h3>:Agent</h3>
+            <h3>Agent</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Agent</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
                 <div class="defblock defblock--def">A thing that bears some form of accountability for the occurrence of another thing.</div>
 
               <div class="section-title">Comments</div>
-                <div class="comment">
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.
-
-  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
-prescribe such distinctions.
-</div>
+                <div class="comment">This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.</div>
+                <div class="comment">AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+		prescribe such distinctions.</div>
                 <div class="comment">An Agent may comprise other Agents.</div>
 
               <div class="section-title"><span class="badge badge--ex">SKOS</span>Example</div>
@@ -156,12 +152,12 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--AgentActivityRelation">
-            <h3>:AgentActivityRelation</h3>
+            <h3>AgentActivityRelation</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#AgentActivityRelation</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
                 <div class="defblock defblock--def">The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
-</div>
+		</div>
 
 
 
@@ -175,16 +171,14 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Control">
-            <h3>:Control</h3>
+            <h3>Control</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Control</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
                 <div class="defblock defblock--def">A thing that limits or directs another thing.</div>
 
               <div class="section-title">Comments</div>
-                <div class="comment">
-  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
-</div>
+                <div class="comment">A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).</div>
                 <div class="comment">The implementation plan and monitoring plan for an activity are controls.</div>
 
               <div class="section-title"><span class="badge badge--ex">SKOS</span>Example</div>
@@ -200,16 +194,14 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Environment">
-            <h3>:Environment</h3>
+            <h3>Environment</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Environment</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
                 <div class="defblock defblock--def">The surroundings and conditions in which a thing occurs.</div>
 
               <div class="section-title">Comments</div>
-                <div class="comment">
-  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
-</div>
+                <div class="comment">This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.</div>
                 <div class="comment">An Environment may comprise other Environments.</div>
 
               <div class="section-title"><span class="badge badge--ex">SKOS</span>Example</div>
@@ -227,7 +219,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--ImpactClaim">
-            <h3>:ImpactClaim</h3>
+            <h3>ImpactClaim</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#ImpactClaim</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -247,7 +239,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Instrument">
-            <h3>:Instrument</h3>
+            <h3>Instrument</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Instrument</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -268,7 +260,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--NaturalProcess">
-            <h3>:NaturalProcess</h3>
+            <h3>NaturalProcess</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#NaturalProcess</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -283,7 +275,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Objective">
-            <h3>:Objective</h3>
+            <h3>Objective</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Objective</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -304,7 +296,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Project">
-            <h3>:Project</h3>
+            <h3>Project</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Project</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -322,7 +314,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--Role">
-            <h3>:Role</h3>
+            <h3>Role</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#Role</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -345,7 +337,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="cls--StateClaim">
-            <h3>:StateClaim</h3>
+            <h3>StateClaim</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#StateClaim</code></div>
 
               <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
@@ -369,7 +361,7 @@ prescribe such distinctions.
       <section>
         <h2>Properties</h2>
           <div class="item" id="prop--comprisesActivity">
-            <h3>:comprisesActivity</h3>
+            <h3>comprisesActivity</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#comprisesActivity</code></div>
 
 
@@ -385,7 +377,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--governs">
-            <h3>:governs</h3>
+            <h3>governs</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#governs</code></div>
 
 
@@ -404,7 +396,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--hasActivity">
-            <h3>:hasActivity</h3>
+            <h3>hasActivity</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasActivity</code></div>
 
 
@@ -420,7 +412,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--hasAgent">
-            <h3>:hasAgent</h3>
+            <h3>hasAgent</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasAgent</code></div>
 
 
@@ -436,7 +428,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--hasAgentActivityRelation">
-            <h3>:hasAgentActivityRelation</h3>
+            <h3>hasAgentActivityRelation</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasAgentActivityRelation</code></div>
 
 
@@ -452,7 +444,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--hasDuration">
-            <h3>:hasDuration</h3>
+            <h3>hasDuration</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasDuration</code></div>
 
 
@@ -464,11 +456,11 @@ prescribe such distinctions.
                     <a href="#cls--Project">:Project</a>                </div>
                 <div class="key">Range</div>
                 <div>
-                    <a href="#cls-ns3-Duration">ns3:Duration</a>                </div>
+                    <a href="#cls-time-Duration">time:Duration</a>                </div>
             </div>
           </div>
           <div class="item" id="prop--hasObjective">
-            <h3>:hasObjective</h3>
+            <h3>hasObjective</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasObjective</code></div>
 
 
@@ -484,7 +476,7 @@ prescribe such distinctions.
             </div>
           </div>
           <div class="item" id="prop--hasSubject">
-            <h3>:hasSubject</h3>
+            <h3>hasSubject</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#hasSubject</code></div>
 
 
@@ -496,11 +488,11 @@ prescribe such distinctions.
                     <a href="#cls--ImpactClaim">:ImpactClaim</a>,                     <a href="#cls--StateClaim">:StateClaim</a>                </div>
                 <div class="key">Range</div>
                 <div>
-                    <a href="#cls-ns2-Impact">ns2:Impact</a>,                     <a href="#cls-ns2-State">ns2:State</a>                </div>
+                    <a href="#cls-impactont-Impact">impactont:Impact</a>,                     <a href="#cls-impactont-State">impactont:State</a>                </div>
             </div>
           </div>
           <div class="item" id="prop--isPerformedWith">
-            <h3>:isPerformedWith</h3>
+            <h3>isPerformedWith</h3>
             <div class="meta">IRI: <code>http://w3id.org/aiao#isPerformedWith</code></div>
 
 
