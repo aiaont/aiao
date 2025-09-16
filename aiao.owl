@@ -15,211 +15,211 @@
 		 xmlns:terms="http://purl.org/dc/terms/"
 		 xmlns:time="http://www.w3.org/2006/time#">
 		 
-  <owl:Ontology rdf:about="http://w3id.org/aiao">
-	<terms:title xml:lang="en">Anthropogenic Impact Accounting Ontology</terms:title>
-	<terms:description xml:lang="en">An ontology for accounting for how human activities impact their environments. The premise of the ontology is: An agent engages in an activity that impacts an environment.</terms:description>
-	<terms:description xml:lang="en">This ontology relies on the 'claimont' (http://w3id.org/claimont), 'impactont' (http://w3id.org/impactont) and 'legalruleml' (http://docs.oasis-open.org/legalruleml/ns/v1.0/) ontologies.</terms:description>
-  </owl:Ontology>
+	<owl:Ontology rdf:about="http://w3id.org/aiao">
+		<terms:title xml:lang="en">Anthropogenic Impact Accounting Ontology</terms:title>
+		<terms:description xml:lang="en">An ontology for accounting for how human activities impact their environments. 
+		The premise of the ontology is: An agent engages in an activity that impacts an environment.
+		This ontology relies on the claimont, impactont and legalruleml ontologies.</terms:description>
+	</owl:Ontology>
   
-  <!-- aiao:Agent class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Agent">
-	<rdfs:subClassOf rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"/>
-	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-<rdfs:comment>A thing that bears some form of accountability for the occurrence of another thing.</rdfs:comment>
-<rdfs:comment>
-  This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.
-
-  AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
-prescribe such distinctions.
-</rdfs:comment>
-<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
-<skos:example xml:lang="en">Jane Doe (as a natural person)</skos:example>
-<skos:example xml:lang="en">Intermart Inc. (as a legal person)</skos:example>
-<skos:example xml:lang="en">User1234 on TalkSomeMore social media platform (as a cyber persona)</skos:example>
-
-  </owl:Class>
+	<!-- aiao:Agent class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Agent">
+		<rdfs:subClassOf rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Agent"/>
+		<owl:equivalentClass rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+		<skos:definition>A thing that bears some form of accountability for the occurrence of another thing.</skos:definition>
+		<rdfs:comment>This class includes all kinds of human and human-comprised agents, such as natural persons, legal persons and cyber personas.</rdfs:comment>
+		<rdfs:comment>AIAO strongly recommends distinguishing between different types of agents (such as those listed above), but will neither require nor 
+		prescribe such distinctions.</rdfs:comment>
+		<rdfs:comment>An Agent may comprise other Agents.</rdfs:comment>
+		<rdfs:label xml:lang="en">Agent</rdfs:label>
+		<skos:example xml:lang="en">Jane Doe (as a natural person)</skos:example>
+		<skos:example xml:lang="en">Intermart Inc. (as a legal person)</skos:example>
+		<skos:example xml:lang="en">User1234 on TalkSomeMore social media platform (as a cyber persona)</skos:example>
+	</owl:Class>
   
-  <!-- aiao:ImpactClaim class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#ImpactClaim">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/claimont#Claim"/>
-	<rdfs:comment>A claim about the causal relation between an event and a state difference.</rdfs:comment>
-	<rdfs:comment>An Impact Claim may comprise other Impact Claims.</rdfs:comment>
-  </owl:Class>
+	<!-- aiao:ImpactClaim class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#ImpactClaim">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/claimont#Claim"/>
+		<skos:definition>A claim about the causal relation between an event and a state difference.</skos:definition>
+		<rdfs:label xml:lang="en">ImpactClaim</rdfs:label>
+		<rdfs:comment>An Impact Claim may comprise other Impact Claims.</rdfs:comment>
+	</owl:Class>
   
-  <!-- aiao:StateClaim class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#StateClaim">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/claimont#Claim"/>
-	<rdfs:comment>A claim about the state of a thing.</rdfs:comment>
-	<rdfs:comment>A State Claim may comprise other State Claims.</rdfs:comment>
-  </owl:Class>
+	<!-- aiao:StateClaim class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#StateClaim">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/claimont#Claim"/>
+		<skos:definition>A claim about the state of a thing.</skos:definition>
+		<rdfs:label xml:lang="en">StateClaim</rdfs:label>
+		<rdfs:comment>A State Claim may comprise other State Claims.</rdfs:comment>
+	</owl:Class>
   
-  <!-- aiao:Activity class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Activity">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Event"/>
-	<rdfs:comment>An event that is orchestrated by an agent.</rdfs:comment>
-	<rdfs:comment>A thing that an agent does, which impacts an environment.</rdfs:comment>
-
-<rdfs:comment>An Activity may comprise other Activities.</rdfs:comment>
-
-<skos:example xml:lang="en">generating electricity</skos:example>
-<skos:example xml:lang="en">extracting minerals</skos:example>
-<skos:example xml:lang="en">protecting a forest</skos:example>
-<skos:example xml:lang="en">restoring a wetland</skos:example>
-<skos:example xml:lang="en">transporting goods</skos:example>
-  </owl:Class>
+	<!-- aiao:Activity class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Activity">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Event"/>
+		<skos:definition>An event that is orchestrated by an agent.</skos:definition>
+		<rdfs:label xml:lang="en">Activity</rdfs:label>
+		<rdfs:comment>A thing that an agent does, which impacts an environment.</rdfs:comment>
+		<rdfs:comment>An Activity may comprise other Activities.</rdfs:comment>
+		<skos:example xml:lang="en">generating electricity</skos:example>
+		<skos:example xml:lang="en">extracting minerals</skos:example>
+		<skos:example xml:lang="en">protecting a forest</skos:example>
+		<skos:example xml:lang="en">restoring a wetland</skos:example>
+		<skos:example xml:lang="en">transporting goods</skos:example>
+	</owl:Class>
   
-  <owl:Class rdf:about="http://w3id.org/aiao#AgentActivityRelation">
-	<rdfs:comment>The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
-</rdfs:comment>
-  </owl:Class>
+	<owl:Class rdf:about="http://w3id.org/aiao#AgentActivityRelation">
+		<skos:definition>The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
+		</skos:definition>
+		<rdfs:label xml:lang="en">AgentActivityRelation</rdfs:label>
+	</owl:Class>
    
-  <!-- aiao:Instrument class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Instrument">
-
-<rdfs:comment>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</rdfs:comment>
-
-<rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
-<skos:example xml:lang="en">boiler</skos:example>
-<skos:example xml:lang="en">truck</skos:example>
-<skos:example xml:lang="en">turbine</skos:example>
-  </owl:Class>
+	<!-- aiao:Instrument class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Instrument">
+		<skos:definition>A thing used to perform an activity, but which is neither an input to the activity, nor an output of the activity.</skos:definition>
+		<rdfs:comment>An Instrument may comprise other Instruments.</rdfs:comment>
+		<rdfs:label xml:lang="en">Instrument</rdfs:label>
+		<skos:example xml:lang="en">boiler</skos:example>
+		<skos:example xml:lang="en">truck</skos:example>
+		<skos:example xml:lang="en">turbine</skos:example>
+	</owl:Class>
   
-  <!-- aiao:NaturalProcess class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#NaturalProcess">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Process"/>
-	<rdfs:comment>A series of interrelated or interacting natural events without a primary human cause.</rdfs:comment>
-  </owl:Class>
+	<!-- aiao:NaturalProcess class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#NaturalProcess">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Process"/>
+		<skos:definition>A series of interrelated or interacting natural events without a primary human cause.</skos:definition>
+		<rdfs:label xml:lang="en">NaturalProcess</rdfs:label>
+	</owl:Class>
+
+	<!-- aiao:Project class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Project">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Process"/>
+		<skos:definition>A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.</skos:definition>
+		<rdfs:label xml:lang="en">Project</rdfs:label>
+	</owl:Class>  
   
-  <!-- aiao:Project class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Project">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Process"/>
-	<rdfs:comment>A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.</rdfs:comment>
-  </owl:Class>  
+	<!-- aiao:Environment class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Environment">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Thing"/>
+		<skos:definition>The surroundings and conditions in which a thing occurs.</skos:definition>
+		<rdfs:comment>This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.</rdfs:comment>
+		<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
+		<rdfs:label xml:lang="en">Environment</rdfs:label>
+		<skos:example xml:lang="en">The Manhattan Workaholics Support Group (a social environment)</skos:example>
+		<skos:example xml:lang="en">The Republic of Indonesia (a political environment)</skos:example>
+		<skos:example xml:lang="en">The economy of Australia (an economic environment)</skos:example>
+		<skos:example xml:lang="en">A legal environment created by some set of consumer protection laws</skos:example>
+		<skos:example xml:lang="en">Tribeca Mall (a physical environment)</skos:example>
+		<skos:example xml:lang="en">Lake Victoria (a natural environment)</skos:example>
+	</owl:Class>
   
-  <!-- aiao:Environment class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Environment">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/impactont#Thing"/>
-	<rdfs:comment>The surroundings and conditions in which a thing occurs.</rdfs:comment>
-
-<rdfs:comment>
-  This definition is not limited to physical or natural environments - social, political, economic, legal, etc. environments are also included.
-</rdfs:comment>
-<rdfs:comment>An Environment may comprise other Environments.</rdfs:comment>
-
-<skos:example xml:lang="en">The Manhattan Workaholics Support Group (a social environment)</skos:example>
-<skos:example xml:lang="en">The Republic of Indonesia (a political environment)</skos:example>
-<skos:example xml:lang="en">The economy of Australia (an economic environment)</skos:example>
-<skos:example xml:lang="en">A legal environment created by some set of consumer protection laws</skos:example>
-<skos:example xml:lang="en">Tribeca Mall (a physical environment)</skos:example>
-<skos:example xml:lang="en">Lake Victoria (a natural environment)</skos:example>
-
-  </owl:Class>
+	<!-- aiao:Control class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Control">
+		<owl:equivalentClass rdf:resource="http://www.ruleml.org/spec/Rule"/>
+		<skos:definition>A thing that limits or directs another thing.</skos:definition>
+		<rdfs:comment>A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).</rdfs:comment>
+		<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
+		<rdfs:label xml:lang="en">Control</rdfs:label>
+		<skos:example xml:lang="en">implementation plan</skos:example>
+		<skos:example xml:lang="en">monitoring plan</skos:example>
+		<skos:example xml:lang="en">methodology</skos:example>
+		<skos:example xml:lang="en">employment contract</skos:example>
+	</owl:Class>
   
-  <!-- aiao:Control class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Control">
-	<owl:equivalentClass rdf:resource="http://www.ruleml.org/spec/Rule"/>
-
-<rdfs:comment>A thing that limits or directs another thing.</rdfs:comment>
-<rdfs:comment>
-  A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).
-</rdfs:comment>
-<rdfs:comment>The implementation plan and monitoring plan for an activity are controls.</rdfs:comment>
-<skos:example xml:lang="en">implementation plan</skos:example>
-<skos:example xml:lang="en">monitoring plan</skos:example>
-<skos:example xml:lang="en">methodology</skos:example>
-<skos:example xml:lang="en">employment contract</skos:example>
-
-
-  </owl:Class>
+	<!-- aiao:Objective class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Objective">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/aiao#Control"/>
+		<skos:definition>A desired state to be effected by an activity.</skos:definition>
+		<rdfs:label xml:lang="en">Objective</rdfs:label>
+		<skos:altLabel>Goal</skos:altLabel>
+		<skos:example xml:lang="en">"The objective of the activity is to apply Intersleek 700 to the hull of vessel 5514393."</skos:example>
+		<skos:example xml:lang="en">"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings."</skos:example>
+	</owl:Class>
   
-  <!-- aiao:Objective class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Objective">
-	<rdfs:subClassOf rdf:resource="http://w3id.org/aiao#Control"/>
-	<rdfs:comment>A desired state to be effected by an activity.</rdfs:comment>
-	<skos:example xml:lang="en">"The objective of the activity is to apply Intersleek 700 to the hull of vessel 5514393."</skos:example>
-	<skos:example xml:lang="en">"The objective of the project is to reduce the fuel consumption of our cargo fleet through the application of advanced hull coatings."</skos:example>
-	<skos:altLabel>Goal</skos:altLabel>
-  </owl:Class>
+	<!-- aiao:Role class -->
+	<owl:Class rdf:about="http://w3id.org/aiao#Role">
+		<owl:equivalentClass rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"/>
+		<skos:definition>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</skos:definition>
+		<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
+		<rdfs:label xml:lang="en">Role</rdfs:label>
+		<skos:example xml:lang="en">project developer</skos:example>
+		<skos:example xml:lang="en">project owner</skos:example>
+		<skos:example xml:lang="en">calibrator</skos:example>
+		<skos:example xml:lang="en">operator</skos:example>
+		<skos:example xml:lang="en">representer</skos:example>
+	</owl:Class>
   
-  <!-- aiao:Role class -->
-  <owl:Class rdf:about="http://w3id.org/aiao#Role">
-	<owl:equivalentClass rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"/>
-	<rdfs:comment>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</rdfs:comment>
+	<!-- Disjoint Classes -->
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+		<owl:Class rdf:about="#ImpactClaim"/>
+		<owl:Class rdf:about="#StateClaim"/>
+		</owl:members>
+	</owl:AllDisjointClasses>  
 
-	<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
-
-<skos:example xml:lang="en">project developer</skos:example>
-<skos:example xml:lang="en">project owner</skos:example>
-<skos:example xml:lang="en">calibrator</skos:example>
-<skos:example xml:lang="en">operator</skos:example>
-<skos:example xml:lang="en">representer</skos:example>
-
-  </owl:Class>
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+		<owl:Class rdf:about="#NaturalProcess"/>
+		<owl:Class rdf:about="#Project"/>
+		</owl:members>
+	</owl:AllDisjointClasses>    
   
-  <!-- Disjoint Classes -->
-  <owl:AllDisjointClasses>
-
-  <owl:members rdf:parseType="Collection">
-  <owl:Class rdf:about="#ImpactClaim"/>
-  <owl:Class rdf:about="#StateClaim"/>
-  </owl:members>
-  </owl:AllDisjointClasses>  
-  
-  <owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-  <owl:Class rdf:about="#NaturalProcess"/>
-  <owl:Class rdf:about="#Project"/>
-  </owl:members>
-  </owl:AllDisjointClasses>    
-  
-  <owl:ObjectProperty rdf:about="#hasObjective">
-	  <rdfs:domain rdf:resource="#Activity"/>
-	  <rdfs:domain rdf:resource="#Project"/>
-	  <rdfs:range rdf:resource="#Objective"/>
-  </owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="#hasObjective">
+		<rdfs:label xml:lang="en">hasObjective</rdfs:label>
+		<rdfs:domain rdf:resource="#Activity"/>
+		<rdfs:domain rdf:resource="#Project"/>
+		<rdfs:range rdf:resource="#Objective"/>
+	</owl:ObjectProperty>
   
 	<owl:ObjectProperty rdf:ID="hasSubject">
-    <rdfs:domain rdf:resource="#ImpactClaim"/>
-    <rdfs:domain rdf:resource="#StateClaim"/>
-    <rdfs:range rdf:resource="impactont:Impact"/>
-    <rdfs:range rdf:resource="impactont:State"/>
-</owl:ObjectProperty>
+		<rdfs:label xml:lang="en">hasSubject</rdfs:label>
+		<rdfs:domain rdf:resource="#ImpactClaim"/>
+		<rdfs:domain rdf:resource="#StateClaim"/>
+		<rdfs:range rdf:resource="http://w3id.org/impactont#Impact"/>
+		<rdfs:range rdf:resource="http://w3id.org/impactont#State"/>
+	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:ID="hasAgentActivityRelation">
+		<rdfs:label xml:lang="en">hasAgentActivityRelation</rdfs:label>
 		<rdfs:domain rdf:resource="#Activity"/>
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="#AgentActivityRelation"/>
 	</owl:ObjectProperty>
 
 	<owl:ObjectProperty rdf:ID="governs">
+		<rdfs:label xml:lang="en">governs</rdfs:label>
 		<owl:inverseOf rdf:resource="#isGovernedBy"/>
 		<rdfs:domain rdf:resource="#Role"/>
 		<rdfs:range rdf:resource="#AgentActivityRelation"/>
 	</owl:ObjectProperty>
 
 	<owl:ObjectProperty rdf:ID="hasAgent">
+		<rdfs:label xml:lang="en">hasAgent</rdfs:label>
 		<rdfs:domain rdf:resource="#AgentActivityRelation"/>
 		<rdfs:range rdf:resource="#Agent"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:ID="hasActivity">
+		<rdfs:label xml:lang="en">hasActivity</rdfs:label>
 		<rdfs:domain rdf:resource="#AgentActivityRelation"/>
 		<rdfs:range rdf:resource="#Activity"/>
 	</owl:ObjectProperty>	
   
 	<owl:ObjectProperty rdf:ID="isPerformedWith">
+		<rdfs:label xml:lang="en">isPerformedWith</rdfs:label>
 		<rdfs:domain rdf:resource="#Activity"/>
 		<rdfs:range rdf:resource="#Instrument"/>
 	</owl:ObjectProperty>  
   
 		<owl:ObjectProperty rdf:ID="comprisesActivity">
+		<rdfs:label xml:lang="en">comprisesActivity</rdfs:label>
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="#Activity"/>
 	</owl:ObjectProperty>    
   
 	<owl:ObjectProperty rdf:ID="hasDuration">
+		<rdfs:label xml:lang="en">hasDuration</rdfs:label>
 		<rdfs:domain rdf:resource="#Project"/>
-		<rdfs:range rdf:resource="time:Duration"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
 	</owl:ObjectProperty>     
 
 </rdf:RDF>
