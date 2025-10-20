@@ -74,6 +74,12 @@
 				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#Objective"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://w3id.org/aiao#hasAgentActivityRelation"/>
+				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#AgentActivityRelation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
 		<skos:definition>An event that is orchestrated by an agent.</skos:definition>
 		<rdfs:label xml:lang="en">Activity</rdfs:label>
 		<rdfs:comment>A thing that an agent does, which impacts an environment.</rdfs:comment>
@@ -116,7 +122,13 @@
 				<owl:onProperty rdf:resource="http://w3id.org/aiao#hasObjective"/>
 				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#Objective"/>
 			</owl:Restriction>
-		</rdfs:subClassOf>			
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://w3id.org/aiao#hasAgentActivityRelation"/>
+				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#AgentActivityRelation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
 		<skos:definition>A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration.</skos:definition>
 		<rdfs:label xml:lang="en">Project</rdfs:label>
 	</owl:Class>  
@@ -194,9 +206,7 @@
 	
 	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasAgentActivityRelation">
 		<rdfs:label xml:lang="en">hasAgentActivityRelation</rdfs:label>
-		<rdfs:domain rdf:resource="#Activity"/>
-		<rdfs:domain rdf:resource="#Project"/>
-		<rdfs:range rdf:resource="#AgentActivityRelation"/>
+		<rdfs:comment>This property is used on the Activity and Project classes. The range should always be an AgentActivityRelation. This is enforced by owl:Restriction (see the definitions of the Activity and Project classes.)</rdfs:comment>		
 	</owl:ObjectProperty>
 
 	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#governs">
