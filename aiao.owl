@@ -170,7 +170,7 @@
 		<rdfs:range rdf:resource="#Objective"/>
 	</owl:ObjectProperty>
   
-	<owl:ObjectProperty rdf:ID="hasSubject">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasSubject">
 		<rdfs:label xml:lang="en">hasSubject</rdfs:label>
 		<rdfs:domain rdf:resource="#ImpactClaim"/>
 		<rdfs:domain rdf:resource="#StateClaim"/>
@@ -178,45 +178,45 @@
 		<rdfs:range rdf:resource="http://w3id.org/impactont#State"/>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:ID="hasAgentActivityRelation">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasAgentActivityRelation">
 		<rdfs:label xml:lang="en">hasAgentActivityRelation</rdfs:label>
 		<rdfs:domain rdf:resource="#Activity"/>
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="#AgentActivityRelation"/>
 	</owl:ObjectProperty>
 
-	<owl:ObjectProperty rdf:ID="governs">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#governs">
 		<rdfs:label xml:lang="en">governs</rdfs:label>
 		<owl:inverseOf rdf:resource="#isGovernedBy"/>
 		<rdfs:domain rdf:resource="#Role"/>
 		<rdfs:range rdf:resource="#AgentActivityRelation"/>
 	</owl:ObjectProperty>
 
-	<owl:ObjectProperty rdf:ID="hasAgent">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasAgent">
 		<rdfs:label xml:lang="en">hasAgent</rdfs:label>
 		<rdfs:domain rdf:resource="#AgentActivityRelation"/>
 		<rdfs:range rdf:resource="#Agent"/>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:ID="hasActivity">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasActivity">
 		<rdfs:label xml:lang="en">hasActivity</rdfs:label>
 		<rdfs:domain rdf:resource="#AgentActivityRelation"/>
 		<rdfs:range rdf:resource="#Activity"/>
 	</owl:ObjectProperty>	
   
-	<owl:ObjectProperty rdf:ID="isPerformedWith">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#isPerformedWith">
 		<rdfs:label xml:lang="en">isPerformedWith</rdfs:label>
 		<rdfs:domain rdf:resource="#Activity"/>
 		<rdfs:range rdf:resource="#Instrument"/>
 	</owl:ObjectProperty>  
   
-		<owl:ObjectProperty rdf:ID="comprisesActivity">
+		<owl:ObjectProperty rdf:about="http://w3id.org/aiao#comprisesActivity">
 		<rdfs:label xml:lang="en">comprisesActivity</rdfs:label>
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="#Activity"/>
 	</owl:ObjectProperty>    
   
-	<owl:ObjectProperty rdf:ID="hasDuration">
+	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasDuration">
 		<rdfs:label xml:lang="en">hasDuration</rdfs:label>
 		<rdfs:domain rdf:resource="#Project"/>
 		<rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
