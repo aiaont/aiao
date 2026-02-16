@@ -57,7 +57,7 @@ Note that the IDs that we'll be using for JSON-LD nodes throughout this example 
 
 
 
-To describe who is accountable for the impact, we'll identify the agents...
+To describe who is accountable for the impact, we need to create JSON-LD representations for the agents involved in the project, along with the roles that they fulfilled in the project.
 TODO. B.W.H.
 
 
