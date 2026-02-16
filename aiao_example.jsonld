@@ -1,0 +1,244 @@
+{
+  "@context": {
+    "@base": "http://mydataserverthatdoesnotexist.com/imaginarynamespace/",
+	"myns:" "http://mydataserverthatdoesnotexist.com/imaginarynamespace/",
+    "aiao": "http://w3id.org/aiao#",
+    "claimont": "http://purl.org/claimont#",
+    "impactont": "http://purl.org/impactont#",
+    "infocomm": "http://w3id.org/infocomm#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+
+    {
+	  "@id": "myns:gs3492",
+	  "@type": "aiao:Project",
+      "aiao:comprisesActivity": [
+        {
+          "@id": "/gs3492-activity1"
+        },
+        {
+          "@id": "/gs3492-activity2"
+        },
+        {
+          "@id": "/gs3492-activity3"
+        }
+      ],
+      "aiao:hasAgentActivityRelation": {
+        "@id": "/gs3492-agentActivityRel1"
+      },
+	  "time:hasBeginning": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2010-01-01T00:00:00Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  },
+	  "time:hasEnd": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2037-12-31T23:59:59Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  }
+      "aiao:hasObjective": "Reduce the fuel consumption of ships through the application of advanced hull coatings."
+    },	
+	
+    {
+      "@id": "myns:gs3492-activity1",
+      "@type": "aiao:Activity",
+      "aiao:hasObjective": "Apply Intersleek 700 (only) to selected vessels."
+    },	
+	
+    {
+      "@id": "myns:gs3492-activity2",
+      "@type": "aiao:Activity",
+      "aiao:hasObjective": "Apply Intersleek 700 and Intersleek 1100SR to selected vessels."
+    },	
+	
+    {
+      "@id": "myns:gs3492-activity3",
+      "@type": "aiao:Activity",
+      "aiao:hasObjective": "Apply Intersleek 900 (only) to selected vessels."
+    },	
+	
+    {
+      "@id": "myns:role-projectOwner",
+      "@type": "aiao:Role"
+    },	
+	
+    {
+      "@id": "myns:internationalPaintLtd",
+      "@type": "aiao:Agent"
+    },	
+	
+    {
+      "@id": "myns:gs3492-agentActivityRel1",
+      "@type": "aiao:AgentActivityRelation",
+      "aiao:hasActivity": {
+        "@id": "/gs3492"
+      },
+      "aiao:hasAgent": {
+        "@id": "/internationalPaintLtd"
+      },
+      "aiao:isGovernedBy": {
+        "@id": "/role-projectOwner"
+      }
+    },	
+	
+    {
+      "@id": "myns:ind-emissions-co2-ship",
+      "@type": "impactont:Indicator",
+	  <!--
+      "impactont:hasDefinition": "The amount of carbon dioxide (CO2) emissions released per year by a maritime vessel due to the fuel consumption of its engines.",
+	  -->
+	  "impactont:hasDefinition": "CO2 emissions from fossil fuel combustion in ship j during year y (tCO2/yr)",
+      "impactont:hasUnitOfMeasure": "tCO2/yr"
+    },	
+	
+    {
+      "@id": "myns:ship9xxxx14-86366",
+      "@type": "impactont:Thing"
+    },	
+	
+    {
+      "@id": "myns:voyageLog-ship9xxxx14-86366",
+      "@type": "claimont:Substantiation"
+    },	
+
+	{
+	  "@id": "myns:gs3492-monitoringPeriod1",
+	  "@type": "time:ProperInterval",
+	  "rdfs:label": "10 September 2014 - 9 September 2015 (UTC, inclusive end)",
+	  "time:hasBeginning": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2014-09-10T00:00:00Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  },
+	  "time:hasEnd": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2015-09-09T23:59:59Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  }
+	},
+
+    {
+      "@id": "myns:state-baseline-ship9xxxx14-86366-monper1",
+      "@type": "impactont:State",
+      "impactont:hasModality": "counterfactual",
+      "impactont:hasTemporalLocation": {
+		"@id": "/gs3492-monitoringPeriod1"
+	  },
+      "impactont:hasValue": {
+        "@type": "xsd:decimal",
+        "@value": "119000"
+      },
+      "impactont:isDefinedByIndicator": {
+        "@id": "/ind-emissions-co2-ship"
+      }
+    },
+
+    {
+      "@id": "myns:state-project-ship9xxxx14-86366-monper1",
+      "@type": "impactont:State",
+      "impactont:hasModality": "real",
+            "impactont:hasTemporalLocation": {
+		"@id": "/gs3492-monitoringPeriod1"
+	  },
+      "impactont:hasValue": {
+        "@type": "xsd:decimal",
+        "@value": "101002"
+      },
+      "impactont:isDefinedByIndicator": {
+        "@id": "/ind-emissions-co2-ship"
+      }
+    },	
+	
+	
+    {
+      "@id": "myns:statediff-baselineVsProject-ship9xxxx14-86366-monper1",
+      "@type": "impactont:Event",
+      "impactont:hasStateA": {
+        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
+      },
+      "impactont:hasStateB": {
+        "@id": "/state-project-ship9xxxx14-86366-monper1"
+      }
+    },	
+	
+	
+    {
+      "@id": "myns:claim-state-baseline-ship9xxxx14-86366-monper1",
+      "@type": "aiao:StateClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/ship9xxxx14-86366"
+      },	  
+      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of gs3492-activity1",
+      "claimont:hasObject": {
+        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
+      },
+      "claimont:isSupportedBy": {
+        "@id": "/voyageLog-ship9xxxx14-86366"
+      }
+    },
+
+    {
+      "@id": "myns:claim-state-project-ship9xxxx14-86366-monper1",
+      "@type": "aiao:StateClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/ship9xxxx14-86366"
+      },
+      "claimont:hasPredicate": "Had project state during monitoring period 1 of gs3492-activity1",
+      "claimont:hasObject": {
+        "@id": "/state-project-ship9xxxx14-86366-monper1"
+      },	  
+      "claimont:isSupportedBy": {
+        "@id": "/voyageLog-ship9xxxx14-86366"
+      }
+    },
+
+    {
+      "@id": "myns:claim-impact-project-ship9xxxx14-86366-monper1",
+      "@type": "aiao:ImpactClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/gs3492-activity1"
+      },
+      "claimont:hasPredicate": "caused",
+      "claimont:hasObject": {
+        "@id": "/statediff-baselineVsProject-ship9xxxx14-86366-monper1"
+      },
+      "claimont:isSupportedBy": "TODO: project documentation"
+    },
+
+    {
+      "@id": "myns:impact-project-ship9xxxx14-86366-monper1",
+      "@type": "impactont:Impact",
+      "impactont:hasProvenance": {
+        "@id": "/gs3492-activity1"
+      },
+      "impactont:hasStateA": {
+        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
+      },
+      "impactont:hasStateB": {
+        "@id": "/state-project-ship9xxxx14-86366-monper1"
+      }
+    }
+
+  ]
+}
