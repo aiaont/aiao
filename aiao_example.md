@@ -53,6 +53,19 @@ Seeing that impact accounting is all about impact and the agents responsible for
 
 Note that the IDs that we'll be using for JSON-LD nodes throughout this example are not true IRIs. As per W3C recommendation, the value assigned to the "@id" property of a JSON-LD node should be a true, functional IRI. For the purposes of keeping this example as human-readible and as simple as possible, we'll be using word-like identifiers (e.g, "gs3492" and "gs3492-activity1") instead of UUIDs (e.g., "61f0c404-5cb3-11e7-907b-a6006ad3dba0") or something similar.
 
+
+
+
+
+To describe who is accountable for the impact, we'll identify the agents...
+TODO. B.W.H.
+
+
+
+
+
+
+
 The objective answers the "why" question of the project. Let us now try to anchor the project in space and time so that we can answer the "when" and "where" questions too. 
 
 The project documentation states that the officially registered start date of the project is 1 January 2010, and that the duration of the project is 28 years. We can therefore add a clear start date and end date to our project's JSON-LD node. To do so, however, we'll use the OWL Time Ontology and XMLSchema, which means we first need to declare their namespaces in our "@context" node:
@@ -114,8 +127,90 @@ This leads us to our next question, i.e., the "what" - what states of the ships 
     }
 ```
 
-You may notice in the project documentation that this indicator was actually calculated from several other indicators. In a real-life accounting scenario, JSON-LD represenations should be created for those indicators alike as well as for the states that they describe. In the interest of keeping the present example as simple as possible, we shall not do that here.
+You may notice in the project documentation that this indicator was actually calculated from several other indicators. In a real-life accounting scenario, JSON-LD represenations should be created for those indicators alike, and for the states that they describe. In the interest of keeping the present example as simple as possible, we shall not do that here.
 
-Now that we have the indicator represented, we can proceed with creating JSON-LD representations for each of the states that it described.
+Now that we have the indicator represented, we can proceed with creating a JSON-LD representation for each of the states of interest. States in AIA should _always_ have clear temporal locations, i.e., it should always be clear exactly when a state occurred (or would have occurred). Unfortunately, the project information available to us does not give us the exact dates for each of the states that were quantified for each ship. We do know, however, that the project followed the convention of describing a baseline state (counterfactual) and a project state (real) for each ship; when following that convention, the baseline and project states have the same temporal location. Furthermore, states are typically described per monitoring period. We shall therefore apply some creativity and imagine that the first monitoring period for the first ship ran from 10 September 2014 to 9 September 2015. We can represent it in our JSON-LD graph as follows:
+
+```
+	{
+	  "@id": "myns:gs3492-ship9xxxx14-86366-monitoringPeriod1",
+	  "@type": "time:ProperInterval",
+	  "time:hasBeginning": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2014-09-10T00:00:00Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  },
+	  "time:hasEnd": {
+		"@type": "time:Instant",
+		"time:inXSDDateTimeStamp": {
+		  "@value": "2015-09-09T23:59:59Z",
+		  "@type": "xsd:dateTimeStamp"
+		}
+	  }
+	}
+```
+
+Then we create a baseline state node and a project state node for the first ship's first monitoring period like thus:
+
+```
+    {
+      "@id": "myns:state-baseline-ship9xxxx14-86366-monper1",
+      "@type": "impactont:State",
+      "impactont:hasModality": "counterfactual",
+      "impactont:hasTemporalLocation": {
+		"@id": "/gs3492-monitoringPeriod1"
+	  },
+      "impactont:hasValue": {
+        "@type": "xsd:decimal",
+        "@value": "119000"
+      },
+      "impactont:isDefinedByIndicator": {
+        "@id": "/ind-emissions-co2-ship"
+      }
+    },
+
+    {
+      "@id": "myns:state-project-ship9xxxx14-86366-monper1",
+      "@type": "impactont:State",
+      "impactont:hasModality": "real",
+            "impactont:hasTemporalLocation": {
+		"@id": "/gs3492-monitoringPeriod1"
+	  },
+      "impactont:hasValue": {
+        "@type": "xsd:decimal",
+        "@value": "101002"
+      },
+      "impactont:isDefinedByIndicator": {
+        "@id": "/ind-emissions-co2-ship"
+      }
+    }
+```
+
+Note that the values assigned to each state above (119000 for the baseline state and 101002 for the project state) are purely imaginary as the actual values are not provided in the project information available to us.
+
+In the interest of keeping this guide digestible, we shall not provide the JSON-LD representations here for the monitoring periods, baseline states, and project states of each of the remaining 15 ships. Those representations can be found in the guide's accompanying aiao_example.jsonld file.
+
+With the states represented, we can now also represent the impact of the project on the first ship during its first monitoring period as follows:
+
+```
+    {
+      "@id": "myns:impact-baselineVsProject-ship9xxxx14-86366-monper1",
+      "@type": "impactont:Impact",
+      "impactont:hasStateA": {
+        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
+      },
+      "impactont:hasStateB": {
+        "@id": "/state-project-ship9xxxx14-86366-monper1"
+      },
+	  "impactont:hasProvenance": {
+		"@id": "/gs3492"
+	  }
+    }
+```
 
 
+
+
+But proper impact accounting never accepts statements at face value, so let's package all these things as claims that can be verified or falsified, based on their substantiations.

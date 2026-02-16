@@ -110,9 +110,8 @@
     },	
 
 	{
-	  "@id": "myns:gs3492-monitoringPeriod1",
+	  "@id": "myns:gs3492-ship9xxxx14-86366-monitoringPeriod1",
 	  "@type": "time:ProperInterval",
-	  "rdfs:label": "10 September 2014 - 9 September 2015 (UTC, inclusive end)",
 	  "time:hasBeginning": {
 		"@type": "time:Instant",
 		"time:inXSDDateTimeStamp": {
@@ -163,14 +162,17 @@
 	
 	
     {
-      "@id": "myns:statediff-baselineVsProject-ship9xxxx14-86366-monper1",
-      "@type": "impactont:Event",
+      "@id": "myns:impact-baselineVsProject-ship9xxxx14-86366-monper1",
+      "@type": "impactont:Impact",
       "impactont:hasStateA": {
         "@id": "/state-baseline-ship9xxxx14-86366-monper1"
       },
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx14-86366-monper1"
-      }
+      },
+	  "impactont:hasProvenance": {
+		"@id": "/gs3492"
+	  }
     },	
 	
 	
@@ -221,7 +223,7 @@
       },
       "claimont:hasPredicate": "caused",
       "claimont:hasObject": {
-        "@id": "/statediff-baselineVsProject-ship9xxxx14-86366-monper1"
+        "@id": "/impact-baselineVsProject-ship9xxxx14-86366-monper1"
       },
       "claimont:isSupportedBy": "TODO: project documentation"
     },
