@@ -9,7 +9,8 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "time": "http://www.w3.org/2006/time#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+	"terms": "http://purl.org/dc/terms/"
   },
   "@graph": [
 
@@ -99,6 +100,45 @@
       "impactont:hasUnitOfMeasure": "tCO2/yr"
     },	
 	
+	
+	{
+	  "@id": "myns:meth-ind-emissions-co2-ship",
+	  "@type": "aiao:Control",
+	  "terms:title": "Gold Standard methodology: Reducing Vessel Emissions Through the Use of Advanced Hull Coatings",
+	  "terms:hasVersion": 2
+	},
+	
+    {
+      "@id": "myns:mgmInnova",
+      "@type": "aiao:Agent"
+    },		
+
+    {
+      "@id": "myns:role-externalConsultant1",
+      "@type": "aiao:Role"
+    },
+	
+    {
+      "@id": "myns:gs3492-impactCalculation",
+      "@type": "aiao:Activity",
+      "aiao:hasObjective": "Calculate project impact according to GS methodology: Reducing Vessel Emissions Through the Use of Advanced Hull Coatings",
+	  "aiao:isGovernedBy": "/meth-ind-emissions-co2-ship"
+    },	
+	
+    {
+      "@id": "myns:gs3492-agentActivityRel2",
+      "@type": "aiao:AgentActivityRelation",
+      "aiao:hasActivity": {
+        "@id": "/gs3492-impactCalculation"
+      },
+      "aiao:hasAgent": {
+        "@id": "/mgmInnova"
+      },
+      "aiao:isGovernedBy": {
+        "@id": "/role-externalConsultant1"
+      }
+    },	
+
     {
       "@id": "myns:ship9xxxx14-86366",
       "@type": "impactont:Thing"
