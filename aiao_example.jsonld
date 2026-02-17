@@ -66,7 +66,7 @@
     },	
 	
     {
-      "@id": "myns:role-projectOwner",
+      "@id": "myns:role-projectProponent",
       "@type": "aiao:Role"
     },	
 	
@@ -85,7 +85,7 @@
         "@id": "/internationalPaintLtd"
       },
       "aiao:isGovernedBy": {
-        "@id": "/role-projectOwner"
+        "@id": "/role-projectProponent"
       }
     },	
 	
@@ -185,7 +185,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of gs3492-activity1",
+      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx14-86366-monper1"
       },
@@ -203,7 +203,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of gs3492-activity1",
+      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx14-86366-monper1"
       },	  
@@ -219,27 +219,13 @@
         "@id": "/internationalPaintLtd"
       },
       "claimont:hasSubject": {
-        "@id": "/gs3492-activity1"
+        "@id": "/gs3492"
       },
       "claimont:hasPredicate": "caused",
       "claimont:hasObject": {
         "@id": "/impact-baselineVsProject-ship9xxxx14-86366-monper1"
       },
       "claimont:isSupportedBy": "TODO: project documentation"
-    },
-
-    {
-      "@id": "myns:impact-project-ship9xxxx14-86366-monper1",
-      "@type": "impactont:Impact",
-      "impactont:hasProvenance": {
-        "@id": "/gs3492-activity1"
-      },
-      "impactont:hasStateA": {
-        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
-      },
-      "impactont:hasStateB": {
-        "@id": "/state-project-ship9xxxx14-86366-monper1"
-      }
     }
 
   ]

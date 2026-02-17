@@ -18,7 +18,7 @@ Note that this example will not concern itself with the communication (and hence
 For the purposes of this example, we shall only focus on the first phase of the project which included only 16 ships.
 
 
-# Creating the AIA-annotated JSON-LD representation
+# Creating the AIA-annotated JSON-LD representations
 
 To set the stage for the rest of our work, let us start off by initialising our JSON-LD context. We already know that we'll be using the main AIA ontology, the Impact Ontology, and the Claim Ontology, so we can create our "@context" node with their namespace declarations inside:
 
@@ -41,7 +41,9 @@ To make things easier for ourselves and for others, let's also add the path to o
 	}
 ```
 
-Seeing that impact accounting is all about impact and the agents responsible for that impact, our most sensible next step is to determine what the primary impact goals of the project were. According to the Project Design Document (PDD), the primary impact goal of the project was to reduce the fuel consumption of ships through the application of advanced hull coatings. In AIA terminology a goal is called an "objective," so let us now create a JSON-LD node for the project that indicates its objective:
+Seeing that impact accounting is all about impact and who was responsible for that impact, our most sensible next steps are to determine what the primary impact goals of the project were, and who the primary agents were. We'll start with the impact goals.
+
+According to the Project Design Document (PDD), the primary impact goal of the project was to reduce the fuel consumption of ships through the application of advanced hull coatings. In AIA terminology a goal is called an "objective," so let us now create a JSON-LD node for the project that indicates its objective:
 
 ```
 	{
@@ -53,20 +55,44 @@ Seeing that impact accounting is all about impact and the agents responsible for
 
 Note that the IDs that we'll be using for JSON-LD nodes throughout this example are not true IRIs. As per W3C recommendation, the value assigned to the "@id" property of a JSON-LD node should be a true, functional IRI. For the purposes of keeping this example as human-readible and as simple as possible, we'll be using word-like identifiers (e.g, "gs3492" and "gs3492-activity1") instead of UUIDs (e.g., "61f0c404-5cb3-11e7-907b-a6006ad3dba0") or something similar.
 
+The project documentation identifies International Paint Ltd. as the Project Proponent, and therefore accountable for the project's impact. We'll create a JSON-LD representation for International Paint Ltd. like this...
 
+```
+{
+      "@id": "myns:internationalPaintLtd",
+      "@type": "aiao:Agent"
+}
+```
+... and a JSON-LD representation for the role of "Project Proponent" like this:
 
+```
+{
+      "@id": "myns:role-projectProponent",
+      "@type": "aiao:Role"
+}
+```
 
+Then we'll explicitly link International Paint Ltd. to the Project Proponent role within the context of the GS3492 project using an agent-activity relation:
 
-To describe who is accountable for the impact, we need to create JSON-LD representations for the agents involved in the project, along with the roles that they fulfilled in the project.
-TODO. B.W.H.
+```
+    {
+      "@id": "myns:gs3492-agentActivityRel1",
+      "@type": "aiao:AgentActivityRelation",
+      "aiao:hasActivity": {
+        "@id": "/gs3492"
+      },
+      "aiao:hasAgent": {
+        "@id": "/internationalPaintLtd"
+      },
+      "aiao:isGovernedBy": {
+        "@id": "/role-projectProponent"
+      }
+    }
+```
 
+Admittedly, our aiao:Agent node for International Paint Ltd. isn't very descriptive in its current state. It seems like, if it had not been for the word-like identifiers that we're using in this guide, there would have been no way for a reader to tell that the aiao:Agent node represented International Paint Ltd. This, however, is exactly why a real-life use case would use proper, universal IRIs as node IDs - those IRIs will typically point to official registers in which a lot of identifying information (legal entity name, registration number, etc.) is recorded for each ID. Where such a register is not available, as much identifying information as necessary should be added to the aiao:Agent node itself. To keep things simple for the purposes of this guide, we shall leave our aiao:Agent node as is.
 
-
-
-
-
-
-The objective answers the "why" question of the project. Let us now try to anchor the project in space and time so that we can answer the "when" and "where" questions too. 
+So far we have answers to the "why" and "who" questions of the project. Let us now try to anchor the project in space and time so that we can answer the "when" and "where" questions too. 
 
 The project documentation states that the officially registered start date of the project is 1 January 2010, and that the duration of the project is 28 years. We can therefore add a clear start date and end date to our project's JSON-LD node. To do so, however, we'll use the OWL Time Ontology and XMLSchema, which means we first need to declare their namespaces in our "@context" node:
 
@@ -114,7 +140,7 @@ It is, however, rather difficult (if not impossible - at least at present) to at
     }
 ```
 
-In the interest of brevity we shall not show the JSON-LD representations for each of the remaining 15 ships here. Their JSON-LD representations can, however, all be found in the aiao_example.jsonld file that accompanies this guide.
+In the interest of brevity we shall not show the JSON-LD representations for each of the remaining 15 ships here. Their JSON-LD representations can all be found in the aiao_example.jsonld file that accompanies this guide.
 
 This leads us to our next question, i.e., the "what" - what states of the ships were targeted by the project interventions? Essentially, the project was concerned with how polluting each vessel was, but states in AIA are described through indicators, so to answer the "what" question, we need to identify the indicators that were used to describe the states of the vessels. This information can be found in the PDD, where the indicator of primary concern is identified as, "CO2 emissions from fossil fuel combustion in ship j during year y (tCO2/yr)." Let us therefore now create a JSON-LD representation for the indicator, so that we can subsequently use it to define states:
 
@@ -210,7 +236,101 @@ With the states represented, we can now also represent the impact of the project
     }
 ```
 
+Proper impact accounting, though, never accepts statements at face value, so let's package all these things as claims that can be verified or falsified, based on their substantiations.
 
+The state claims will be substantiated by the voyage logs of the ships, so we can create a claimont:Substantiation node for the first ship's voyage log as follows:
 
+```
+    {
+      "@id": "myns:voyageLog-ship9xxxx14-86366",
+      "@type": "claimont:Substantiation"
+    }
+```
 
-But proper impact accounting never accepts statements at face value, so let's package all these things as claims that can be verified or falsified, based on their substantiations.
+Then we can create an aiao:StateClaim node for the baseline state of the first ship during its first monitoring period like thus:
+
+```
+    {
+      "@id": "myns:claim-state-baseline-ship9xxxx14-86366-monper1",
+      "@type": "aiao:StateClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/ship9xxxx14-86366"
+      },	  
+      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasObject": {
+        "@id": "/state-baseline-ship9xxxx14-86366-monper1"
+      },
+      "claimont:isSupportedBy": {
+        "@id": "/voyageLog-ship9xxxx14-86366"
+      }
+    }
+```
+
+The node above reads, "International Paint Ltd. (the claimant) hereby claims that the baseline state of ship 'ship9xxxx14-86366' during its first monitoring period of its participation in Gold Standard project 3492 was as described by state node 'state-baseline-ship9xxxx14-86366-monper1'. This claim is substantiated by the voyage log for the ship (voyageLog-ship9xxxx14-86366)."
+
+The claim for the ship's project state during the same period will be near-identical to its baseline state claim:
+
+```
+    {
+      "@id": "myns:claim-state-project-ship9xxxx14-86366-monper1",
+      "@type": "aiao:StateClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/ship9xxxx14-86366"
+      },
+      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasObject": {
+        "@id": "/state-project-ship9xxxx14-86366-monper1"
+      },	  
+      "claimont:isSupportedBy": {
+        "@id": "/voyageLog-ship9xxxx14-86366"
+      }
+    }
+```
+
+Finally, we can create an aiao:ImpactClaim node to represent International Paint Ltd.'s claim that they are accountable for (i.e., "deserves the credit for") the reduction in CO2 emissions between the first ship's baseline state and project state. This claim will be supported by the project documentation (PDD, monitoring reports, etc.), so we'll first create substantiation nodes for those:
+
+```
+    {
+      "@id": "myns:gs3492-projectDesignDocument",
+      "@type": "claimont:Substantiation"
+    },
+    {
+      "@id": "myns:gs3492-monitoringReport1",
+      "@type": "claimont:Substantiation"
+    }	
+```
+
+Then we can create the impact claim's node:
+
+```
+    {
+      "@id": "myns:claim-impact-project-ship9xxxx14-86366-monper1",
+      "@type": "aiao:ImpactClaim",
+      "claimont:hasClaimant": {
+        "@id": "/internationalPaintLtd"
+      },
+      "claimont:hasSubject": {
+        "@id": "/gs3492"
+      },
+      "claimont:hasPredicate": "caused",
+      "claimont:hasObject": {
+        "@id": "/impact-baselineVsProject-ship9xxxx14-86366-monper1"
+      },
+      "claimont:isSupportedBy": [
+		{
+			"@id": "/gs3492-projectDesignDocument"
+		},
+		{
+			"@id": "/gs3492-monitoringReport1"
+		}
+	  ]
+    }
+```
+
+And with this, we now have AIA-annotated JSON-LD representations of our impact project data, ready to be ingested by a verification system or shared with other impact aggregation systems!
