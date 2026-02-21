@@ -193,6 +193,7 @@
   
 	<!-- aiao:Role class -->
 	<owl:Class rdf:about="http://w3id.org/aiao#Role">
+		<rdfs:subClassOf rdf:resource="http://w3id.org/aiao#Control"/>
 		<owl:equivalentClass rdf:resource="http://docs.oasis-open.org/legalruleml/ns/v1.0/Role"/>
 		<skos:definition>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</skos:definition>
 		<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
