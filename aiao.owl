@@ -198,6 +198,12 @@
 		<skos:definition>A control that specifies the scope of and/or requirements for an agent's relation to an activity.</skos:definition>
 		<rdfs:comment>The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity.</rdfs:comment>
 		<rdfs:label xml:lang="en">Role</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://w3id.org/aiao#governs"/>
+				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#AgentActivityRelation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
 		<skos:example xml:lang="en">project developer</skos:example>
 		<skos:example xml:lang="en">project owner</skos:example>
 		<skos:example xml:lang="en">calibrator</skos:example>
@@ -233,8 +239,8 @@
 	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#governs">
 		<rdfs:label xml:lang="en">governs</rdfs:label>
 		<owl:inverseOf rdf:resource="#isGovernedBy"/>
-		<rdfs:domain rdf:resource="#Role"/>
-		<rdfs:range rdf:resource="#AgentActivityRelation"/>
+		<rdfs:domain rdf:resource="#Control"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 	</owl:ObjectProperty>
 
 	<owl:ObjectProperty rdf:about="http://w3id.org/aiao#hasAgent">
