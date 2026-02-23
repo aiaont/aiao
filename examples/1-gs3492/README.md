@@ -398,11 +398,11 @@ Then we can create the impact claim's node:
         "@id": "/internationalPaintLtd"
       },
       "claimont:hasSubject": {
-        "@id": "/gs3492"
-      },
-      "claimont:hasPredicate": "caused",
-      "claimont:hasObject": {
         "@id": "/impact-baselineVsProject-ship9xxxx14-86366-monper1"
+      },
+      "claimont:hasPredicate": {"@id": "impactont:hasProvenance"},
+      "claimont:hasObject": {
+        "@id": "/gs3492"
       },
       "claimont:isSupportedBy": [
         {
