@@ -30,16 +30,37 @@
         "The economy of Australia (an economic environment)"@en,
         "Tribeca Mall (a physical environment)"@en .
 
+:Role a owl:Class ;
+    rdfs:label "Role"@en ;
+    rdfs:comment "The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :AgentActivityRelation ;
+            owl:onProperty :governs ],
+        :Control ;
+    owl:equivalentClass lrml:Role ;
+    skos:definition "A control that specifies the scope of and/or requirements for an agent's relation to an activity." ;
+    skos:example "calibrator"@en,
+        "operator"@en,
+        "project developer"@en,
+        "project owner"@en,
+        "representer"@en .
+
+:StateProvenanceClaim a owl:Class ;
+    rdfs:label "StateProvenanceClaim"@en ;
+    rdfs:comment "A State Provenance Claim may comprise other State Provenance Claims." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom impactont:Event ;
+            owl:onProperty claimont:hasObject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom impactont:State ;
+            owl:onProperty claimont:hasSubject ],
+        claimont:Claim ;
+    skos:definition "A claim about the provenance of a state. 'hasPredicate' can only be 'impactont:hasProvenance'." .
+
 :comprisesActivity a owl:ObjectProperty ;
     rdfs:label "comprisesActivity"@en ;
     rdfs:domain :Project ;
     rdfs:range :Activity .
-
-:governs a owl:ObjectProperty ;
-    rdfs:label "governs"@en ;
-    rdfs:domain :Role ;
-    rdfs:range :AgentActivityRelation ;
-    owl:inverseOf :isGovernedBy .
 
 :hasActivity a owl:ObjectProperty ;
     rdfs:label "hasActivity"@en ;
@@ -74,17 +95,6 @@
         "Jane Doe (as a natural person)"@en,
         "User1234 on TalkSomeMore social media platform (as a cyber persona)"@en .
 
-:Control a owl:Class ;
-    rdfs:label "Control"@en ;
-    rdfs:comment "A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).",
-        "The implementation plan and monitoring plan for an activity are controls." ;
-    owl:equivalentClass ruleml:Rule ;
-    skos:definition "A thing that limits or directs another thing." ;
-    skos:example "employment contract"@en,
-        "implementation plan"@en,
-        "methodology"@en,
-        "monitoring plan"@en .
-
 :ImpactClaim a owl:Class ;
     rdfs:label "ImpactClaim"@en ;
     rdfs:comment "An Impact Claim may comprise other Impact Claims." ;
@@ -107,17 +117,6 @@
     rdfs:subClassOf impactont:Process ;
     skos:definition "A series of interrelated or interacting natural events without a primary human cause." .
 
-:Role a owl:Class ;
-    rdfs:label "Role"@en ;
-    rdfs:comment "The extent to which an agent is accountable for the impact of an activity is determined by the role that they fulfil(led) in the activity." ;
-    owl:equivalentClass lrml:Role ;
-    skos:definition "A control that specifies the scope of and/or requirements for an agent's relation to an activity." ;
-    skos:example "calibrator"@en,
-        "operator"@en,
-        "project developer"@en,
-        "project owner"@en,
-        "representer"@en .
-
 :StateClaim a owl:Class ;
     rdfs:label "StateClaim"@en ;
     rdfs:comment "A State Claim may comprise other State Claims." ;
@@ -126,6 +125,12 @@
             owl:onProperty claimont:hasSubject ],
         claimont:Claim ;
     skos:definition "A claim about the state of a thing." .
+
+:governs a owl:ObjectProperty ;
+    rdfs:label "governs"@en ;
+    rdfs:domain :Control ;
+    rdfs:range owl:Thing ;
+    owl:inverseOf :isGovernedBy .
 
 :Objective a owl:Class ;
     rdfs:label "Objective"@en ;
@@ -161,14 +166,25 @@
         "restoring a wetland"@en,
         "transporting goods"@en .
 
+:Control a owl:Class ;
+    rdfs:label "Control"@en ;
+    rdfs:comment "A Control may comprise other Controls, e.g., a methodology (a Control) defines many conditions to be met (which are Controls themselves).",
+        "The implementation plan and monitoring plan for an activity are controls." ;
+    owl:equivalentClass ruleml:Rule ;
+    skos:definition "A thing that limits or directs another thing." ;
+    skos:example "employment contract"@en,
+        "implementation plan"@en,
+        "methodology"@en,
+        "monitoring plan"@en .
+
 :Project a owl:Class ;
     rdfs:label "Project"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom :Objective ;
-            owl:onProperty :hasObjective ],
-        [ a owl:Restriction ;
             owl:allValuesFrom :AgentActivityRelation ;
             owl:onProperty :hasAgentActivityRelation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Objective ;
+            owl:onProperty :hasObjective ],
         impactont:Process ;
     skos:definition "A coordinated set of activities, subject to specific controls. The controls must include at least (a) an objective and (b) a limited duration." .
 
@@ -178,8 +194,8 @@
 		""" .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :ImpactClaim :StateClaim ) .
+    owl:members ( :NaturalProcess :Project ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :NaturalProcess :Project ) .
+    owl:members ( :ImpactClaim :StateClaim ) .
 

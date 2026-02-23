@@ -84,7 +84,7 @@
       <div class="kv">
           <div class="key">Classes</div>
           <div>
-              <a href="#cls--Activity">Activity</a>,               <a href="#cls--Agent">Agent</a>,               <a href="#cls--AgentActivityRelation">AgentActivityRelation</a>,               <a href="#cls--Control">Control</a>,               <a href="#cls--Environment">Environment</a>,               <a href="#cls--ImpactClaim">ImpactClaim</a>,               <a href="#cls--Instrument">Instrument</a>,               <a href="#cls--NaturalProcess">NaturalProcess</a>,               <a href="#cls--Objective">Objective</a>,               <a href="#cls--Project">Project</a>,               <a href="#cls--Role">Role</a>,               <a href="#cls--StateClaim">StateClaim</a>          </div>
+              <a href="#cls--Activity">Activity</a>,               <a href="#cls--Agent">Agent</a>,               <a href="#cls--AgentActivityRelation">AgentActivityRelation</a>,               <a href="#cls--Control">Control</a>,               <a href="#cls--Environment">Environment</a>,               <a href="#cls--ImpactClaim">ImpactClaim</a>,               <a href="#cls--Instrument">Instrument</a>,               <a href="#cls--NaturalProcess">NaturalProcess</a>,               <a href="#cls--Objective">Objective</a>,               <a href="#cls--Project">Project</a>,               <a href="#cls--Role">Role</a>,               <a href="#cls--StateClaim">StateClaim</a>,               <a href="#cls--StateProvenanceClaim">StateProvenanceClaim</a>          </div>
           <div class="key">Properties</div>
           <div>
               <a href="#prop--comprisesActivity">comprisesActivity</a>,               <a href="#prop--governs">governs</a>,               <a href="#prop--hasActivity">hasActivity</a>,               <a href="#prop--hasAgent">hasAgent</a>,               <a href="#prop--hasAgentActivityRelation">hasAgentActivityRelation</a>,               <a href="#prop--hasDuration">hasDuration</a>,               <a href="#prop--hasObjective">hasObjective</a>,               <a href="#prop--isPerformedWith">isPerformedWith</a>          </div>
@@ -165,9 +165,6 @@
                 <div class="key">In Domain Of</div>
                 <div>
                     <a href="#prop--hasAgent">:hasAgent</a>,                     <a href="#prop--hasActivity">:hasActivity</a>                </div>
-                <div class="key">In Range Of</div>
-                <div>
-                    <a href="#prop--governs">:governs</a>                </div>
             </div>
           </div>
           <div class="item" id="cls--Control">
@@ -190,7 +187,10 @@
             <div class="kv">
                 <div class="key">Superclass Of</div>
                 <div>
-                    <a href="#cls--Objective">:Objective</a>                </div>
+                    <a href="#cls--Objective">:Objective</a>,                     <a href="#cls--Role">:Role</a>                </div>
+                <div class="key">In Domain Of</div>
+                <div>
+                    <a href="#prop--governs">:governs</a>                </div>
             </div>
           </div>
           <div class="item" id="cls--Environment">
@@ -325,9 +325,9 @@
                 <div class="defblock defblock--ex">representer</div>
 
             <div class="kv">
-                <div class="key">In Domain Of</div>
+                <div class="key">SubClass Of</div>
                 <div>
-                    <a href="#prop--governs">:governs</a>                </div>
+                    <a href="#cls--Control">:Control</a>                </div>
             </div>
           </div>
           <div class="item" id="cls--StateClaim">
@@ -339,6 +339,23 @@
 
               <div class="section-title">Comments</div>
                 <div class="comment">A State Claim may comprise other State Claims.</div>
+
+
+            <div class="kv">
+                <div class="key">SubClass Of</div>
+                <div>
+                    <a href="http://w3id.org/claimont#Claim">claimont:Claim</a>                </div>
+            </div>
+          </div>
+          <div class="item" id="cls--StateProvenanceClaim">
+            <h3>StateProvenanceClaim</h3>
+            <div class="meta">IRI: <code>http://w3id.org/aiao#StateProvenanceClaim</code></div>
+
+              <div class="section-title"><span class="badge badge--def">SKOS</span>Definition</div>
+                <div class="defblock defblock--def">A claim about the provenance of a state. 'hasPredicate' can only be 'impactont:hasProvenance'.</div>
+
+              <div class="section-title">Comments</div>
+                <div class="comment">A State Provenance Claim may comprise other State Provenance Claims.</div>
 
 
             <div class="kv">
@@ -377,10 +394,10 @@
             <div class="kv">
                 <div class="key">Domain</div>
                 <div>
-                    <a href="#cls--Role">:Role</a>                </div>
+                    <a href="#cls--Control">:Control</a>                </div>
                 <div class="key">Range</div>
                 <div>
-                    <a href="#cls--AgentActivityRelation">:AgentActivityRelation</a>                </div>
+                    <a href="#cls-owl-Thing">owl:Thing</a>                </div>
                 <div class="key">Inverse Of</div>
                 <div>
                     <a href="#prop--isGovernedBy">:isGovernedBy</a>                </div>
