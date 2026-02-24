@@ -14,6 +14,56 @@
     "schema": "https://schema.org/"
   },
   "@graph": [
+  
+    {
+      "@id": "p5874:doc/verificationReport-01-2024-02-17",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Verification Report: Karapınar YEKA Solar Power Plant Project (CCMP ID 126)",
+      "dcterms:date": "2024-02-17",
+      "dcterms:identifier": "2303-CER (Verification number 01)",
+      "dcterms:description": "Verification report prepared by 4K Earth Science Private Limited for CCMP ID 126, monitoring period 1 (20/09/2020–30/09/2023); includes verified totals (e.g., net GHG emission reductions), plus baseline/methodology discussion under ACM0002."
+    },
+    {
+      "@id": "p5874:doc/validationReport",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Validation Report: Karapınar YEKA Solar Power Plant Project (CCMP ID 126)",
+      "dcterms:description": "Validation report for CCMP ID 126; includes ACM0002 applicability, baseline framing, and referenced tools used for baseline/additionality and grid emission factor calculations."
+    },
+    {
+      "@id": "p5874:doc/verificationStatement-sectorsOtherThanLandUse-v2-0",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Verification Statement for CCMP in Sectors Other Than Land Use (Template V2.0)",
+      "dcterms:description": "Verification statement/opinion document summarizing verification scope/period and verified results for the project's first monitoring period."
+    },
+    {
+      "@id": "p5874:doc/monitoringReport-v3-1-2024-02-05",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Monitoring Report: Karapınar YEKA Solar Power Plant Project (Version 3.1, 05/02/2024)",
+      "dcterms:date": "2024-02-05",
+      "dcterms:identifier": "Monitoring Report v3.1",
+      "dcterms:description": "Monitoring report prepared by the project participant; includes monitored electricity generation, calculation approach, and reported emission reductions for the relevant monitoring/verification period."
+    },
+    {
+      "@id": "p5874:doc/issuanceCertificate-2024-03-18",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Issuance Certificate (Carboncer / Cercarbono): CCMP ID 126",
+      "dcterms:date": "2024-03-18",
+      "dcterms:description": "Issuance certificate documenting the issuance outcome for verified emission reductions for CCMP ID 126, monitoring period 1."
+    },
+    {
+      "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Project Description Document (PDD): Karapınar YEKA Solar Power Plant Project (v3.3)",
+      "dcterms:description": "Project description document defining the project design, boundary, baseline approach, and monitoring plan for CCMP ID 126."
+    },
+	{
+	  "@id": "p5874:doc/projectSite-kml",
+	  "@type": "dcterms:Resource",
+	  "rdfs:label": "Project site location (KML)",
+	  "dcterms:format": "application/vnd.google-earth.kml+xml",
+	  "dcterms:description": "KML file containing the spatial location of the Karapınar YEKA Solar Power Plant project site."
+	},  
+  
     {
       "@id": "p5874:instant/2020-09-20",
       "@type": ["time:Instant", "impactont:TemporalLocation"],
@@ -30,9 +80,9 @@
       "time:inXSDDate": "2030-09-19"
     },
     {
-      "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30",
+      "@id": "p5874:temporallocation/monitoringPeriod1",
       "@type": ["time:Interval", "impactont:TemporalLocation"],
-      "rdfs:label": "Verification period (20/09/2020 to 30/09/2023)",
+      "rdfs:label": "Monitoring period 1 (20/09/2020 to 30/09/2023)",
       "time:hasBeginning": {
         "@id": "p5874:instant/2020-09-20"
       },
@@ -41,9 +91,9 @@
       }
     },
     {
-      "@id": "p5874:temporallocation/creditingPeriod-2020-09-20_to_2030-09-19",
+      "@id": "p5874:temporallocation/creditingPeriod1",
       "@type": ["time:Interval", "impactont:TemporalLocation"],
-      "rdfs:label": "Crediting period (20/09/2020 to 19/09/2030)",
+      "rdfs:label": "Crediting period 1 (20/09/2020 to 19/09/2030)",
       "time:hasBeginning": {
         "@id": "p5874:instant/2020-09-20"
       },
@@ -51,6 +101,7 @@
         "@id": "p5874:instant/2030-09-19"
       }
     },
+	
     {
       "@id": "p5874:location/projectSite",
       "@type": "schema:Place",
@@ -63,36 +114,37 @@
       },
 	  "schema:hasMap": { "@id": "p5874:doc/projectSite-kml" }
     },
+	
     {
       "@id": "p5874:project",
       "@type": "aiao:Project",
       "rdfs:label": "Karapınar YEKA Solar Power Plant Project",
       "dcterms:identifier": "CCMP ID 126",
-      "aiao:hasObjective": "Generate grid-connected electricity from solar power to meet increasing electricity demand in a cleaner and more sustainable manner, displacing fossil-fuel-fired grid generation and thereby reducing associated GHG emissions.",
+      "aiao:hasObjective": "Generate grid-connected electricity from solar power to meet Turkey's increasing electricity demand in a cleaner and more sustainable manner, displacing fossil-fuel-fired grid generation and thereby reducing associated GHG emissions.",
       "schema:location": {
         "@id": "p5874:location/projectSite"
       },
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/creditingPeriod-2020-09-20_to_2030-09-19"
+        "@id": "p5874:temporallocation/creditingPeriod1"
       },
       "aiao:comprisesActivity": [
         {
-          "@id": "p5874:activity/projectSolarElectricityGeneration-2020-09-20_to_2023-09-30"
+          "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1"
         },
         {
-          "@id": "p5874:activity/monitoring-2020-09-20_to_2023-09-30"
+          "@id": "p5874:activity/monitoring-monitoringPeriod1"
         },
         {
-          "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30"
+          "@id": "p5874:activity/quantification-monitoringPeriod1"
         },
         {
           "@id": "p5874:activity/validation"
         },
         {
-          "@id": "p5874:activity/verification-2020-09-20_to_2023-09-30"
+          "@id": "p5874:activity/verification-monitoringPeriod1"
         },
         {
-          "@id": "p5874:activity/issuance-2024-03-18"
+          "@id": "p5874:activity/issuance1"
         }
       ],
       "aiao:hasAgentActivityRelation": [
@@ -129,8 +181,10 @@
         {
           "@id": "p5874:agentActivityRel/rel11-ekobil-projectProponent-project"
         }
-      ]
+      ],
+	  "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
     },
+	
     {
       "@id": "p5874:control/acm0002-v21",
       "@type": "aiao:Control",
@@ -173,41 +227,54 @@
       "dcterms:identifier": "Common Practice Tool v03.0",
       "dcterms:description": "Methodological tool referenced by ACM0002 to assess common practice considerations in additionality demonstration."
     },
+	{
+	  "@id": "p5874:control/validatedPDD-ccmp126-v3-3",
+	  "@type": "aiao:Control",
+	  "rdfs:label": "Validated Project Design Document (PDD) for CCMP ID 126 (v3.3)",
+	  "dcterms:identifier": "CCMP ID 126 PDD v3.3 (validated)",
+	  "dcterms:description": "The validated Project Design Document (PDD) for CCMP ID 126. Once validated, the PDD functions as a governing control for the project by specifying the project design, boundary, baseline approach, monitoring plan, and methodological application that subsequent project activities must follow.",
+	  "dcterms:source": { "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3" }
+	},	
+		
     {
-      "@id": "p5874:activity/projectSolarElectricityGeneration-2020-09-20_to_2023-09-30",
+      "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1",
       "@type": "aiao:Activity",
       "rdfs:label": "Project solar electricity generation delivered to the grid (20/09/2020–30/09/2023)",
-      "dcterms:description": "Real activity of generating electricity from the project’s solar PV plant and delivering it to Turkey’s national grid during the verified period.",
+      "dcterms:description": "Real activity of generating electricity from the project’s solar PV plant and delivering it to Turkey’s national grid during monitoring period 1.",
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
-      }
+        "@id": "p5874:temporallocation/monitoringPeriod1"
+      },
+	  "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
     },
     {
-      "@id": "p5874:activity/monitoring-2020-09-20_to_2023-09-30",
+      "@id": "p5874:activity/monitoring-monitoringPeriod1",
       "@type": "aiao:Activity",
       "rdfs:label": "Monitoring and data collection (20/09/2020–30/09/2023)",
       "dcterms:description": "Monitoring and recording of electricity generation and other required parameters for the monitoring/verification period, in accordance with the monitoring plan and applied methodology.",
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
-      "dcterms:conformsTo": [
+      "aiao:isGovernedBy": [
         {
           "@id": "p5874:control/acm0002-v21"
         },
         {
           "@id": "p5874:control/tool-05-v03"
-        }
+        },
+		{
+		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+		}
       ]
     },
     {
-      "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30",
+      "@id": "p5874:activity/quantification-monitoringPeriod1",
       "@type": "aiao:Activity",
-      "rdfs:label": "Quantification of GHG emission reductions (verified period: 20/09/2020–30/09/2023)",
+      "rdfs:label": "Quantification of GHG emission reductions (monitoring period: 20/09/2020–30/09/2023)",
       "dcterms:description": "Quantification and reporting of emission reductions for the project for the monitoring/verification period, performed in accordance with ACM0002 v21.0 and its referenced CDM tools.",
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
-      "dcterms:conformsTo": [
+      "aiao:isGovernedBy": [
         {
           "@id": "p5874:control/acm0002-v21"
         },
@@ -225,7 +292,10 @@
         },
         {
           "@id": "p5874:control/tool-common-practice-v03"
-        }
+        },
+		{
+		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+		}
       ]
     },
     {
@@ -233,7 +303,7 @@
       "@type": "aiao:Activity",
       "rdfs:label": "Validation of project design and methodology application",
       "dcterms:description": "Independent validation activity assessing project design, baseline scenario, methodology applicability, and related requirements prior to verification under the certification programme.",
-      "dcterms:conformsTo": [
+      "aiao:isGovernedBy": [
         {
           "@id": "p5874:control/acm0002-v21"
         },
@@ -252,14 +322,14 @@
       ]
     },
     {
-      "@id": "p5874:activity/verification-2020-09-20_to_2023-09-30",
+      "@id": "p5874:activity/verification-monitoringPeriod1",
       "@type": "aiao:Activity",
       "rdfs:label": "Verification of emission reductions (for 20/09/2020–30/09/2023)",
       "dcterms:description": "Independent verification activity assessing the monitoring report, supporting evidence, and emission reduction calculations for the verification period, leading to a verification opinion/report.",
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
-      "dcterms:conformsTo": [
+      "aiao:isGovernedBy": [
         {
           "@id": "p5874:control/acm0002-v21"
         },
@@ -268,35 +338,38 @@
         },
         {
           "@id": "p5874:control/tool-07-v07"
-        }
+        },
+		{
+		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+		}
       ]
     },
     {
-      "@id": "p5874:activity/issuance-2024-03-18",
+      "@id": "p5874:activity/issuance1",
       "@type": "aiao:Activity",
       "rdfs:label": "Issuance of certified units/credits (18/03/2024)",
       "dcterms:description": "Issuance activity under the certification programme resulting in an issuance certificate for CCMP ID 126.",
       "dcterms:date": "2024-03-18"
     },
     {
-      "@id": "p5874:activity/counterfactualGridElectricityGeneration-2020-09-20_to_2023-09-30",
+      "@id": "p5874:activity/counterfactualGridElectricityGeneration-monitoringPeriod1",
       "@type": "aiao:Activity",
-      "rdfs:label": "Counterfactual grid electricity generation displaced by the project (20/09/2020–30/09/2023)",
-      "dcterms:description": "Counterfactual activity/event representing electricity that would otherwise have been generated by grid-connected power plants in Turkey in the absence of the project, for the same quantity of electricity delivered by the project during the verified period (ACM0002 baseline framing).",
+      "rdfs:label": "Counterfactual grid electricity generation displaced by the project during its first monitoring period (20/09/2020–30/09/2023)",
+      "dcterms:description": "Counterfactual activity/event representing electricity that would otherwise have been generated by grid-connected power plants in Turkey in the absence of the project, for the same quantity of electricity delivered by the project during monitoring period 1 (ACM0002 baseline framing).",
       "aiao:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       }
     },
     {
       "@id": "p5874:thing/turkeyNationalElectricityGrid",
       "@type": "impactont:Thing",
-      "rdfs:label": "Turkey national electricity grid (displaced electricity generation for the electricity delivered by the project)",
+      "rdfs:label": "Turkey's national electricity grid",
       "impactont:hasState": [
         {
-          "@id": "p5874:state/gridEmissions-baseline-verifiedPeriod-counterfactual"
+          "@id": "p5874:state/gridEmissions-baseline-monitoringPeriod1-counterfactual"
         },
         {
-          "@id": "p5874:state/gridEmissions-withProject-verifiedPeriod-real"
+          "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real"
         }
       ]
     },
@@ -308,117 +381,70 @@
       "schema:unitText": "tCO2e"
     },
     {
-      "@id": "p5874:value/gridEmissions-baseline-verifiedPeriod",
+      "@id": "p5874:value/gridEmissions-baseline-monitoringPeriod1",
       "rdf:value": {
         "@type": "xsd:decimal",
         "@value": "2955365"
       },
       "dcterms:source": {
-        "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/quantification-monitoringPeriod1"
       }
     },
     {
-      "@id": "p5874:value/gridEmissions-withProject-verifiedPeriod",
+      "@id": "p5874:value/gridEmissions-withProject-monitoringPeriod1",
       "rdf:value": {
         "@type": "xsd:decimal",
         "@value": "0"
       },
       "dcterms:source": {
-        "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/quantification-monitoringPeriod1"
       }
     },
     {
-      "@id": "p5874:state/gridEmissions-baseline-verifiedPeriod-counterfactual",
+      "@id": "p5874:state/gridEmissions-baseline-monitoringPeriod1-counterfactual",
       "@type": "impactont:State",
-      "rdfs:label": "Baseline state: grid emissions for electricity that would have been generated without the project (verified period)",
+      "rdfs:label": "Baseline state: grid emissions for electricity that would have been generated without the project (monitoring period 1)",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
       "impactont:isDefinedByIndicator": {
         "@id": "p5874:indicator/co2eEmissionsFromElectricityGeneration"
       },
       "impactont:hasIndicatorValue": {
-        "@id": "p5874:value/gridEmissions-baseline-verifiedPeriod"
+        "@id": "p5874:value/gridEmissions-baseline-monitoringPeriod1"
       }
     },
     {
-      "@id": "p5874:state/gridEmissions-withProject-verifiedPeriod-real",
+      "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real",
       "@type": "impactont:State",
-      "rdfs:label": "Project state: emissions associated with electricity delivered by the project during the verified period",
+      "rdfs:label": "Project state: emissions associated with electricity delivered by the project during monitoring period 1",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
       "impactont:isDefinedByIndicator": {
         "@id": "p5874:indicator/co2eEmissionsFromElectricityGeneration"
       },
       "impactont:hasIndicatorValue": {
-        "@id": "p5874:value/gridEmissions-withProject-verifiedPeriod"
+        "@id": "p5874:value/gridEmissions-withProject-monitoringPeriod1"
       }
     },
     {
-      "@id": "p5874:impact/emissionReductions-verifiedPeriod",
+      "@id": "p5874:impact/emissionReductions-monitoringPeriod1",
       "@type": "impactont:Impact",
-      "rdfs:label": "Impact: reduced grid emissions via solar electricity generation (verified period)",
+      "rdfs:label": "Impact: reduced grid emissions via solar electricity generation (monitoring period 1)",
       "impactont:hasTemporalLocation": {
-        "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30"
+        "@id": "p5874:temporallocation/monitoringPeriod1"
       },
       "impactont:hasStateA": {
-        "@id": "p5874:state/gridEmissions-baseline-verifiedPeriod-counterfactual"
+        "@id": "p5874:state/gridEmissions-baseline-monitoringPeriod1-counterfactual"
       },
       "impactont:hasStateB": {
-        "@id": "p5874:state/gridEmissions-withProject-verifiedPeriod-real"
+        "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real"
       }
     },
-    {
-      "@id": "p5874:doc/verificationReport-01-2024-02-17",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Verification Report: Karapınar YEKA Solar Power Plant Project (CCMP ID 126)",
-      "dcterms:date": "2024-02-17",
-      "dcterms:identifier": "2303-CER (Verification number 01)",
-      "dcterms:description": "Verification report prepared by 4K Earth Science Private Limited for CCMP ID 126; includes verified period 20/09/2020–30/09/2023 and verified totals (e.g., net GHG emission reductions), plus baseline/methodology discussion under ACM0002."
-    },
-    {
-      "@id": "p5874:doc/validationReport",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Validation Report: Karapınar YEKA Solar Power Plant Project (CCMP ID 126)",
-      "dcterms:description": "Validation report for CCMP ID 126; includes ACM0002 applicability, baseline framing, and referenced tools used for baseline/additionality and grid emission factor calculations."
-    },
-    {
-      "@id": "p5874:doc/verificationStatement-sectorsOtherThanLandUse-v2-0",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Verification Statement for CCMP in Sectors Other Than Land Use (Template V2.0)",
-      "dcterms:description": "Verification statement/opinion document summarizing verification scope/period and verified results for the project."
-    },
-    {
-      "@id": "p5874:doc/monitoringReport-v3-1-2024-02-05",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Monitoring Report: Karapınar YEKA Solar Power Plant Project (Version 3.1, 05/02/2024)",
-      "dcterms:date": "2024-02-05",
-      "dcterms:identifier": "Monitoring Report v3.1",
-      "dcterms:description": "Monitoring report prepared by the project participant; includes monitored electricity generation, calculation approach, and reported emission reductions for the relevant monitoring/verification period."
-    },
-    {
-      "@id": "p5874:doc/issuanceCertificate-2024-03-18",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Issuance Certificate (Carboncer / Cercarbono): CCMP ID 126",
-      "dcterms:date": "2024-03-18",
-      "dcterms:description": "Issuance certificate documenting the issuance outcome for verified emission reductions for CCMP ID 126."
-    },
-    {
-      "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3",
-      "@type": "dcterms:Resource",
-      "rdfs:label": "Project Description Document (PDD): Karapınar YEKA Solar Power Plant Project (v3.3)",
-      "dcterms:description": "Project description document defining the project design, boundary, baseline approach, and monitoring plan for CCMP ID 126."
-    },
-	{
-	  "@id": "p5874:doc/projectSite-kml",
-	  "@type": "dcterms:Resource",
-	  "rdfs:label": "Project site location (KML)",
-	  "dcterms:format": "application/vnd.google-earth.kml+xml",
-	  "dcterms:description": "KML file containing the spatial location of the Karapınar YEKA Solar Power Plant project site."
-	},	
+	
     {
       "@id": "p5874:agent/kalyon-gunes-enerjisi-uretim-as",
       "@type": "aiao:Agent",
@@ -504,6 +530,7 @@
       "rdfs:label": "Cercarbono",
       "schema:description": "International voluntary carbon certification standard / programme referenced in the project’s verification and issuance documentation."
     },
+	
     {
       "@id": "p5874:role/projectOwner",
       "@type": "aiao:Role",
@@ -546,6 +573,7 @@
       "rdfs:label": "Registry / Issuer",
       "dcterms:description": "Responsible for issuing certified units/credits based on verified emission reductions under the certification programme."
     },
+	
     {
       "@id": "p5874:agentActivityRel/rel1-kalyon-projectOwner-projectSolarGen",
       "@type": "aiao:AgentActivityRelation",
@@ -554,7 +582,7 @@
         "@id": "p5874:agent/kalyon-gunes-enerjisi-uretim-as"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/projectSolarElectricityGeneration-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/projectOwner"
@@ -568,7 +596,7 @@
         "@id": "p5874:agent/kalyon-gunes-enerjisi-uretim-as"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/monitoring-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/monitoring-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/projectOwner"
@@ -582,7 +610,7 @@
         "@id": "p5874:agent/kalyon-gunes-enerjisi-uretim-as"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/quantification-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/projectOwner"
@@ -596,7 +624,7 @@
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/monitoring-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/monitoring-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/ccmpDeveloper"
@@ -610,7 +638,7 @@
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/quantification-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/quantification-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/ccmpDeveloper"
@@ -624,7 +652,7 @@
         "@id": "p5874:agent/4k-earth-science-private-limited"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/verification-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/verification-monitoringPeriod1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/verificationBody"
@@ -652,7 +680,7 @@
         "@id": "p5874:agent/cercarbono"
       },
       "aiao:hasActivity": {
-        "@id": "p5874:activity/issuance-2024-03-18"
+        "@id": "p5874:activity/issuance1"
       },
       "aiao:isGovernedBy": {
         "@id": "p5874:role/registryIssuer"
@@ -700,10 +728,11 @@
         "@id": "p5874:role/projectProponent"
       }
     },
+	
     {
-      "@id": "p5874:claim/state-gridEmissions-baseline-verifiedPeriod",
+      "@id": "p5874:claim/state-gridEmissions-baseline-monitoringPeriod1",
       "@type": "aiao:StateClaim",
-      "rdfs:label": "StateClaim: baseline grid emissions for displaced electricity (verified period)",
+      "rdfs:label": "StateClaim: baseline grid emissions for displaced electricity (monitoring period 1)",
       "claimont:hasSubject": {
         "@id": "p5874:thing/turkeyNationalElectricityGrid"
       },
@@ -711,7 +740,7 @@
         "@id": "impactont:hasState"
       },
       "claimont:hasObject": {
-        "@id": "p5874:state/gridEmissions-baseline-verifiedPeriod-counterfactual"
+        "@id": "p5874:state/gridEmissions-baseline-monitoringPeriod1-counterfactual"
       },
       "claimont:hasClaimant": {
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
@@ -726,9 +755,9 @@
       ]
     },
     {
-      "@id": "p5874:claim/state-gridEmissions-withProject-verifiedPeriod",
+      "@id": "p5874:claim/state-gridEmissions-withProject-monitoringPeriod1",
       "@type": "aiao:StateClaim",
-      "rdfs:label": "StateClaim: project-period grid emissions for electricity delivered by the project (verified period)",
+      "rdfs:label": "StateClaim: project-period grid emissions for electricity delivered by the project (monitoring period 1)",
       "claimont:hasSubject": {
         "@id": "p5874:thing/turkeyNationalElectricityGrid"
       },
@@ -736,7 +765,7 @@
         "@id": "impactont:hasState"
       },
       "claimont:hasObject": {
-        "@id": "p5874:state/gridEmissions-withProject-verifiedPeriod-real"
+        "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real"
       },
       "claimont:hasClaimant": {
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
@@ -751,17 +780,17 @@
       ]
     },
     {
-      "@id": "p5874:claim/provenance-gridEmissions-baseline-verifiedPeriod",
+      "@id": "p5874:claim/provenance-gridEmissions-baseline-monitoringPeriod1",
       "@type": "aiao:StateProvenanceClaim",
-      "rdfs:label": "StateProvenanceClaim: provenance of baseline grid-emissions state (verified period)",
+      "rdfs:label": "StateProvenanceClaim: provenance of baseline grid-emissions state (monitoring period 1)",
       "claimont:hasSubject": {
-        "@id": "p5874:state/gridEmissions-baseline-verifiedPeriod-counterfactual"
+        "@id": "p5874:state/gridEmissions-baseline-monitoringPeriod1-counterfactual"
       },
       "claimont:hasPredicate": {
         "@id": "impactont:hasProvenance"
       },
       "claimont:hasObject": {
-        "@id": "p5874:activity/counterfactualGridElectricityGeneration-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/counterfactualGridElectricityGeneration-monitoringPeriod1"
       },
       "claimont:hasClaimant": {
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
@@ -779,17 +808,17 @@
       ]
     },
     {
-      "@id": "p5874:claim/provenance-gridEmissions-withProject-verifiedPeriod",
+      "@id": "p5874:claim/provenance-gridEmissions-withProject-monitoringPeriod1",
       "@type": "aiao:StateProvenanceClaim",
-      "rdfs:label": "StateProvenanceClaim: provenance of with-project grid-emissions state (verified period)",
+      "rdfs:label": "StateProvenanceClaim: provenance of with-project grid-emissions state (monitoring period 1)",
       "claimont:hasSubject": {
-        "@id": "p5874:state/gridEmissions-withProject-verifiedPeriod-real"
+        "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real"
       },
       "claimont:hasPredicate": {
         "@id": "impactont:hasProvenance"
       },
       "claimont:hasObject": {
-        "@id": "p5874:activity/projectSolarElectricityGeneration-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1"
       },
       "claimont:hasClaimant": {
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
@@ -804,17 +833,17 @@
       ]
     },
     {
-      "@id": "p5874:claim/impactProvenance-emissionReductions-verifiedPeriod",
+      "@id": "p5874:claim/impactProvenance-emissionReductions-monitoringPeriod1",
       "@type": "aiao:ImpactClaim",
       "rdfs:label": "ImpactClaim: provenance (cause) of emission-reductions impact (20/09/2020–30/09/2023)",
       "claimont:hasSubject": {
-        "@id": "p5874:impact/emissionReductions-verifiedPeriod"
+        "@id": "p5874:impact/emissionReductions-monitoringPeriod1"
       },
       "claimont:hasPredicate": {
         "@id": "impactont:hasProvenance"
       },
       "claimont:hasObject": {
-        "@id": "p5874:activity/projectSolarElectricityGeneration-2020-09-20_to_2023-09-30"
+        "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1"
       },
       "claimont:hasClaimant": {
         "@id": "p5874:agent/ekobil-environmental-services-and-consultancy-ltd"
