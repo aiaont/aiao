@@ -274,7 +274,7 @@ Now we are ready to add the results of the state quantification activity to our 
     {
       "@id": "myns:state-baseline-ship9xxxx14-86366-monper1",
 	  ...
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "119000",
         "terms:source": {
@@ -287,7 +287,7 @@ Now we are ready to add the results of the state quantification activity to our 
     {
       "@id": "myns:state-project-ship9xxxx14-86366-monper1",
 	  ...
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "101002",
         "terms:source": {

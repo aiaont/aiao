@@ -565,7 +565,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "119000"
         "terms:source": {
@@ -583,7 +583,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "102000"
         "terms:source": {
@@ -602,7 +602,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "161412"
         "terms:source": {
@@ -620,7 +620,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "150932"
         "terms:source": {
@@ -639,7 +639,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "154424"
         "terms:source": {
@@ -657,7 +657,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "130815"
         "terms:source": {
@@ -676,7 +676,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "199555"
         "terms:source": {
@@ -694,7 +694,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "182230"
         "terms:source": {
@@ -713,7 +713,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "174361"
         "terms:source": {
@@ -731,7 +731,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "161908"
         "terms:source": {
@@ -750,7 +750,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "146207"
         "terms:source": {
@@ -768,7 +768,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "127034"
         "terms:source": {
@@ -787,7 +787,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "147127"
         "terms:source": {
@@ -805,7 +805,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "129339"
         "terms:source": {
@@ -824,7 +824,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "116739"
         "terms:source": {
@@ -842,7 +842,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "88082"
         "terms:source": {
@@ -861,7 +861,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "161604"
         "terms:source": {
@@ -879,7 +879,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "149053"
         "terms:source": {
@@ -898,7 +898,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "173235"
         "terms:source": {
@@ -916,7 +916,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "146930"
         "terms:source": {
@@ -935,7 +935,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "109090"
         "terms:source": {
@@ -953,7 +953,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "87472"
         "terms:source": {
@@ -972,7 +972,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "162040"
         "terms:source": {
@@ -990,7 +990,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "140817"
         "terms:source": {
@@ -1009,7 +1009,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "133699"
         "terms:source": {
@@ -1027,7 +1027,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "106589"
         "terms:source": {
@@ -1046,7 +1046,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "159358"
         "terms:source": {
@@ -1064,7 +1064,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "148414"
         "terms:source": {
@@ -1083,7 +1083,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "154788"
         "terms:source": {
@@ -1101,7 +1101,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
 	  },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "133280"
         "terms:source": {
@@ -1120,7 +1120,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "154585"
         "terms:source": {
@@ -1138,7 +1138,7 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
 	    },
-      "impactont:hasValue": {
+      "impactont:hasIndicatorValue": {
         "@type": "xsd:decimal",
         "@value": "127576"
         "terms:source": {
