@@ -115,6 +115,12 @@
 		<skos:definition>The relation between an agent and an activity, typically governed by a formal control (such as an employment contract).
 		</skos:definition>
 		<rdfs:label xml:lang="en">AgentActivityRelation</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://w3id.org/aiao#isGovernedBy"/>
+				<owl:allValuesFrom rdf:resource="http://w3id.org/aiao#Role"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
 	</owl:Class>
    
 	<!-- aiao:Instrument class -->
