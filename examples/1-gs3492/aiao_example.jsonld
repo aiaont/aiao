@@ -565,15 +565,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "119000"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },		
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "119000"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}		
       }
     },
     {
@@ -583,15 +586,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "102000"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "102000"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}			
       }
     },    
 	
@@ -602,15 +608,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "161412"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },		
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "161412"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}		
       }
     },
     {
@@ -620,15 +629,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "150932"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "150932"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}		
       }
     },    
 	
@@ -639,15 +651,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "154424"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "154424"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -657,15 +672,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "130815"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "130815"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -676,15 +694,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "199555"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "199555"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -694,15 +715,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "182230"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "182230"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -713,15 +737,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "174361"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "174361"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -731,15 +758,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "161908"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "161908"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}		
       }
     },    
 	
@@ -750,15 +780,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "146207"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "146207"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -768,15 +801,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "127034"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "127034"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -787,15 +823,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "147127"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "147127"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -805,15 +844,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "129339"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "129339"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -824,15 +866,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "116739"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "116739"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -842,15 +887,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "88082"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "88082"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -861,15 +909,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "161604"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "161604"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -879,15 +930,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "149053"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "149053"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -898,15 +952,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "173235"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "173235"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -916,15 +973,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "146930"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "146930"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },   
 
@@ -935,15 +995,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "109090"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "109090"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -953,15 +1016,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "87472"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "87472"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -972,15 +1038,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "162040"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "162040"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -990,15 +1059,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "140817"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "140817"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -1009,15 +1081,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "133699"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "133699"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -1027,15 +1102,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "106589"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "106589"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -1046,15 +1124,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "159358"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "159358"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}		
       }
     },
     {
@@ -1064,15 +1145,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "148414"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "148414"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}	
       }
     },    
 	
@@ -1083,15 +1167,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "154788"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "154788"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -1101,15 +1188,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
 	  },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "133280"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "133280"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },    
 	
@@ -1120,15 +1210,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "154585"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "154585"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
     {
@@ -1138,15 +1231,18 @@
       "impactont:hasTemporalLocation": {
 		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
 	    },
-      "impactont:hasIndicatorValue": {
-        "@type": "xsd:decimal",
-        "@value": "127576"
-        "terms:source": {
-          "@id": "/gs3492-impactCalculation"
-        }		
-      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
+      },
+      "impactont:hasIndicatorValue": {
+	    "@type": "impactont:IndicatorValue",
+		"rdf:value": {
+			"@type": "xsd:decimal",
+			"@value": "127576"
+		},
+		"dcterms:source": {
+			"@id": "/gs3492-impactCalculation"
+		}
       }
     },
 	
