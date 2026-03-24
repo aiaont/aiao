@@ -671,16 +671,5 @@
   
 ]  
   
-
-I have added "impactont:TemporalLocation" to all our "time:Instant" and "time:Interval" nodes.
-baseline activity is counterfactual
-verifiedPeriod
-
-
-
-
-
-
-
   ]
 }
