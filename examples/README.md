@@ -1,10 +1,10 @@
 # 🌱 AIA Modelling Best Practices
 
-These best practices were distilled from a complete AIA modelling exercise of a grid-connected renewable electricity project under ACM0002.
+These best practices were distilled from a complete AIA modelling exercise of a grid-connected renewable electricity project under ACM0002 (see 2-ecoregistry125/).
 
 ---
 
-## 1 Model Impacts as State Differences --- Not Just Numbers
+## 1 Model Impacts as State Differences, Not Just Numbers
 
 **Principle:**
 
@@ -145,7 +145,7 @@ Before finalizing a project graph, verify:
 
 ---
 
-# 🌍 Philosophical Principle Behind AIA
+# 🌍 Modelling Layers
 
 AIA modelling distinguishes three layers:
 
