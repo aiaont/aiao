@@ -1,99 +1,92 @@
-# 🌱 AIA Modelling Best Practices (Draft v0.1)
+# 🌱 AIA Modelling Best Practices
 
-These best practices are distilled from a complete AIA modelling
-exercise of a grid-connected renewable electricity project under
-ACM0002.
+These best practices were distilled from a complete AIA modelling exercise of a grid-connected renewable electricity project under ACM0002.
 
-------------------------------------------------------------------------
+---
 
-## 1️⃣ Model Impacts as State Differences --- Not Just Numbers
+## 1 Model Impacts as State Differences --- Not Just Numbers
 
-**Principle:**\
-An impact is a change between two states, not a standalone numeric
-value.
+**Principle:**
 
-**Best practice:** - Always create: - Two `impactont:State` nodes - One
-`impactont:Impact` node linking them via: - `impactont:hasStateA` -
-`impactont:hasStateB` - Never model emission reductions as a single
-literal.
+An impact is a change between two states, not a standalone numeric value.
 
-------------------------------------------------------------------------
+**Best practice:**
 
-## 2️⃣ Distinguish Causal Provenance from Quantification Source
+- Always create:
+  - Two `impactont:State` nodes
+  - One `impactont:Impact` node
+    linking them via:
+  - `impactont:hasStateA`
+  - `impactont:hasStateB`
+- Never model emission reductions as a single literal.
 
-  ---------------------------------------------------------------------------
-  Concept                 Property                    Meaning
-  ----------------------- --------------------------- -----------------------
-  What caused the state?  `impactont:hasProvenance`   Causal provenance
+---
 
-  Where did the numeric   `dcterms:source`            Epistemic/measurement
-  value come from?                                    provenance
-  ---------------------------------------------------------------------------
+## 2 Distinguish Causal Provenance from Quantification Source
 
-**Best practice:** - Attach `impactont:hasProvenance` via a
-`StateProvenanceClaim` - Attach `dcterms:source` to the reified value
-node
+What caused the state? `impactont:hasProvenance` (causal provenance)
+Where did the numeric value come from? `dcterms:source` (epistemic/measurement provenance)
+
+**Best practice:**
+
+- Attach `impactont:hasProvenance` to a state via a `StateProvenanceClaim`
+- Attach `dcterms:source` to the quantified value of the state, as an `impactont:IndicatorValue` node (via the `impactont:hasIndicatorValue` property of an `impactont:State` node)
 
 Never mix these two.
 
-------------------------------------------------------------------------
+---
 
-## 3️⃣ Always Reify Indicator Values (If They Have Metadata)
+## 3 Always Reify Indicator Values (If They Have Metadata)
 
-If a value has: - A source - A methodology - Uncertainty - A calculation
-activity - Or verification linkage
+If a value has:
 
-→ It must be a node, not a bare literal.
+- A source
+- A methodology
+- Uncertainty
+- A calculation activity
+- Or verification linkage
+
+→ It must be an `impactont:IndicatorValue` node, not a bare literal.
 
 Pattern:
 
 State\
-└─ impactont:hasIndicatorValue → ValueNode\
+└─ impactont:hasIndicatorValue → impactont:IndicatorValue\
   ├─ rdf:value\
   └─ dcterms:source
 
-------------------------------------------------------------------------
+---
 
-## 4️⃣ Explicitly Model Counterfactual States
+## 4 Use `StateProvenanceClaim` and `ImpactClaim` for Causality
 
-Baseline ≠ Real.
-
-**Best practice:** - Use `impactont:hasModality` - `"real"` -
-`"counterfactual"` - Reflect this in node names.
-
-------------------------------------------------------------------------
-
-## 5️⃣ Use `StateProvenanceClaim` and `ImpactClaim` for Causality
-
-Do not attach causal properties directly to states if you want claims to
-be accountable.
+Do not attach causal properties directly to states if you want claims to be accountable.
 
 StateProvenanceClaim\
+
 - subject = State\
 - predicate = impactont:hasProvenance\
 - object = Event
 
 ImpactClaim\
+
 - subject = Impact (state difference)\
 - predicate = impactont:hasProvenance\
 - object = Event
 
-------------------------------------------------------------------------
+---
 
-## 6️⃣ Use One Project Node as the Container
+## 5 Use One Project Node as the Container
 
-Everything real that occurred within the project should be connected
-via:
+Everything real that occurred within the project should be connected via:
 
 aiao:Project\
 └─ aiao:comprisesActivity → Activity
 
-Do not include counterfactual baseline activities in the project
-container.
+Do not include counterfactual baseline activities in the project container.
 
-------------------------------------------------------------------------
+---
 
-## 7️⃣ Use Agent--Role--Activity Relations for Accountability
+## 6 Use Agent-Role-Activity Relations for Accountability
 
 Never attach roles directly to agents.
 
@@ -104,76 +97,53 @@ AgentActivityRelation\
 ├─ aiao:hasActivity\
 └─ aiao:isGovernedBy → Role
 
-------------------------------------------------------------------------
+---
 
-## 8️⃣ Always Add Claimants
+## 7 Always Add Claimants
 
 Every claim should have:
 
-claimont:hasClaimant → Agent
+`claimont:hasClaimant` → Agent
 
 Impact accounting without a claimant is incomplete.
 
-------------------------------------------------------------------------
+---
 
-## 9️⃣ Treat Documents as Evidence, Not Claims
+## 8 Temporal Hygiene
 
-Documents should be typed as:
+- Use `aiao:hasTemporalLocation` consistently.
+- Type all instants and intervals also as `impactont:TemporalLocation`.
+- Avoid using `dcterms:temporal` for activity timing in AIA graphs.
 
-`dcterms:Resource`
+---
 
-Claims should reference documents via:
+## 9 Use Schema.org Pragmatically (But Carefully)
 
-`claimont:isSupportedBy → Document`
+Use `schema:` only when:
 
-Do not collapse document, claim, and activity layers.
-
-------------------------------------------------------------------------
-
-## 🔟 Temporal Hygiene
-
--   Use `aiao:hasTemporalLocation` consistently.
--   Type all instants and intervals also as
-    `impactont:TemporalLocation`.
--   Avoid using `dcterms:temporal` for activity timing in AIA graphs.
-
-------------------------------------------------------------------------
-
-## 11️⃣ Avoid Redundant Typing
-
-If:
-
-`aiao:Activity rdfs:subClassOf impactont:Event`
-
-Do not assert both types on instances.
-
-------------------------------------------------------------------------
-
-## 12️⃣ Use Schema.org Pragmatically (But Carefully)
-
-Use `schema:` only when: - ImpactOnt does not define the concept (e.g.,
-location, address, identifiers) - It adds interoperability value
+- ImpactOnt does not define the concept (e.g., location, address, identifiers)
+- It adds interoperability value
 
 Do not replace AIA semantics with schema semantics.
 
-------------------------------------------------------------------------
+---
 
 # 🔎 Structural Integrity Checklist
 
 Before finalizing a project graph, verify:
 
--   [ ] Every impact has two states
--   [ ] Every state has an indicator
--   [ ] Every indicator value is sourced
--   [ ] Every claim has a claimant
--   [ ] Every causal statement is modelled as a claim
--   [ ] Every real activity belongs to a project
--   [ ] Counterfactual activity does NOT belong to the project
--   [ ] Accountability is expressed via AgentActivityRelation
--   [ ] Documents are linked to claims
--   [ ] Temporal modelling uses AIA properties
+- [ ] Every impact has two states
+- [ ] Every state has an indicator
+- [ ] Every indicator value is sourced
+- [ ] Every claim has a claimant
+- [ ] Every causal statement is modelled as a claim
+- [ ] Every real activity belongs to a project
+- [ ] Counterfactual activity does NOT belong to the project
+- [ ] Accountability is expressed via AgentActivityRelation
+- [ ] Documents are linked to claims
+- [ ] Temporal modelling uses AIA properties
 
-------------------------------------------------------------------------
+---
 
 # 🌍 Philosophical Principle Behind AIA
 
