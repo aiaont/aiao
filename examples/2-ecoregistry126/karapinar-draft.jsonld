@@ -206,7 +206,8 @@
     "@type": "aiao:Activity",
     "rdfs:label": "Project solar electricity generation delivered to the grid (20/09/2020–30/09/2023)",
     "dcterms:description": "Real activity of generating electricity from the project’s solar PV plant and delivering it to Turkey’s national grid during the verified period.",
-    "dcterms:temporal": { "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30" }
+    "dcterms:temporal": { "@id": "p5874:temporallocation/verifiedPeriod-2020-09-20_to_2023-09-30" },
+	aiao:isGovernedBy { "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3" }
   },
   
     {
@@ -412,7 +413,7 @@
   
   
   
-[
+
   {
     "@id": "p5874:role/projectOwner",
     "@type": "aiao:Role",
@@ -666,10 +667,6 @@
   "dcterms:format": "application/vnd.google-earth.kml+xml",
   "dcterms:description": "KML file containing the spatial location of the Karapınar YEKA Solar Power Plant project site."
 }
-  
-  
-  
-]  
   
   ]
 }
