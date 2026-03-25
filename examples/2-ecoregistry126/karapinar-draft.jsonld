@@ -1,12 +1,10 @@
 {
   "@context": {
     "p5874": "http://independentimpact.org/p5874#",
-    
     "aiao": "https://aiaont.github.io/aiao/",
     "impactont": "http://w3id.org/impactont#",
     "claimont": "https://aiaont.github.io/claimont/",
     "infocomm": "https://aiaont.github.io/infocomm/",
-    
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",

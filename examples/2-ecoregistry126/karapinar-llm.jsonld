@@ -14,7 +14,7 @@
     "schema": "https://schema.org/"
   },
   "@graph": [
-  
+    
     {
       "@id": "p5874:doc/verificationReport-01-2024-02-17",
       "@type": "dcterms:Resource",
@@ -56,14 +56,14 @@
       "rdfs:label": "Project Description Document (PDD): Karapınar YEKA Solar Power Plant Project (v3.3)",
       "dcterms:description": "Project description document defining the project design, boundary, baseline approach, and monitoring plan for CCMP ID 126."
     },
-	{
-	  "@id": "p5874:doc/projectSite-kml",
-	  "@type": "dcterms:Resource",
-	  "rdfs:label": "Project site location (KML)",
-	  "dcterms:format": "application/vnd.google-earth.kml+xml",
-	  "dcterms:description": "KML file containing the spatial location of the Karapınar YEKA Solar Power Plant project site."
-	},  
-  
+    {
+      "@id": "p5874:doc/projectSite-kml",
+      "@type": "dcterms:Resource",
+      "rdfs:label": "Project site location (KML)",
+      "dcterms:format": "application/vnd.google-earth.kml+xml",
+      "dcterms:description": "KML file containing the spatial location of the Karapınar YEKA Solar Power Plant project site."
+    },  
+    
     {
       "@id": "p5874:instant/2020-09-20",
       "@type": ["time:Instant", "impactont:TemporalLocation"],
@@ -101,7 +101,7 @@
         "@id": "p5874:instant/2030-09-19"
       }
     },
-	
+    
     {
       "@id": "p5874:location/projectSite",
       "@type": "schema:Place",
@@ -112,9 +112,9 @@
         "schema:addressRegion": "Konya Province",
         "schema:addressCountry": "Türkiye"
       },
-	  "schema:hasMap": { "@id": "p5874:doc/projectSite-kml" }
+      "schema:hasMap": { "@id": "p5874:doc/projectSite-kml" }
     },
-	
+    
     {
       "@id": "p5874:project",
       "@type": "aiao:Project",
@@ -182,9 +182,9 @@
           "@id": "p5874:agentActivityRel/rel11-ekobil-projectProponent-project"
         }
       ],
-	  "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
+      "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
     },
-	
+    
     {
       "@id": "p5874:control/acm0002-v21",
       "@type": "aiao:Control",
@@ -227,15 +227,15 @@
       "dcterms:identifier": "Common Practice Tool v03.0",
       "dcterms:description": "Methodological tool referenced by ACM0002 to assess common practice considerations in additionality demonstration."
     },
-	{
-	  "@id": "p5874:control/validatedPDD-ccmp126-v3-3",
-	  "@type": "aiao:Control",
-	  "rdfs:label": "Validated Project Design Document (PDD) for CCMP ID 126 (v3.3)",
-	  "dcterms:identifier": "CCMP ID 126 PDD v3.3 (validated)",
-	  "dcterms:description": "The validated Project Design Document (PDD) for CCMP ID 126. Once validated, the PDD functions as a governing control for the project by specifying the project design, boundary, baseline approach, monitoring plan, and methodological application that subsequent project activities must follow.",
-	  "dcterms:source": { "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3" }
-	},	
-		
+    {
+      "@id": "p5874:control/validatedPDD-ccmp126-v3-3",
+      "@type": "aiao:Control",
+      "rdfs:label": "Validated Project Design Document (PDD) for CCMP ID 126 (v3.3)",
+      "dcterms:identifier": "CCMP ID 126 PDD v3.3 (validated)",
+      "dcterms:description": "The validated Project Design Document (PDD) for CCMP ID 126. Once validated, the PDD functions as a governing control for the project by specifying the project design, boundary, baseline approach, monitoring plan, and methodological application that subsequent project activities must follow.",
+      "dcterms:source": { "@id": "p5874:doc/projectDescriptionDocument-pdd-v3-3" }
+    },	
+    
     {
       "@id": "p5874:activity/projectSolarElectricityGeneration-monitoringPeriod1",
       "@type": "aiao:Activity",
@@ -244,7 +244,7 @@
       "aiao:hasTemporalLocation": {
         "@id": "p5874:temporallocation/monitoringPeriod1"
       },
-	  "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
+      "aiao:isGovernedBy": { "@id": "p5874:control/validatedPDD-ccmp126-v3-3" }
     },
     {
       "@id": "p5874:activity/monitoring-monitoringPeriod1",
@@ -261,9 +261,9 @@
         {
           "@id": "p5874:control/tool-05-v03"
         },
-		{
-		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
-		}
+        {
+          "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+        }
       ]
     },
     {
@@ -293,9 +293,9 @@
         {
           "@id": "p5874:control/tool-common-practice-v03"
         },
-		{
-		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
-		}
+        {
+          "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+        }
       ]
     },
     {
@@ -339,9 +339,9 @@
         {
           "@id": "p5874:control/tool-07-v07"
         },
-		{
-		  "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
-		}
+        {
+          "@id": "p5874:control/validatedPDD-ccmp126-v3-3"
+        }
       ]
     },
     {
@@ -444,7 +444,7 @@
         "@id": "p5874:state/gridEmissions-withProject-monitoringPeriod1-real"
       }
     },
-	
+    
     {
       "@id": "p5874:agent/kalyon-gunes-enerjisi-uretim-as",
       "@type": "aiao:Agent",
@@ -530,7 +530,7 @@
       "rdfs:label": "Cercarbono",
       "schema:description": "International voluntary carbon certification standard / programme referenced in the project’s verification and issuance documentation."
     },
-	
+    
     {
       "@id": "p5874:role/projectOwner",
       "@type": "aiao:Role",
@@ -573,7 +573,7 @@
       "rdfs:label": "Registry / Issuer",
       "dcterms:description": "Responsible for issuing certified units/credits based on verified emission reductions under the certification programme."
     },
-	
+    
     {
       "@id": "p5874:agentActivityRel/rel1-kalyon-projectOwner-projectSolarGen",
       "@type": "aiao:AgentActivityRelation",
@@ -728,7 +728,7 @@
         "@id": "p5874:role/projectProponent"
       }
     },
-	
+    
     {
       "@id": "p5874:claim/state-gridEmissions-baseline-monitoringPeriod1",
       "@type": "aiao:StateClaim",
