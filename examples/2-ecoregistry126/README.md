@@ -6,10 +6,10 @@ The LLM used for this exercise was OpenAI's ChatGPT 5.2.
 
 The versions of the AIA ontologies used were:
 
-- aiao: v3.0.0 (Mar 26, 2026)
-- impactont: v3.0.0 (Mar 26, 2026)
-- claimont: v2.0.0 (Oct 21, 2025)
-- infocomm: v2.0.0 (Oct 21, 2025)
+- aiao: v3.0.0
+- impactont: v3.0.0
+- claimont: v2.0.0 
+- infocomm: v2.0.0
 
 The full conversation with the LLM can be found in the [chatgpt-chat-export.pdf](chatgpt-chat-export.pdf) file.
 
