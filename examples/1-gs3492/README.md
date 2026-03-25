@@ -347,7 +347,7 @@ Then we can create an aiao:StateClaim node for the baseline state of the first s
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx14-86366-monper1"
       },
@@ -371,7 +371,7 @@ The claim for the ship's project state during the same period will be near-ident
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx14-86366-monper1"
       },	  

@@ -1491,7 +1491,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx14-86366-monper1"
       },
@@ -1508,7 +1508,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx14-86366"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx14-86366-monper1"
       },	  
@@ -1526,7 +1526,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx47-74874"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx47-74874-monper1"
       },
@@ -1543,7 +1543,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx47-74874"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx47-74874-monper1"
       },	  
@@ -1561,7 +1561,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx30-52453"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx30-52453-monper1"
       },
@@ -1578,7 +1578,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx30-52453"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx30-52453-monper1"
       },	  
@@ -1596,7 +1596,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx36-78295"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx36-78295-monper1"
       },
@@ -1613,7 +1613,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx36-78295"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx36-78295-monper1"
       },	  
@@ -1631,7 +1631,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx13-71851"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx13-71851-monper1"
       },
@@ -1648,7 +1648,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx13-71851"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx13-71851-monper1"
       },	  
@@ -1666,7 +1666,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx51-76115"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship7xxxx51-76115-monper1"
       },
@@ -1683,7 +1683,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx51-76115"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship7xxxx51-76115-monper1"
       },	  
@@ -1701,7 +1701,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx99-52551"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx99-52551-monper1"
       },
@@ -1718,7 +1718,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx99-52551"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx99-52551-monper1"
       },	  
@@ -1736,7 +1736,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx37-67110"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship7xxxx37-67110-monper1"
       },
@@ -1753,7 +1753,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx37-67110"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship7xxxx37-67110-monper1"
       },	  
@@ -1771,7 +1771,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx46-67779"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship7xxxx46-67779-monper1"
       },
@@ -1788,7 +1788,7 @@
       "claimont:hasSubject": {
         "@id": "/ship7xxxx46-67779"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship7xxxx46-67779-monper1"
       },	  
@@ -1806,7 +1806,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx15-52817"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx15-52817-monper1"
       },
@@ -1823,7 +1823,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx15-52817"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx15-52817-monper1"
       },	  
@@ -1841,7 +1841,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx94-64181"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx94-64181-monper1"
       },
@@ -1858,7 +1858,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx94-64181"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx94-64181-monper1"
       },	  
@@ -1876,7 +1876,7 @@
       "claimont:hasSubject": {
         "@id": "/ship8xxxx44-62937"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship8xxxx44-62937-monper1"
       },
@@ -1893,7 +1893,7 @@
       "claimont:hasSubject": {
         "@id": "/ship8xxxx44-62937"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship8xxxx44-62937-monper1"
       },	  
@@ -1911,7 +1911,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx13-50516"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx13-50516-monper1"
       },
@@ -1928,7 +1928,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx13-50516"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx13-50516-monper1"
       },	  
@@ -1946,7 +1946,7 @@
       "claimont:hasSubject": {
         "@id": "/ship8xxxx68-83712"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship8xxxx68-83712-monper1"
       },
@@ -1963,7 +1963,7 @@
       "claimont:hasSubject": {
         "@id": "/ship8xxxx68-83712"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship8xxxx68-83712-monper1"
       },	  
@@ -1981,7 +1981,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx52-88115"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship9xxxx52-88115-monper1"
       },
@@ -1998,7 +1998,7 @@
       "claimont:hasSubject": {
         "@id": "/ship9xxxx52-88115"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship9xxxx52-88115-monper1"
       },	  
@@ -2016,7 +2016,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx34-73529"
       },	  
-      "claimont:hasPredicate": "Had baseline state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-baseline-ship6xxxx34-73529-monper1"
       },
@@ -2033,7 +2033,7 @@
       "claimont:hasSubject": {
         "@id": "/ship6xxxx34-73529"
       },
-      "claimont:hasPredicate": "Had project state during monitoring period 1 of Gold Standard project 3492",
+      "claimont:hasPredicate": { "@id": "impactont:hasState" },
       "claimont:hasObject": {
         "@id": "/state-project-ship6xxxx34-73529-monper1"
       },	  
