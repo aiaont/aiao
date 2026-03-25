@@ -1,7 +1,7 @@
 {
   "@context": {
     "@base": "http://mydataserverthatdoesnotexist.com/imaginarynamespace/",
-	"myns:" "http://mydataserverthatdoesnotexist.com/imaginarynamespace/",
+    "myns": "http://mydataserverthatdoesnotexist.com/imaginarynamespace/",
     "aiao": "http://w3id.org/aiao#",
     "claimont": "http://purl.org/claimont#",
     "impactont": "http://purl.org/impactont#",
@@ -10,43 +10,43 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "time": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-	"terms": "http://purl.org/dc/terms/"
+    "terms": "http://purl.org/dc/terms/"
   },
   "@graph": [
-
+    
     {
-	  "@id": "myns:gs3492",
-	  "@type": "aiao:Project",
+      "@id": "myns:gs3492",
+      "@type": "aiao:Project",
       "aiao:hasAgentActivityRelation": {
         "@id": "/gs3492-agentActivityRel1"
       },
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2010-01-01T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2037-12-31T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2010-01-01T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2037-12-31T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
       "aiao:hasObjective": "Reduce the fuel consumption of ships through the application of advanced hull coatings."
     },	
-		
+    
     {
       "@id": "myns:role-projectProponent",
       "@type": "aiao:Role"
     },	
-	
+    
     {
       "@id": "myns:internationalPaintLtd",
       "@type": "aiao:Agent"
     },	
-	
+    
     {
       "@id": "myns:gs3492-agentActivityRel1",
       "@type": "aiao:AgentActivityRelation",
@@ -60,38 +60,38 @@
         "@id": "/role-projectProponent"
       }
     },	
-	
+    
     {
       "@id": "myns:ind-emissions-co2-ship",
       "@type": "impactont:Indicator",
-	  "impactont:hasDefinition": "CO2 emissions from fossil fuel combustion in ship j during year y (tCO2/yr)",
+      "impactont:hasDefinition": "CO2 emissions from fossil fuel combustion in ship j during year y (tCO2/yr)",
       "impactont:hasUnitOfMeasure": "tCO2/yr"
     },	
-	
-	{
-	  "@id": "myns:meth-ind-emissions-co2-ship",
-	  "@type": "aiao:Control",
-	  "terms:title": "Gold Standard methodology: Reducing Vessel Emissions Through the Use of Advanced Hull Coatings",
-	  "terms:hasVersion": 2
-	},
-	
+    
+    {
+      "@id": "myns:meth-ind-emissions-co2-ship",
+      "@type": "aiao:Control",
+      "terms:title": "Gold Standard methodology: Reducing Vessel Emissions Through the Use of Advanced Hull Coatings",
+      "terms:hasVersion": 2
+    },
+    
     {
       "@id": "myns:mgmInnova",
       "@type": "aiao:Agent"
     },		
-
+    
     {
       "@id": "myns:role-externalConsultant1",
       "@type": "aiao:Role"
     },
-	
+    
     {
       "@id": "myns:gs3492-impactCalculation",
       "@type": "aiao:Activity",
       "aiao:hasObjective": "Calculate project impact according to GS methodology: Reducing Vessel Emissions Through the Use of Advanced Hull Coatings",
-	  "aiao:isGovernedBy": "/meth-ind-emissions-co2-ship"
+      "aiao:isGovernedBy": "/meth-ind-emissions-co2-ship"
     },	
-	
+    
     {
       "@id": "myns:gs3492-agentActivityRel2",
       "@type": "aiao:AgentActivityRelation",
@@ -105,478 +105,478 @@
         "@id": "/role-externalConsultant1"
       }
     },	
-
-	{
-	  "@id": "myns:ship9xxxx14-86366",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship9xxxx14-86366",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx47-74874",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx47-74874",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx30-52453",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx30-52453",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx36-78295",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx36-78295",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx13-71851",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx13-71851",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship7xxxx51-76115",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship7xxxx51-76115",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship9xxxx99-52551",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship9xxxx99-52551",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship7xxxx37-67110",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship7xxxx37-67110",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship7xxxx46-67779",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship7xxxx46-67779",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx15-52817",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx15-52817",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship9xxxx94-64181",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship9xxxx94-64181",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship8xxxx44-62937",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship8xxxx44-62937",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship9xxxx13-50516",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship9xxxx13-50516",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship8xxxx68-83712",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship8xxxx68-83712",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship9xxxx52-88115",
-	  "@type": "impactont:Thing"
-	},
-	{
-	  "@id": "myns:voyageLog-ship9xxxx52-88115",
-	  "@type": "claimont:Substantiation"
-	}, 
-	
-	{
-	  "@id": "myns:ship6xxxx34-73529",
-	  "@type": "impactont:Thing"
-	}, 
-	{
-	  "@id": "myns:voyageLog-ship6xxxx34-73529",
-	  "@type": "claimont:Substantiation"
-	},
-
-	{
-	  "@id": "myns:gs3492-ship9xxxx14-86366-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-09-10T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-09T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship6xxxx47-74874-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-09-10T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-09T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship6xxxx30-52453-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-07-11T09:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-07-10T08:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship6xxxx36-78295-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-05-11T12:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-05-10T11:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 
-
-	{
-	  "@id": "myns:gs3492-ship6xxxx13-71851-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-10T06:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-09-09T05:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship7xxxx51-76115-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-05-11T12:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-05-10T11:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship9xxxx99-52551-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-11-09T21:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-11-09T20:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship7xxxx37-67110-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-09-10T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-09T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship7xxxx46-67779-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-02-09T04:30:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-02-09T04:29:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship6xxxx15-52817-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-04-11T01:30:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-04-10T01:29:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship9xxxx94-64181-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-07-11T09:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-07-10T08:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship8xxxx44-62937-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-01-09T18:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-01-09T17:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship9xxxx13-50516-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-09-10T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-09T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship8xxxx68-83712-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-02-09T04:30:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2016-02-09T04:29:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 
-	
-	{
-	  "@id": "myns:gs3492-ship9xxxx52-88115-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-09-10T00:00:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-09-09T23:59:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	}, 	
-	
-	{
-	  "@id": "myns:gs3492-ship6xxxx34-73529-monitoringPeriod1",
-	  "@type": "time:ProperInterval",
-	  "time:hasBeginning": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2014-10-10T10:30:00Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  },
-	  "time:hasEnd": {
-		"@type": "time:Instant",
-		"time:inXSDDateTimeStamp": {
-		  "@value": "2015-10-10T10:29:59Z",
-		  "@type": "xsd:dateTimeStamp"
-		}
-	  }
-	},
-
-
-
-
-
-   {
+    
+    {
+      "@id": "myns:ship9xxxx14-86366",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship9xxxx14-86366",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx47-74874",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx47-74874",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx30-52453",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx30-52453",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx36-78295",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx36-78295",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx13-71851",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx13-71851",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship7xxxx51-76115",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship7xxxx51-76115",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship9xxxx99-52551",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship9xxxx99-52551",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship7xxxx37-67110",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship7xxxx37-67110",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship7xxxx46-67779",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship7xxxx46-67779",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx15-52817",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx15-52817",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship9xxxx94-64181",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship9xxxx94-64181",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship8xxxx44-62937",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship8xxxx44-62937",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship9xxxx13-50516",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship9xxxx13-50516",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship8xxxx68-83712",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship8xxxx68-83712",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship9xxxx52-88115",
+      "@type": "impactont:Thing"
+    },
+    {
+      "@id": "myns:voyageLog-ship9xxxx52-88115",
+      "@type": "claimont:Substantiation"
+    }, 
+    
+    {
+      "@id": "myns:ship6xxxx34-73529",
+      "@type": "impactont:Thing"
+    }, 
+    {
+      "@id": "myns:voyageLog-ship6xxxx34-73529",
+      "@type": "claimont:Substantiation"
+    },
+    
+    {
+      "@id": "myns:gs3492-ship9xxxx14-86366-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-09-10T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-09T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx47-74874-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-09-10T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-09T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx30-52453-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-07-11T09:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-07-10T08:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx36-78295-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-05-11T12:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-05-10T11:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx13-71851-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-10T06:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-09-09T05:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship7xxxx51-76115-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-05-11T12:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-05-10T11:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship9xxxx99-52551-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-11-09T21:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-11-09T20:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship7xxxx37-67110-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-09-10T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-09T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship7xxxx46-67779-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-02-09T04:30:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-02-09T04:29:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx15-52817-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-04-11T01:30:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-04-10T01:29:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship9xxxx94-64181-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-07-11T09:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-07-10T08:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship8xxxx44-62937-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-01-09T18:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-01-09T17:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship9xxxx13-50516-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-09-10T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-09T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship8xxxx68-83712-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-02-09T04:30:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2016-02-09T04:29:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 
+    
+    {
+      "@id": "myns:gs3492-ship9xxxx52-88115-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-09-10T00:00:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-09-09T23:59:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    }, 	
+    
+    {
+      "@id": "myns:gs3492-ship6xxxx34-73529-monitoringPeriod1",
+      "@type": "time:ProperInterval",
+      "time:hasBeginning": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2014-10-10T10:30:00Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      },
+      "time:hasEnd": {
+        "@type": "time:Instant",
+        "time:inXSDDateTimeStamp": {
+          "@value": "2015-10-10T10:29:59Z",
+          "@type": "xsd:dateTimeStamp"
+        }
+      }
+    },
+    
+    
+    
+    
+    
+    {
       "@id": "myns:state-baseline-ship9xxxx14-86366-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },		
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "119000"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}		
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "119000"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }		
       }
     },
     {
@@ -584,42 +584,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx14-86366-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "102000"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}			
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "102000"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }			
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx47-74874-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },		
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "161412"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}		
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "161412"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }		
       }
     },
     {
@@ -627,42 +627,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx47-74874-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "150932"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}		
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "150932"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }		
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx30-52453-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "154424"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "154424"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -670,42 +670,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx30-52453-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "130815"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "130815"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx36-78295-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "199555"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "199555"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -713,42 +713,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx36-78295-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "182230"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "182230"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx13-71851-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "174361"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "174361"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -756,42 +756,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx13-71851-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "161908"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}		
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "161908"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }		
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship7xxxx51-76115-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "146207"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "146207"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -799,42 +799,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx51-76115-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "127034"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "127034"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship9xxxx99-52551-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "147127"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "147127"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -842,42 +842,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx99-52551-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "129339"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "129339"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship7xxxx37-67110-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "116739"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "116739"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -885,42 +885,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx37-67110-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "88082"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "88082"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship7xxxx46-67779-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "161604"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "161604"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -928,42 +928,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship7xxxx46-67779-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "149053"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "149053"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx15-52817-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "173235"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "173235"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -971,42 +971,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx15-52817-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "146930"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "146930"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },   
-
-	{
+    
+    {
       "@id": "myns:state-baseline-ship9xxxx94-64181-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "109090"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "109090"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -1014,42 +1014,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx94-64181-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "87472"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "87472"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship8xxxx44-62937-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "162040"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "162040"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -1057,42 +1057,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship8xxxx44-62937-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "140817"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "140817"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship9xxxx13-50516-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "133699"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "133699"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -1100,42 +1100,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx13-50516-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "106589"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "106589"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship8xxxx68-83712-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "159358"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}		
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "159358"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }		
       }
     },
     {
@@ -1143,42 +1143,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship8xxxx68-83712-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "148414"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}	
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "148414"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }	
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship9xxxx52-88115-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "154788"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "154788"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -1186,42 +1186,42 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
-	  },
+        "@id": "/gs3492-ship9xxxx52-88115-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "133280"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "133280"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:state-baseline-ship6xxxx34-73529-monper1",
       "@type": "impactont:State",
       "impactont:hasModality": "counterfactual",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "154585"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "154585"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
     {
@@ -1229,30 +1229,23 @@
       "@type": "impactont:State",
       "impactont:hasModality": "real",
       "impactont:hasTemporalLocation": {
-		    "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
-	    },
+        "@id": "/gs3492-ship6xxxx34-73529-monitoringPeriod1"
+      },
       "impactont:isDefinedByIndicator": {
         "@id": "/ind-emissions-co2-ship"
       },
       "impactont:hasIndicatorValue": {
-	    "@type": "impactont:IndicatorValue",
-		"rdf:value": {
-			"@type": "xsd:decimal",
-			"@value": "127576"
-		},
-		"dcterms:source": {
-			"@id": "/gs3492-impactCalculation"
-		}
+        "@type": "impactont:IndicatorValue",
+        "rdf:value": {
+          "@type": "xsd:decimal",
+          "@value": "127576"
+        },
+        "dcterms:source": {
+          "@id": "/gs3492-impactCalculation"
+        }
       }
     },
-	
-	
-	
-	
-	
-	
-	
-	
+
     {
       "@id": "myns:impact-baselineVsProject-ship9xxxx14-86366-monper1",
       "@type": "impactont:Impact",
@@ -1262,12 +1255,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx14-86366-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx47-74874-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1276,12 +1269,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx47-74874-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx30-52453-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1290,12 +1283,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx30-52453-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx36-78295-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1304,12 +1297,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx36-78295-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx13-71851-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1318,12 +1311,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx13-71851-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship7xxxx51-76115-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1332,12 +1325,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship7xxxx51-76115-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship9xxxx99-52551-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1346,12 +1339,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx99-52551-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship7xxxx37-67110-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1360,12 +1353,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship7xxxx37-67110-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship7xxxx46-67779-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1374,12 +1367,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship7xxxx46-67779-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx15-52817-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1388,12 +1381,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx15-52817-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship9xxxx94-64181-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1402,12 +1395,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx94-64181-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship8xxxx44-62937-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1416,12 +1409,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship8xxxx44-62937-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship9xxxx13-50516-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1430,12 +1423,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx13-50516-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship8xxxx68-83712-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1444,12 +1437,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship8xxxx68-83712-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship9xxxx52-88115-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1458,12 +1451,12 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship9xxxx52-88115-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },	     
-	
-	{
+    
+    {
       "@id": "myns:impact-baselineVsProject-ship6xxxx34-73529-monper1",
       "@type": "impactont:Impact",
       "impactont:hasStateA": {
@@ -1472,16 +1465,16 @@
       "impactont:hasStateB": {
         "@id": "/state-project-ship6xxxx34-73529-monper1"
       },
-	  "impactont:hasProvenance": {
-		"@id": "/gs3492"
-	  }
+      "impactont:hasProvenance": {
+        "@id": "/gs3492"
+      }
     },
-	
-	
-	
-	
-
-	
+    
+    
+    
+    
+    
+    
     {
       "@id": "myns:claim-state-baseline-ship9xxxx14-86366-monper1",
       "@type": "aiao:StateClaim",
@@ -1516,8 +1509,8 @@
         "@id": "/voyageLog-ship9xxxx14-86366"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx47-74874-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1551,8 +1544,8 @@
         "@id": "/voyageLog-ship6xxxx47-74874"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx30-52453-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1586,8 +1579,8 @@
         "@id": "/voyageLog-ship6xxxx30-52453"
       }
     },    
-
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx36-78295-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1621,8 +1614,8 @@
         "@id": "/voyageLog-ship6xxxx36-78295"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx13-71851-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1656,8 +1649,8 @@
         "@id": "/voyageLog-ship6xxxx13-71851"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship7xxxx51-76115-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1691,8 +1684,8 @@
         "@id": "/voyageLog-ship7xxxx51-76115"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship9xxxx99-52551-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1726,8 +1719,8 @@
         "@id": "/voyageLog-ship9xxxx99-52551"
       }
     },    
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship7xxxx37-67110-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1761,8 +1754,8 @@
         "@id": "/voyageLog-ship7xxxx37-67110"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship7xxxx46-67779-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1796,8 +1789,8 @@
         "@id": "/voyageLog-ship7xxxx46-67779"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx15-52817-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1831,8 +1824,8 @@
         "@id": "/voyageLog-ship6xxxx15-52817"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship9xxxx94-64181-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1866,8 +1859,8 @@
         "@id": "/voyageLog-ship9xxxx94-64181"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship8xxxx44-62937-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1901,8 +1894,8 @@
         "@id": "/voyageLog-ship8xxxx44-62937"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship9xxxx13-50516-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1936,8 +1929,8 @@
         "@id": "/voyageLog-ship9xxxx13-50516"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship8xxxx68-83712-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -1971,8 +1964,8 @@
         "@id": "/voyageLog-ship8xxxx68-83712"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship9xxxx52-88115-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -2006,8 +1999,8 @@
         "@id": "/voyageLog-ship9xxxx52-88115"
       }
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-state-baseline-ship6xxxx34-73529-monper1",
       "@type": "aiao:StateClaim",
       "claimont:hasClaimant": {
@@ -2041,9 +2034,9 @@
         "@id": "/voyageLog-ship6xxxx34-73529"
       }
     },
-
-
-
+    
+    
+    
     {
       "@id": "myns:gs3492-projectDesignDocument",
       "@type": "claimont:Substantiation"
@@ -2052,12 +2045,12 @@
       "@id": "myns:gs3492-monitoringReport1",
       "@type": "claimont:Substantiation"
     },	
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     {
       "@id": "myns:claim-impact-project-ship9xxxx14-86366-monper1",
       "@type": "aiao:ImpactClaim",
@@ -2080,8 +2073,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx47-74874-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2103,8 +2096,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx30-52453-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2126,8 +2119,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx36-78295-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2149,8 +2142,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx13-71851-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2172,8 +2165,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship7xxxx51-76115-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2195,8 +2188,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship9xxxx99-52551-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2218,8 +2211,8 @@
         }
       ]
     },    
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship7xxxx37-67110-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2241,8 +2234,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship7xxxx46-67779-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2264,8 +2257,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx15-52817-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2287,8 +2280,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship9xxxx94-64181-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2310,8 +2303,8 @@
         }
       ]
     },    
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship8xxxx44-62937-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2333,8 +2326,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship9xxxx13-50516-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2356,8 +2349,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship8xxxx68-83712-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2379,8 +2372,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship9xxxx52-88115-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2402,8 +2395,8 @@
         }
       ]
     },     
-	
-	{
+    
+    {
       "@id": "myns:claim-impact-project-ship6xxxx34-73529-monper1",
       "@type": "aiao:ImpactClaim",
       "claimont:hasClaimant": {
@@ -2425,6 +2418,6 @@
         }
       ]
     }
-
+    
   ]
 }
