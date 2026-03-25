@@ -5,8 +5,8 @@ This guide will take you through the process of manually (i.e., without AI assis
 This example is loosely based on Gold Standard project 3492, but the result will not be a perfect 1:1 representation of the project - not all the project documents and data are publicly available, so we'll be making some information up. 
 
 The latest versions of the ontologies in the AIA suite at the time of writing were:  
-- Anthropogenic Impact Accounting Ontology (aiao): v3.0.0 (Mar 25, 2026) ([GitHub](https://github.com/aiaont/aiao), [HTML](https://aiaont.github.io/aiao/aiao.html))  
-- Impact Ontology (impactont): v3.0.0 (Mar 25, 2026) ([GitHub](https://github.com/aiaont/impactont), [HTML](https://aiaont.github.io/impactont/impactont.html))  
+- Anthropogenic Impact Accounting Ontology (aiao): v3.0.0 (Mar 26, 2026) ([GitHub](https://github.com/aiaont/aiao), [HTML](https://aiaont.github.io/aiao/aiao.html))  
+- Impact Ontology (impactont): v3.0.0 (Mar 26, 2026) ([GitHub](https://github.com/aiaont/impactont), [HTML](https://aiaont.github.io/impactont/impactont.html))  
 - Claim Ontology (claimont): v2.0.0 (Oct 21, 2025) ([GitHub](https://github.com/aiaont/claimont), [HTML](https://aiaont.github.io/impactont/impactont.html))  
 - Information Communication Ontology (infocomm): v2.0.0 (Oct 21, 2025) ([GitHub](https://github.com/aiaont/infocomm), [HTML](https://aiaont.github.io/infocomm/infocomm.html))
 
